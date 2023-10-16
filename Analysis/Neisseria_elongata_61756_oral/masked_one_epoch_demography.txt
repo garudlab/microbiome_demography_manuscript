@@ -1,7 +1,0 @@
-Best fit parameters: [0.0676553].
-Maximum multinomial log composite likelihood: -965.0853956769552.
-Maximum poisson log composite likelihood: -965.0853956769552.
-Non-scaled best-fit model spectrum: [-- 0.9999997591611245 0.49999993251205593 0.33333330343841516 0.24999998656117425 0.1999999946261108 --].
-Optimal value of theta_syn: 11458.155018288076.
-Optimal value of theta_nonsyn: 24520.451739136486.
-Scaled best-fit model spectrum: [-- 11458.152258718907 5729.076735856714 3819.3846635554187 2864.5386005878704 2291.6309420827597 --].

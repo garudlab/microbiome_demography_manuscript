@@ -1,2 +1,0 @@
-species_id	genome_length	covered_bases	fraction_covered	mean_coverage	aligned_reads	mapped_reads
-Streptococcus_mutans_56116	1908740	301	0.000157695652629	1.0	25	1

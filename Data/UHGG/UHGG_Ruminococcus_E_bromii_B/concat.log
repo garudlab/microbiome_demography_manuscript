@@ -1,9 +1,0 @@
-2023-03-29 11:03:50,149 - INFO - Beginning execution of concat_isolate_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
-
-2023-03-29 11:03:50,150 - INFO - Progress is being logged to ../Data/UHGG/UHGG_Ruminococcus_E_bromii_B/concat.log
-
-2023-03-29 11:03:50,150 - INFO - Parsed the following arguments:
-	outprefix = ../Data/UHGG/UHGG_Ruminococcus_E_bromii_B/
-
-2023-03-29 11:03:50,173 - INFO - Finished concatenating.
-2023-03-29 11:03:50,173 - INFO - Pipeline executed succesfully.

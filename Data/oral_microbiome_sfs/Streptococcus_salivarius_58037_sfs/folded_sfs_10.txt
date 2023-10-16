@@ -1,3 +1,0 @@
-9 folded "Streptococcus_salivarius_58037"
-0 77723 17111 5500 1211 0 0 0 0
-1 0 0 0 0 1 1 1 1 

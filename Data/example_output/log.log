@@ -1,8 +1,0 @@
-2021-02-10 11:53:01,807 - INFO - Beginning execution of compute_SNP_matrix.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
-
-2021-02-10 11:53:01,808 - INFO - Progress is being logged to ../Data/example_output/log.log
-
-2021-02-10 11:53:01,808 - INFO - Parsed the following arguments:
-	input_snps = ../Data/microbiome_data/snps/Phascolarctobacterium_succinatutens_61948/annotated_snps.txt.bz2
-	outprefix = ../Data/example_output/
-

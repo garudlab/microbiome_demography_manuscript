@@ -1,9 +1,0 @@
-2023-03-29 11:03:46,941 - INFO - Beginning execution of concat_isolate_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
-
-2023-03-29 11:03:46,942 - INFO - Progress is being logged to ../Data/UHGG/UHGG_Parabacteroides_merdae/concat.log
-
-2023-03-29 11:03:46,942 - INFO - Parsed the following arguments:
-	outprefix = ../Data/UHGG/UHGG_Parabacteroides_merdae/
-
-2023-03-29 11:03:46,973 - INFO - Finished concatenating.
-2023-03-29 11:03:46,973 - INFO - Pipeline executed succesfully.

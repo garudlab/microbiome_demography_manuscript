@@ -1,3 +1,0 @@
-9 folded "Streptococcus_sanguinis_62456"
-0 121567 30550 11799 3117 0 0 0 0
-1 0 0 0 0 1 1 1 1 

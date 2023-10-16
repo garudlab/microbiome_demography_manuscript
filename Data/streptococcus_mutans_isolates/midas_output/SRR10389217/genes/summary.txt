@@ -1,2 +1,0 @@
-species_id	pangenome_size	covered_genes	fraction_covered	mean_coverage	marker_coverage	aligned_reads	mapped_reads
-Streptococcus_mutans_56116	11902	2	0.000168038985045	0.10225979052823315	0.0	517218	2
