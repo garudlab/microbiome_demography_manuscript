@@ -1,3 +1,0 @@
-plot_likelihood.py ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/empirical_sfs.txt 4.06991e-05 0.000467818 ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/red/ --mask_singletons
-plot_likelihood.py ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/empirical_sfs.txt 0.000631269 4.55855e-05 ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/orange/ --mask_singletons
-plot_likelihood.py ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/empirical_sfs.txt 0.001183690 2.92090e-06 ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/violet/ --mask_singletons

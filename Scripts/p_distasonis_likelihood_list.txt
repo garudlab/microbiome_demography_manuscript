@@ -1,3 +1,0 @@
-plot_likelihood.py ../Analysis/Parabacteroides_distasonis_56985_downsampled/empirical_sfs.txt 0.1 0.006 ../Analysis/Parabacteroides_distasonis_56985_downsampled/red/ --mask_singletons
-plot_likelihood.py ../Analysis/Parabacteroides_distasonis_56985_downsampled/empirical_sfs.txt 0.01 0.0045 ../Analysis/Parabacteroides_distasonis_56985_downsampled/orange/ --mask_singletons
-plot_likelihood.py ../Analysis/Parabacteroides_distasonis_56985_downsampled/empirical_sfs.txt 0.001 4.5E-05 ../Analysis/Parabacteroides_distasonis_56985_downsampled/violet/ --mask_singletons

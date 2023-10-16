@@ -1,6 +1,0 @@
-evaluate_likelihood_surface.py ../Analysis/Akkermansia_muciniphila_55290_downsampled/empirical_sfs.txt 25 ../Analysis/Akkermansia_muciniphila_55290_downsampled/ --mask_singletons
-evaluate_likelihood_surface.py ../Analysis/Alistipes_onderdonkii_55464_downsampled/empirical_sfs.txt 25 ../Analysis/Alistipes_onderdonkii_55464_downsampled/ --mask_singletons
-evaluate_likelihood_surface.py ../Analysis/Bacteroides_thetaiotaomicron_56941_downsampled/empirical_sfs.txt 25 ../Analysis/Bacteroides_thetaiotaomicron_56941_downsampled/ --mask_singletons
-evaluate_likelihood_surface.py ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/empirical_sfs.txt 25 ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/ --mask_singletons
-evaluate_likelihood_surface.py ../Analysis/Barnesiella_intestinihominis_62208_downsampled/empirical_sfs.txt 25 ../Analysis/Barnesiella_intestinihominis_62208_downsampled/ --mask_singletons
-evaluate_likelihood_surface.py ../Analysis/Parabacteroides_distasonis_56985_downsampled/empirical_sfs.txt 25 ../Analysis/Parabacteroides_distasonis_56985_downsampled/ --mask_singletons

@@ -1,6 +1,0 @@
-plot_likelihood.py ../Analysis/Akkermansia_muciniphila_55290_downsampled/empirical_sfs.txt 2.49183094e-05 4.02384611e-06 ../Analysis/Akkermansia_muciniphila_55290_downsampled/ --mask_singletons
-plot_likelihood.py ../Analysis/Alistipes_onderdonkii_55464_downsampled/empirical_sfs.txt 2.22291146e-05 3.89330882e-06 ../Analysis/Alistipes_onderdonkii_55464_downsampled/ --mask_singletons
-plot_likelihood.py ../Analysis/Bacteroides_thetaiotaomicron_56941_downsampled/empirical_sfs.txt 2.348264416e-06 8.240087951609573e-06 ../Analysis/Bacteroides_thetaiotaomicron_56941_downsampled/ --mask_singletons
-plot_likelihood.py ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/empirical_sfs.txt 0.00034628 0.0009297364257209518 ../Analysis/Bacteroides_xylanisolvens_57185_downsampled/ --mask_singletons
-plot_likelihood.py ../Analysis/Barnesiella_intestinihominis_62208_downsampled/empirical_sfs.txt 5.7166365815160346e-06 2.1858310365842913e-08 ../Analysis/Barnesiella_intestinihominis_62208_downsampled/ --mask_singletons
-plot_likelihood.py ../Analysis/Parabacteroides_distasonis_56985_downsampled/empirical_sfs.txt 0.006151478043440233 0.00094314807446801 ../Analysis/Parabacteroides_distasonis_56985_downsampled/ --mask_singletons

@@ -1,1 +1,0 @@
-The log likelihood when comparing the expected SFS is: -19.129041222185606
