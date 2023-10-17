@@ -7,6 +7,11 @@ Below, we provide example `.bash` scripts which accomplish each of these steps; 
 ## Species step
 An example `.bash` script which runs this step is located at [`../Scripts/MIDAS_species.bash`](../Scripts/MIDAS_species.bash).
 
+### Species Union
+Supposing that your data consists of multiple time points, you may wish to consider a list of species per host taking into account all of the time points.
+
+['../Scripts/construct_species_union.py'](../Scripts/construct_species_union.py) is a python script accepts an `indir` containing all `*species_profile.txt` files output by the `species` step to output a `species_union.txt` at a specified outprefix.
+
 ## Genes step
 An example `.bash` script which runs this step is located at [`../Scripts/MIDAS_genes.bash`](../Scripts/MIDAS_genes.bash).
 

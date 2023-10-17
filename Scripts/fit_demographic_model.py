@@ -1,5 +1,4 @@
-"""
-Uses dadi to infer the best-fit demographic model for given sfs.
+""" Uses dadi to infer the best-fit demographic model for given sfs.
 
 JCM 201907011
 """
@@ -228,6 +227,103 @@ class DemographicInference():
         fs = dadi.Spectrum.from_phi(phi, ns, (xx, ))
         return fs
 
+    def one_epoch(self, params, ns, pts):
+        """Define a one-epoch demography.
+        params = (nu, T)
+            nu: Ratio of contemporary to ancient population size.
+            T: Time in the past at which size change occured,
+                in units of 2*N_a.
+        ns = (n1, )
+            n1: Number of samples in resulting Spectrum object.
+        pts: Number of grid points to use in integration.
+        """
+        xx = dadi.Numerics.default_grid(pts)  # Define likelihood surface.
+        phi = dadi.PhiManip.phi_1D(xx)  # Define initial phi.
+
+        # Construct spectrum object
+        fs = dadi.Spectrum.from_phi(phi, ns, (xx, ))
+        return fs
+
+
+    def one_pop(phi, xx, T, nu=1, gamma=0, h=0.5, theta0=1.0, initial_t=0,
+                frozen=False, beta=1):
+        """
+        Integrate a 1-dimensional phi foward.
+
+        phi: Initial 1-dimensional phi
+        xx: Grid upon (0,1) overwhich phi is defined.
+
+        nu, gamma, and theta0 may be functions of time.
+        nu: Population size
+        gamma: Selection coefficient on *all* segregating alleles
+        h: Dominance coefficient. h = 0.5 corresponds to genic selection.
+        Heterozygotes have fitness 1+2sh and homozygotes have fitness 1+2s.
+        theta0: Propotional to ancestral size. Typically constant.
+        beta: Breeding ratio, beta=Nf/Nm.
+
+        T: Time at which to halt integration
+        initial_t: Time at which to start integration. (Note that this only
+            matters if one of the demographic parameters is a function of time.)
+
+        frozen: If True, population is 'frozen' so that it does not change.
+            In the one_pop case, this is equivalent to not running the
+            integration at all.
+        """
+        phi = phi.copy()
+
+        # For a one population integration, freezing means just not integrating.
+        if frozen:
+            return phi
+
+        if T - initial_t == 0:
+            return phi
+        elif T - initial_t < 0:
+            raise ValueError('Final integration time T (%f) is less than '
+                            'intial_time (%f). Integration cannot be run '
+                            'backwards.' % (T, initial_t))
+
+        vars_to_check = (nu, gamma, h, theta0, beta)
+        if numpy.all([numpy.isscalar(var) for var in vars_to_check]):
+            return _one_pop_const_params(phi, xx, T, nu, gamma, h, theta0,
+                                     initial_t, beta)
+
+        nu_f = Misc.ensure_1arg_func(nu)
+        gamma_f = Misc.ensure_1arg_func(gamma)
+        h_f = Misc.ensure_1arg_func(h)
+        theta0_f = Misc.ensure_1arg_func(theta0)
+        beta_f = Misc.ensure_1arg_func(beta)
+
+        current_t = initial_t
+        nu, gamma, h = nu_f(current_t), gamma_f(current_t), h_f(current_t)
+        beta = beta_f(current_t)
+        dx = numpy.diff(xx)
+        while current_t < T:
+            dt = _compute_dt(dx,nu,[0],gamma,h)
+            this_dt = min(dt, T - current_t)
+
+            # Because this is an implicit method, I need the *next* time's params.
+            # So there's a little inconsistency here, in that I'm estimating dt
+            # using the last timepoints nu,gamma,h.
+            next_t = current_t + this_dt
+            nu, gamma, h = nu_f(next_t), gamma_f(next_t), h_f(next_t)
+            beta = beta_f(next_t)
+            theta0 = theta0_f(next_t)
+
+            if numpy.any(numpy.less([T,nu,theta0], 0)):
+                raise ValueError('A time, population size, migration rate, or '
+                             'theta0 is < 0. Has the model been mis-specified?')
+            if numpy.any(numpy.equal([nu], 0)):
+                raise ValueError('A population size is 0. Has the model been '
+                             'mis-specified?')
+
+            _inject_mutations_1D(phi, this_dt, xx, theta0)
+            # Do each step in C, since it will be faster to compute the a,b,c
+            # matrices there.
+            phi = int_c.implicit_1Dx(phi, xx, nu, gamma, h, beta, this_dt,
+                                 use_delj_trick=use_delj_trick)
+            current_t = next_t
+        return phi
+
     def main(self):
         """Execute main function."""
         # Parse command line arguments
@@ -267,10 +363,18 @@ class DemographicInference():
         three_epoch_demography = \
             '{0}{1}three_epoch_demography.txt'.format(
                 args['outprefix'], underscore)
+        one_epoch_demography = \
+           '{0}{1}one_epoch_demography.txt'.format(
+                args['outprefix'], underscore)
+        expected_sfs_comparison = \
+           '{0}{1}expected_sfs_comparison.txt'.format(
+                args['outprefix'], underscore)
         logfile = '{0}{1}log.log'.format(args['outprefix'], underscore)
-        to_remove = [logfile, exponential_growth_demography,
-                     two_epoch_demography, bottleneck_growth_demography,
-                     three_epoch_demography]
+        # to_remove = [logfile, exponential_growth_demography,
+        #              two_epoch_demography, bottleneck_growth_demography,
+        #              three_epoch_demography, one_epoch_demography,
+        #              expected_sfs_comparison]
+        to_remove = [logfile]
         for f in to_remove:
             if os.path.isfile(f):
                 os.remove(f)
@@ -300,6 +404,7 @@ class DemographicInference():
 
         # Construct initial Spectrum object from input synonymous sfs.
         syn_data = dadi.Spectrum.from_file(syn_input_sfs)
+        syn_data = syn_data.fold()
         if mask_singletons:
             syn_data.mask[1] = True
         if mask_doubletons:
@@ -309,56 +414,217 @@ class DemographicInference():
 
         # Optomize parameters for this model.
         # First set parameter bounds for optimization
-        model_list = ['exponential_growth', 'two_epoch', 'bottleneck_growth',
-                      'three_epoch']
+        # model_list = ['exponential_growth', 'two_epoch', 'bottleneck_growth',
+        #               'three_epoch', 'one_epoch']
+        # model_list = ['three_epoch']
+        # model_list = ['two_epoch']
+        # model_list = ['two_epoch', 'three_epoch']
+        model_list = ['one_epoch', 'two_epoch', 'three_epoch']
+        # Fit different one-epoch models and compute likelihood
+        # method_list = ['expectation']
+        method_list = ['null']
+        for method in method_list:
+            if method == 'expectation':
+                print('compute_likelihood from expectation')
+                model_sum = numpy.ma.sum(syn_data)
+                # print(model_sum)
+                model_data = numpy.divide(
+                    numpy.ones(shape=syn_ns+1), numpy.arange(1, syn_ns+2))
+                syn_data_mask = numpy.zeros(syn_ns+1)
+                syn_data_mask[0] = 1
+                model_data = numpy.ma.masked_array(model_data, syn_data_mask)
+                model_data = dadi.Spectrum(model_data)
+                model_data = dadi.Spectrum.fold(model_data)
+                model_data.mask[1] = True
+                model_data = numpy.divide(model_data, numpy.ma.sum(model_data))
+                model_data = model_data * model_sum
+                with open(expected_sfs_comparison, 'w') as f:
+                   f.write('The log likelihood when comparing the expected '
+                           'SFS is: ' + str(
+                           dadi.Inference.ll_multinom(model_data, syn_data)))
         for model in model_list:
             if model == 'exponential_growth':
-                upper_bound = [8, 0.00015]
+                upper_bound = [80, 0.15]
                 lower_bound = [0, 0]
-                initial_guess = [0.1, 0.00001]
+                initial_guesses = []
+                initial_guesses.append([0.000001, 0.01])
+                initial_guesses.append([0.00001, 0.01])
+                initial_guesses.append([0.0001, 0.01])
+                initial_guesses.append([0.001, 0.01])
+                initial_guesses.append([0.01, 0.01])
+                initial_guesses.append([0.6, 0.01])
+                initial_guesses.append([0.7, 0.01])
+                initial_guesses.append([0.8, 0.01])
+                initial_guesses.append([0.9, 0.01])
+                initial_guesses.append([1, 0.01])
+                initial_guesses.append([1.25, 0.01])
+                initial_guesses.append([1.5, 0.01])
+                initial_guesses.append([1.75, 0.01])
+                initial_guesses.append([2, 0.01])
+                initial_guesses.append([2.25, 0.01])
+                initial_guesses.append([2.5, 0.01])
+                initial_guesses.append([2.75, 0.01])
+                initial_guesses.append([3, 0.01])
+                initial_guesses.append([3.33, 0.01])
+                initial_guesses.append([3.66, 0.01])
+                initial_guesses.append([4, 0.01])
+                initial_guesses.append([5, 0.01])
+                initial_guesses.append([6, 0.01])
+                initial_guesses.append([7, 0.01])
+                initial_guesses.append([8, 0.01])
                 file = exponential_growth_demography
                 func_ex = dadi.Numerics.make_extrap_log_func(self.growth)
                 logger.info('Beginning demographic inference for exponential '
                             'growth demographic model.')
             elif model == 'two_epoch':
-                upper_bound = [8, 0.00015]
+                upper_bound = [80, 0.15]
                 lower_bound = [0, 0]
-                initial_guess = [0.1, 0.00001]
+                initial_guesses = []
+                initial_guesses.append([0.1, 0.01])
+                initial_guesses.append([0.2, 0.01])
+                initial_guesses.append([0.3, 0.01])
+                initial_guesses.append([0.4, 0.01])
+                initial_guesses.append([0.5, 0.01])
+                initial_guesses.append([0.6, 0.01])
+                initial_guesses.append([0.7, 0.01])
+                initial_guesses.append([0.8, 0.01])
+                initial_guesses.append([0.9, 0.01])
+                initial_guesses.append([1, 0.01])
+                initial_guesses.append([1.25, 0.01])
+                initial_guesses.append([1.5, 0.01])
+                initial_guesses.append([1.75, 0.01])
+                initial_guesses.append([2, 0.01])
+                initial_guesses.append([2.25, 0.01])
+                initial_guesses.append([2.5, 0.01])
+                initial_guesses.append([2.75, 0.01])
+                initial_guesses.append([3, 0.01])
+                initial_guesses.append([3.33, 0.01])
+                initial_guesses.append([3.66, 0.01])
+                initial_guesses.append([4, 0.01])
+                initial_guesses.append([5, 0.01])
+                initial_guesses.append([6, 0.01])
+                initial_guesses.append([7, 0.01])
+                initial_guesses.append([8, 0.01])
                 file = two_epoch_demography
                 func_ex = dadi.Numerics.make_extrap_log_func(self.two_epoch)
                 logger.info('Beginning demographic inference for two-epoch '
                             'demographic model.')
             elif model == 'bottleneck_growth':
-                upper_bound = [8, 8, 0.00005]
+                upper_bound = [80, 80, 0.15]
                 lower_bound = [0, 0, 0]
-                initial_guess = [0.1, 0.1, 0.00001]
+                initial_guess = [0.1, 0.1, 0.01]
+                initial_guesses = []
+                initial_guesses.append([0.000001, 0.000001, 0.01])
+                initial_guesses.append([0.00001, 0.00001, 0.01])
+                initial_guesses.append([0.0001, 0.0001, 0.01])
+                initial_guesses.append([0.001, 0.001, 0.01])
+                initial_guesses.append([0.01, 0.01, 0.01])
+                initial_guesses.append([0.6, 0.6, 0.01])
+                initial_guesses.append([0.7, 0.7, 0.01])
+                initial_guesses.append([0.8, 0.8, 0.01])
+                initial_guesses.append([0.9, 0.9, 0.01])
+                initial_guesses.append([1, 1, 0.01])
+                initial_guesses.append([1.25, 1.25, 0.01])
+                initial_guesses.append([1.5, 1.5, 0.01])
+                initial_guesses.append([1.75, 1.75, 0.01])
+                initial_guesses.append([2, 2, 0.01])
+                initial_guesses.append([2.25, 2.25, 0.01])
+                initial_guesses.append([2.5, 2.5, 0.01])
+                initial_guesses.append([2.75, 2.75, 0.01])
+                initial_guesses.append([3, 3, 0.01])
+                initial_guesses.append([3.33, 3.33, 0.01])
+                initial_guesses.append([3.66, 3.66, 0.01])
+                initial_guesses.append([4, 4, 0.01])
+                initial_guesses.append([5, 5, 0.01])
+                initial_guesses.append([6, 6, 0.01])
+                initial_guesses.append([7, 7, 0.01])
+                initial_guesses.append([8, 8, 0.01])
                 file = bottleneck_growth_demography
                 func_ex = dadi.Numerics.make_extrap_log_func(self.bottlegrowth)
                 logger.info('Beginning demographic inference for bottleneck + '
                             'growth demographic model.')
-            else:
-                upper_bound = [8, 8, 0.00005, 0.00005]
-                lower_bound = [0, 0, 0, 0]
-                initial_guess = [0.1, 0.1, 0.00001, 0.00001]
+            elif model == 'three_epoch':
+                upper_bound = [80, 80, 0.15, 0.15]
+                lower_bound = [0.0, 0.0, 0.0, 0.0]
+                initial_guesses = []
+                initial_guesses.append([0.01, 0.01, 0.01, 0.01])
+                initial_guesses.append([0.02, 0.02, 0.01, 0.01])
+                initial_guesses.append([0.03, 0.03, 0.01, 0.01])
+                initial_guesses.append([0.04, 0.04, 0.01, 0.01])
+                initial_guesses.append([0.05, 0.05, 0.01, 0.01])
+                initial_guesses.append([0.6, 0.6, 0.01, 0.01])
+                initial_guesses.append([0.7, 0.7, 0.01, 0.01])
+                initial_guesses.append([0.8, 0.8, 0.01, 0.01])
+                initial_guesses.append([0.9, 0.9, 0.01, 0.01])
+                initial_guesses.append([1, 1, 0.01, 0.01])
+                initial_guesses.append([1.25, 1.25, 0.01, 0.01])
+                initial_guesses.append([1.5, 1.5, 0.01, 0.01])
+                initial_guesses.append([1.75, 1.75, 0.01, 0.01])
+                initial_guesses.append([2, 2, 0.01, 0.01])
+                initial_guesses.append([2.25, 2.25, 0.01, 0.01])
+                initial_guesses.append([2.5, 2.5, 0.01, 0.01])
+                initial_guesses.append([2.75, 2.75, 0.01, 0.01])
+                initial_guesses.append([3, 3, 0.01, 0.01])
+                initial_guesses.append([3.33, 3.33, 0.01, 0.01])
+                initial_guesses.append([3.66, 3.66, 0.01, 0.01])
+                initial_guesses.append([4, 4, 0.01, 0.01])
+                initial_guesses.append([5, 5, 0.01, 0.01])
+                initial_guesses.append([6, 6, 0.01, 0.01])
+                initial_guesses.append([7, 7, 0.01, 0.01])
+                initial_guesses.append([8, 8, 0.01, 0.01])
                 file = three_epoch_demography
                 func_ex = dadi.Numerics.make_extrap_log_func(self.three_epoch)
                 logger.info('Beginning demographic inference for three-epoch '
                             'demographic model.')
+            elif model == 'one_epoch':
+                upper_bound = [80]
+                lower_bound = [0]
+                initial_guesses = []
+                initial_guesses.append([0.1])
+                initial_guesses.append([0.2])
+                initial_guesses.append([0.3])
+                initial_guesses.append([0.4])
+                initial_guesses.append([0.5])
+                initial_guesses.append([0.6])
+                initial_guesses.append([0.7])
+                initial_guesses.append([0.8])
+                initial_guesses.append([0.9])
+                initial_guesses.append([1])
+                initial_guesses.append([1.25])
+                initial_guesses.append([1.5])
+                initial_guesses.append([1.75])
+                initial_guesses.append([2])
+                initial_guesses.append([2.25])
+                initial_guesses.append([2.5])
+                initial_guesses.append([2.75])
+                initial_guesses.append([3])
+                initial_guesses.append([3.33])
+                initial_guesses.append([3.66])
+                initial_guesses.append([4])
+                initial_guesses.append([5])
+                initial_guesses.append([6])
+                initial_guesses.append([7])
+                initial_guesses.append([8])
+                # initial_guess = [0.1]
+                file = one_epoch_demography
+                func_ex = dadi.Numerics.make_extrap_log_func(self.snm)
+                logger.info('Beginning demographic inference for one-epoch '
+                            'demographic model.')
             with open(file, 'w') as f:
                 max_likelihood = -1e25
-                for i in range(25):
+                for i in range(24):
                     # Start at initial guess
-                    p0 = initial_guess
+                    p0 = initial_guesses[i]
                     # Randomly perturb parameters before optimization.
                     p0 = dadi.Misc.perturb_params(
-                        p0, fold=1, upper_bound=upper_bound,
-                        lower_bound=lower_bound)
+                        p0, fold=1, upper_bound=None,
+                        lower_bound=None)
                     logger.info(
                         'Beginning optimization with guess, {0}.'.format(p0))
-                    popt = dadi.Inference.optimize_log_lbfgsb(
+                    popt = dadi.Inference.optimize_log_fmin(
                         p0=p0, data=syn_data, model_func=func_ex, pts=pts_l,
-                        lower_bound=lower_bound,
-                        upper_bound=upper_bound,
+                        lower_bound=None,
+                        upper_bound=None,
                         verbose=len(p0), maxiter=25)
                     logger.info(
                         'Finished optimization with guess, ' + str(p0) + '.')
@@ -399,9 +665,10 @@ class DemographicInference():
                 f.write('Optimal value of theta_syn: {0}.\n'.format(theta_syn))
                 f.write('Optimal value of theta_nonsyn: {0}.\n'.format(
                     theta_nonsyn))
+                f.write('Empirical synonymous sfs: {0}.\n'.format(
+                    syn_data))
                 f.write('Scaled best-fit model spectrum: {0}.\n'.format(
                     best_scaled_spectrum))
-
         logger.info('Finished demographic inference.')
         logger.info('Pipeline executed succesfully.')
 

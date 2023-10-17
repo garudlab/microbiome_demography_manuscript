@@ -2,7 +2,7 @@
 
 Figure 1 shows the nucleotide diversity within and between hosts in rural African and North American gut microbiomes.
 
-To recreate it, you must:
+To recreate this figure, you must:
 
 1. Download Data
   Consult [`download_data.md`](./download_data.md).
