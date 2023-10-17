@@ -6511,7 +6511,7 @@ for (i in 1:length(accessory_one_epoch_file_list)) {
   accessory_three_epoch_ncurr[i] = accessory_three_epoch_nu_contemporary[i] * accessory_three_epoch_nanc[i]
 }
 
-core_ancestral = table_s3[c(7, 13, 14, 17, 18, 23, 27)]
+core_ancestral = table_s3[c(7, 13, 14, 17, 18, 23, 27), ]
 
 table_s6 = data.frame(
   species=accessory_phylogenetic_levels,
@@ -6536,7 +6536,10 @@ table_s6 = data.frame(
   accessory_three_epoch_time_total,
   accessory_three_epoch_theta,
   accessory_three_epoch_nanc,
-  accessory_three_epoch_ncurr
+  accessory_three_epoch_ncurr,
+  core_ancestral$`One epoch, Ancestral effective population size`,
+  core_ancestral$`Two epoch, Ancestral effective population size`,
+  core_ancestral$`Three epoch, Ancestral effective population size`
 )
 
 names(table_s6) = c(
