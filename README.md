@@ -7,6 +7,6 @@ This directory includes the following subdirectories:
 * Analysis: Analysis of Data, as well as several `.md` documents describing the Scripts used to generate each figure in the main text and supplement.
 * Data: Data and Results.
 * Scripts: Scripts used for analysis and plotting.
-* Summary: Summary slides for meetings and book-keeping.
+* Summary: Figures and Tables for inclusion in the main text, as well as for intermediate output
 * Supplement: All supplemental tables and figures
 * microbiome_evolution_master: Inherited code from Garud and Good et al. 2019, PLoS Biology

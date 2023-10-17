@@ -1,7 +1,0 @@
-2022-07-25 17:04:35,184 - INFO - Beginning execution of plot_qp_vs_non_qp.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
-
-2022-07-25 17:04:35,185 - INFO - Progress is being logged to ../Analysis/qp_vs_non_qp.log
-
-2022-07-25 17:04:35,185 - INFO - Parsed the following arguments:
-	outprefix = ../Analysis/
-
