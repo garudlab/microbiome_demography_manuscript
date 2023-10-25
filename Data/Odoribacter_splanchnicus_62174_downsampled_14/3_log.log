@@ -1,0 +1,24 @@
+2023-04-11 16:30:37,460 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-04-11 16:30:37,461 - INFO - Progress is being logged to ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/3_log.log
+
+2023-04-11 16:30:37,461 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/empirical_syn_downsampled_sfs.txt
+	input_shape = 1.5
+	input_scale = 0.1
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/3
+
+2023-04-11 16:30:37,463 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-04-11 16:31:54,603 - INFO - Finished plotting likelihood surface.
+2023-04-11 16:31:54,604 - INFO - Pipeline executed succesfully.
+2023-04-11 16:31:54,604 - INFO - The best fit parameters are: [0.2924932564111109, 0.007541696608300303].
+2023-04-11 16:31:54,604 - INFO - The likelihood of the mle is: -65.15054027585302.
+2023-04-11 16:31:54,604 - INFO - Non-scaled best-fit model spectrum: [-- 0.8913353746752793 0.4913134586358587 0.33238248005481064 0.24988140499264772 0.1999842161292759 0.16666449809709552 0.14285683787819328 0.12499995339165704 0.11111110123172746 0.09999999627554206 0.09090908894724158 0.08333333228260631 0.0769230764399653 --].
+
+2023-04-11 16:31:54,604 - INFO - Scaled best-fit model spectrum: [-- 3212.5946514238235 1770.8160522195365 1197.989228285798 900.6348092737878 720.7929151697294 600.70035407719 514.8916180444426 450.53095961838306 400.4720778202034 360.42488866129213 327.65899482461197 300.35408128388985 277.2499229396424 --].
+
+2023-04-11 16:31:54,604 - INFO - Scaled best-fit theta: 3604.2490208516606.
+2023-04-11 16:31:54,604 - INFO - Best low estimate for time is: 67050922694.91708 generations.
+2023-04-11 16:31:54,604 - INFO - Best high estimate for time is: 113887964283.27827 generations.

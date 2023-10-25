@@ -1,0 +1,13 @@
+2023-07-20 15:32:06,009 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-07-20 15:32:06,009 - INFO - Progress is being logged to ../Analysis/Dialister_invisus_61905_downsampled_14/accessory_empirical_nonsyn_downsampling.log
+
+2023-07-20 15:32:06,009 - INFO - Parsed the following arguments:
+	input_sfs = ../Analysis/Dialister_invisus_61905/accessory_empirical_nonsyn_sfs.txt
+	sample_size = 14
+	outprefix = ../Analysis/Dialister_invisus_61905_downsampled_14/accessory_empirical_nonsyn
+
+2023-07-20 15:32:06,009 - INFO - Parsing input SFS.
+2023-07-20 15:32:06,012 - INFO - Formatting output SFS.
+2023-07-20 15:32:06,016 - INFO - Finished downsampling.
+2023-07-20 15:32:06,016 - INFO - Pipeline executed succesfully.

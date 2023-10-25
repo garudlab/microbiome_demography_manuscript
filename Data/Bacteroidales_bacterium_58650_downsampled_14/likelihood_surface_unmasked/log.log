@@ -1,0 +1,24 @@
+2023-02-22 23:30:39,894 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-02-22 23:30:39,894 - INFO - Progress is being logged to ../Analysis/Bacteroidales_bacterium_58650_downsampled_14/likelihood_surface_unmasked/log.log
+
+2023-02-22 23:30:39,894 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Bacteroidales_bacterium_58650_downsampled_14/empirical_sfs.txt
+	input_shape = 1.0
+	input_scale = 0.005
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Bacteroidales_bacterium_58650_downsampled_14/likelihood_surface_unmasked/
+
+2023-02-22 23:30:39,896 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-02-22 23:46:37,465 - INFO - Finished plotting likelihood surface.
+2023-02-22 23:46:37,467 - INFO - Pipeline executed succesfully.
+2023-02-22 23:46:37,467 - INFO - The best fit parameters are: [0.0001765671628931039, 0.0023270274692424276].
+2023-02-22 23:46:37,467 - INFO - The likelihood of the mle is: -47.81256346292912.
+2023-02-22 23:46:37,467 - INFO - Non-scaled best-fit model spectrum: [-- 0.00020921482023596665 0.0001088111846270506 7.534329807079045e-05 5.860935463235812e-05 4.8568988475530696e-05 4.1875410963607364e-05 3.709428410713921e-05 3.350843891083587e-05 3.071944815486807e-05 2.8488255507260378e-05 2.6662734211251773e-05 2.514146642898426e-05 2.3854239811170212e-05 --].
+
+2023-02-22 23:46:37,467 - INFO - Scaled best-fit model spectrum: [-- 4282.139731034223 2227.111331534112 1542.1017008842937 1199.5968822783707 994.0939891956041 857.0920589583666 759.2335360864893 685.8396428283049 628.7555026505349 583.0881896316179 545.7240236386408 514.5872179159736 488.24068932507623 --].
+
+2023-02-22 23:46:37,468 - INFO - Scaled best-fit theta: 20467669.19381971.
+2023-02-22 23:46:37,468 - INFO - Best low estimate for time is: 1.9462415051877043e+17 generations.
+2023-02-22 23:46:37,468 - INFO - Best high estimate for time is: 3.3057484389585274e+17 generations.

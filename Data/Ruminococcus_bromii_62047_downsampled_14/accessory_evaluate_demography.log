@@ -1,0 +1,24 @@
+2023-09-27 14:17:10,728 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-09-27 14:17:10,728 - INFO - Progress is being logged to ../Analysis/Ruminococcus_bromii_62047_downsampled_14/accessory_evaluate_demography.log
+
+2023-09-27 14:17:10,728 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Ruminococcus_bromii_62047_downsampled_14/accessory_empirical_syn_downsampled_sfs.txt
+	model_type = three_epoch
+	params_list = [0.09107036, 0.0535221, 0.00383398, 0.0025581]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Ruminococcus_bromii_62047_downsampled_14/accessory
+
+2023-09-27 14:17:10,729 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2023-09-27 14:17:10,731 - INFO - Beginning optimization with guess, [0.09107036, 0.0535221, 0.00383398, 0.0025581].
+2023-09-27 14:17:10,731 - INFO - Finished optimization with guess, [0.09107036, 0.0535221, 0.00383398, 0.0025581].
+2023-09-27 14:17:10,731 - INFO - Best fit parameters: [0.09107036, 0.0535221, 0.00383398, 0.0025581].
+2023-09-27 14:17:10,759 - INFO - Maximum log composite likelihood: -25.345716430773052.
+2023-09-27 14:17:10,759 - INFO - Outputting residual between model and data.
+2023-09-27 14:17:11,222 - INFO - Optimal value of theta: 281.42422205358326.
+2023-09-27 14:17:11,222 - INFO - Synonymous input SFS: [-- 188.2442717753637 166.60863701276566 122.7717400329782 94.00498022402769 79.81570917327844 76.23437306114845 38.21056870945397 -- -- -- -- -- -- --].
+2023-09-27 14:17:11,223 - INFO - Scaled spectrum: [-- 200.21513779456595 144.61742803964995 114.54525270189056 97.1823326540864 87.18378772844422 81.9712569565086 40.17508411387042 -- -- -- -- -- -- --].
+2023-09-27 14:17:11,224 - INFO - Converting and interpreting Tau estimates.
+2023-09-27 14:17:11,224 - INFO - Finished demographic evaluation.
+2023-09-27 14:17:11,225 - INFO - Pipeline executed succesfully.

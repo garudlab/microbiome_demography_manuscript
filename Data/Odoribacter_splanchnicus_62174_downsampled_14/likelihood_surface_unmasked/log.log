@@ -1,0 +1,24 @@
+2023-02-22 23:30:39,936 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-02-22 23:30:39,936 - INFO - Progress is being logged to ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/likelihood_surface_unmasked/log.log
+
+2023-02-22 23:30:39,936 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/empirical_sfs.txt
+	input_shape = 1.0
+	input_scale = 0.005
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/likelihood_surface_unmasked/
+
+2023-02-22 23:30:39,954 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-02-23 00:16:04,052 - INFO - Finished plotting likelihood surface.
+2023-02-23 00:16:04,054 - INFO - Pipeline executed succesfully.
+2023-02-23 00:16:04,054 - INFO - The best fit parameters are: [0.00011917502515742817, 0.000308859597194072].
+2023-02-23 00:16:04,054 - INFO - The likelihood of the mle is: -32.4275322333001.
+2023-02-23 00:16:04,055 - INFO - Non-scaled best-fit model spectrum: [-- 8.873669186132444e-06 4.436835251479551e-06 2.9578902523187316e-06 2.2184177457252395e-06 1.7747342376842706e-06 1.478945229102594e-06 1.2676673631241357e-06 1.1092089612957467e-06 9.859635355788593e-07 8.873671931463421e-07 8.066974567422347e-07 7.394726748607217e-07 6.825901656887925e-07 --].
+
+2023-02-23 00:16:04,055 - INFO - Scaled best-fit model spectrum: [-- 2933.4677681501857 1466.7341017341287 977.8227624783028 733.3670905319971 586.6936860138313 488.9114152702422 419.06693527318146 366.6835745003234 325.9409598807207 293.3468675704858 266.6789733045559 244.4557275722801 225.65144225047308 --].
+
+2023-02-23 00:16:04,055 - INFO - Scaled best-fit theta: 330581150.4371313.
+2023-02-23 00:16:04,055 - INFO - Best low estimate for time is: 6.181454898431256e+17 generations.
+2023-02-23 00:16:04,056 - INFO - Best high estimate for time is: 1.0499382952482502e+18 generations.

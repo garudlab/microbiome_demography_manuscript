@@ -1,0 +1,13 @@
+2023-07-20 15:32:03,551 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-07-20 15:32:03,551 - INFO - Progress is being logged to ../Analysis/Alistipes_shahii_62199_downsampled_14/core_empirical_nonsyn_downsampling.log
+
+2023-07-20 15:32:03,551 - INFO - Parsed the following arguments:
+	input_sfs = ../Analysis/Alistipes_shahii_62199/core_empirical_nonsyn_sfs.txt
+	sample_size = 14
+	outprefix = ../Analysis/Alistipes_shahii_62199_downsampled_14/core_empirical_nonsyn
+
+2023-07-20 15:32:03,551 - INFO - Parsing input SFS.
+2023-07-20 15:32:03,553 - INFO - Formatting output SFS.
+2023-07-20 15:32:03,559 - INFO - Finished downsampling.
+2023-07-20 15:32:03,559 - INFO - Pipeline executed succesfully.

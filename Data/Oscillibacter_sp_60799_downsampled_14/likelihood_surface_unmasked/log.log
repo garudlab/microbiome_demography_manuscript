@@ -1,0 +1,24 @@
+2023-02-22 23:30:40,477 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-02-22 23:30:40,477 - INFO - Progress is being logged to ../Analysis/Oscillibacter_sp_60799_downsampled_14/likelihood_surface_unmasked/log.log
+
+2023-02-22 23:30:40,477 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Oscillibacter_sp_60799_downsampled_14/empirical_sfs.txt
+	input_shape = 1.0
+	input_scale = 0.005
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Oscillibacter_sp_60799_downsampled_14/likelihood_surface_unmasked/
+
+2023-02-22 23:30:40,479 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-02-23 00:30:32,629 - INFO - Finished plotting likelihood surface.
+2023-02-23 00:30:32,632 - INFO - Pipeline executed succesfully.
+2023-02-23 00:30:32,632 - INFO - The best fit parameters are: [0.0001181222537467853, 0.00018764789075690323].
+2023-02-23 00:30:32,632 - INFO - The likelihood of the mle is: -245.37305119222583.
+2023-02-23 00:30:32,633 - INFO - Non-scaled best-fit model spectrum: [-- 0.9999996679648397 0.4999999038057522 0.3333332787465608 0.24999996542763872 0.19999997697646213 0.166666650979408 0.14285713210503065 0.12499999268476399 0.1111111062351038 0.09999999686553694 0.09090908900919056 0.08333333228802894 0.07692307644027137 --].
+
+2023-02-23 00:30:32,633 - INFO - Scaled best-fit model spectrum: [-- 5344.138834814332 2672.069790552872 1781.379911366251 1336.034967554669 1068.8279988103595 890.6900177079033 763.4486010044742 668.0175370634646 593.7933749704775 534.4140441746803 485.83095432456685 445.34504518515604 411.08773659342813 --].
+
+2023-02-23 00:30:32,633 - INFO - Scaled best-fit theta: 5344.140609256916.
+2023-02-23 00:30:32,633 - INFO - Best low estimate for time is: 6125289343727.867 generations.
+2023-02-23 00:30:32,633 - INFO - Best high estimate for time is: 10403984105890.715 generations.

@@ -1,0 +1,24 @@
+2023-09-27 14:16:31,099 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-09-27 14:16:31,099 - INFO - Progress is being logged to ../Analysis/Bacteroides_cellulosilyticus_58046_downsampled_14/accessory_evaluate_demography.log
+
+2023-09-27 14:16:31,099 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Bacteroides_cellulosilyticus_58046_downsampled_14/accessory_empirical_syn_downsampled_sfs.txt
+	model_type = three_epoch
+	params_list = [0.14545304, 0.07669139, 0.00140239, 0.0010387]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Bacteroides_cellulosilyticus_58046_downsampled_14/accessory
+
+2023-09-27 14:16:31,100 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2023-09-27 14:16:31,102 - INFO - Beginning optimization with guess, [0.14545304, 0.07669139, 0.00140239, 0.0010387].
+2023-09-27 14:16:31,102 - INFO - Finished optimization with guess, [0.14545304, 0.07669139, 0.00140239, 0.0010387].
+2023-09-27 14:16:31,102 - INFO - Best fit parameters: [0.14545304, 0.07669139, 0.00140239, 0.0010387].
+2023-09-27 14:16:31,129 - INFO - Maximum log composite likelihood: -38.07109346766242.
+2023-09-27 14:16:31,129 - INFO - Outputting residual between model and data.
+2023-09-27 14:16:31,570 - INFO - Optimal value of theta: 1840.2103445756097.
+2023-09-27 14:16:31,570 - INFO - Synonymous input SFS: [-- 1730.1270913031437 1161.275586449214 802.2852955120773 631.2342416552714 541.0997319888528 497.27796529471516 241.9450611190331 -- -- -- -- -- -- --].
+2023-09-27 14:16:31,570 - INFO - Scaled spectrum: [-- 1753.1517721649975 1057.0475631814847 779.0607015588247 643.8863273588947 572.4868063990068 536.7250036418175 262.8867990172821 -- -- -- -- -- -- --].
+2023-09-27 14:16:31,571 - INFO - Converting and interpreting Tau estimates.
+2023-09-27 14:16:31,572 - INFO - Finished demographic evaluation.
+2023-09-27 14:16:31,572 - INFO - Pipeline executed succesfully.

@@ -1,0 +1,24 @@
+2023-04-11 16:30:37,413 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-04-11 16:30:37,413 - INFO - Progress is being logged to ../Analysis/Eubacterium_eligens_61678_downsampled_14/2_log.log
+
+2023-04-11 16:30:37,413 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Eubacterium_eligens_61678_downsampled_14/empirical_syn_downsampled_sfs.txt
+	input_shape = 1.5
+	input_scale = 0.5
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Eubacterium_eligens_61678_downsampled_14/2
+
+2023-04-11 16:30:37,415 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-04-11 16:31:40,430 - INFO - Finished plotting likelihood surface.
+2023-04-11 16:31:40,432 - INFO - Pipeline executed succesfully.
+2023-04-11 16:31:40,432 - INFO - The best fit parameters are: [0.06366917806830312, 0.45713392974424333].
+2023-04-11 16:31:40,432 - INFO - The likelihood of the mle is: -209.3632396148996.
+2023-04-11 16:31:40,432 - INFO - Non-scaled best-fit model spectrum: [-- 0.09522737192960296 0.050550405401882346 0.03565719824840886 0.028209933559749514 0.023741045885219206 0.02076134673029496 0.018632612453453275 0.017035731233667317 0.01579341872582078 0.01479930432279452 0.013985697638207398 0.013307471747790366 0.01273338493473553 --].
+
+2023-04-11 16:31:40,432 - INFO - Scaled best-fit model spectrum: [-- 5239.064465079282 2781.0998798972923 1961.7296632487771 1552.008182945424 1306.1461987317834 1142.2139632529893 1025.098727586903 937.2441172578708 868.8965908849516 814.2040236368649 769.4423360737297 732.1288085681362 700.5446352238415 --].
+
+2023-04-11 16:31:40,432 - INFO - Scaled best-fit theta: 55016.371437324466.
+2023-04-11 16:31:40,432 - INFO - Best low estimate for time is: 284998731341862.25 generations.
+2023-04-11 16:31:40,432 - INFO - Best high estimate for time is: 484078727499780.75 generations.

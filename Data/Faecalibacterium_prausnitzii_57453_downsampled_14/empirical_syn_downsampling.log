@@ -1,0 +1,13 @@
+2023-07-20 15:31:56,186 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-07-20 15:31:56,187 - INFO - Progress is being logged to ../Analysis/Faecalibacterium_prausnitzii_57453_downsampled_14/empirical_syn_downsampling.log
+
+2023-07-20 15:31:56,187 - INFO - Parsed the following arguments:
+	input_sfs = ../Analysis/Faecalibacterium_prausnitzii_57453/empirical_syn_sfs.txt
+	sample_size = 14
+	outprefix = ../Analysis/Faecalibacterium_prausnitzii_57453_downsampled_14/empirical_syn
+
+2023-07-20 15:31:56,187 - INFO - Parsing input SFS.
+2023-07-20 15:31:56,205 - INFO - Formatting output SFS.
+2023-07-20 15:31:56,214 - INFO - Finished downsampling.
+2023-07-20 15:31:56,214 - INFO - Pipeline executed succesfully.

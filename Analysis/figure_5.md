@@ -15,4 +15,4 @@ To recreate this figure, you must:
   * To compare DFEs using a null expectation of `s`, an example `.bash` script which does so for all of the species analyzed in this paper can be found at [`../Scripts/constant_s_dfe.bash`](../Scripts/constant_s_dfe.bash).
   * To compare DFEs using a null expectation of `2N_Anc*s`, an example `.bash` script which does so for all of the species analyzed in this paper can be found at [`../Scripts/cross_species_dfe_inference.bash`](../Scripts/cross_species_dfe_inference.bash).
 ## [`generate_figure_5.R`](../Scripts/generate_figure_5.R)
-  This `.R` script generates all figures and saves them automatically in either [`Summary`](../Summary) or [`Supplement`](../Supplement).
+  This `.R` script generates Figure 1 and saves it to [`Summary/figure_3.png`](../Summary/figure_5.png).

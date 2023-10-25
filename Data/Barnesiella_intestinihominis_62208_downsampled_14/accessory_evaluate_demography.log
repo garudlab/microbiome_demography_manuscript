@@ -1,0 +1,24 @@
+2023-09-27 14:16:45,651 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-09-27 14:16:45,651 - INFO - Progress is being logged to ../Analysis/Barnesiella_intestinihominis_62208_downsampled_14/accessory_evaluate_demography.log
+
+2023-09-27 14:16:45,651 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Barnesiella_intestinihominis_62208_downsampled_14/accessory_empirical_syn_downsampled_sfs.txt
+	model_type = three_epoch
+	params_list = [0.73326799, 0.62802295, 0.01067518, 0.15477494]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Barnesiella_intestinihominis_62208_downsampled_14/accessory
+
+2023-09-27 14:16:45,652 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2023-09-27 14:16:45,653 - INFO - Beginning optimization with guess, [0.73326799, 0.62802295, 0.01067518, 0.15477494].
+2023-09-27 14:16:45,653 - INFO - Finished optimization with guess, [0.73326799, 0.62802295, 0.01067518, 0.15477494].
+2023-09-27 14:16:45,654 - INFO - Best fit parameters: [0.73326799, 0.62802295, 0.01067518, 0.15477494].
+2023-09-27 14:16:45,684 - INFO - Maximum log composite likelihood: -24.681228280034702.
+2023-09-27 14:16:45,684 - INFO - Outputting residual between model and data.
+2023-09-27 14:16:46,126 - INFO - Optimal value of theta: 496.5046232237337.
+2023-09-27 14:16:46,126 - INFO - Synonymous input SFS: [-- 410.6527784879736 255.280677137015 187.57913402614 164.38914647992763 152.13256587485589 143.40865309483553 69.90694502724098 -- -- -- -- -- -- --].
+2023-09-27 14:16:46,127 - INFO - Scaled spectrum: [-- 412.0527966029165 249.56277106902252 193.47996204743063 165.61864797682125 150.29589376160655 142.38074461538565 69.95908405480566 -- -- -- -- -- -- --].
+2023-09-27 14:16:46,127 - INFO - Converting and interpreting Tau estimates.
+2023-09-27 14:16:46,128 - INFO - Finished demographic evaluation.
+2023-09-27 14:16:46,128 - INFO - Pipeline executed succesfully.

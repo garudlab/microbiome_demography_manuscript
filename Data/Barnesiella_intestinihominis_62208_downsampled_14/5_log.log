@@ -1,0 +1,24 @@
+2023-04-11 16:30:43,795 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-04-11 16:30:43,795 - INFO - Progress is being logged to ../Analysis/Barnesiella_intestinihominis_62208_downsampled_14/5_log.log
+
+2023-04-11 16:30:43,795 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Barnesiella_intestinihominis_62208_downsampled_14/empirical_syn_downsampled_sfs.txt
+	input_shape = 2.0
+	input_scale = 50.0
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Barnesiella_intestinihominis_62208_downsampled_14/5
+
+2023-04-11 16:30:43,796 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-04-11 16:31:56,411 - INFO - Finished plotting likelihood surface.
+2023-04-11 16:31:56,412 - INFO - Pipeline executed succesfully.
+2023-04-11 16:31:56,412 - INFO - The best fit parameters are: [261.8757287192162, 24.07199785132386].
+2023-04-11 16:31:56,412 - INFO - The likelihood of the mle is: -199.37238213915043.
+2023-04-11 16:31:56,412 - INFO - Non-scaled best-fit model spectrum: [-- 2.802828339507658 1.4014143777301893 0.9342762785733697 0.7007072267822586 0.5605657944182397 0.4671381718245294 0.40040415483086045 0.35035364134413943 0.3114254635321129 0.28028292069426397 0.2548026578388073 0.2335691049709414 0.21560225209410827 --].
+
+2023-04-11 16:31:56,412 - INFO - Scaled best-fit model spectrum: [-- 10885.162196484041 5442.58190594629 3628.388041197359 2721.2911002295696 2177.0329306415224 1814.194146963791 1555.0235838722926 1360.6456586740728 1209.4628254178936 1088.5165565284885 989.5605162740168 907.0971474988391 837.3204490945949 --].
+
+2023-04-11 16:31:56,412 - INFO - Scaled best-fit theta: 3883.6349850794354.
+2023-04-11 16:31:56,412 - INFO - Best low estimate for time is: 257568092437.8872 generations.
+2023-04-11 16:31:56,412 - INFO - Best high estimate for time is: 437486980537.88196 generations.

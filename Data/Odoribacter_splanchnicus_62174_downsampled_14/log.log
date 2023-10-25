@@ -1,0 +1,27 @@
+2023-06-26 16:58:44,259 - INFO - Beginning execution of fit_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-06-26 16:58:44,260 - INFO - Progress is being logged to ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/log.log
+
+2023-06-26 16:58:44,260 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/empirical_syn_downsampled_sfs.txt
+	nonsyn_input_sfs = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/empirical_nonsyn_downsampled_sfs.txt
+	input_demography = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/complete_two_epoch_demography.txt
+	input_model = two_epoch
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/
+
+2023-06-26 16:58:44,263 - INFO - Loading input demography.
+2023-06-26 16:58:44,264 - INFO - Input demographic parameters are: [0.7516755, 0.2090903].
+2023-06-26 16:58:44,264 - INFO - Input theta_syn is: 3800.847031396657.
+2023-06-26 16:58:44,264 - INFO - Generating spectrum from input demography.
+2023-06-26 17:01:01,308 - INFO - Fitting DFE.
+2023-06-26 17:08:50,784 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2023-06-26 17:09:14,460 - WARNING - The integral is probably divergent, or slowly convergent.
+2023-06-26 17:10:25,897 - INFO - Fitting Neutral + Gamma DFE
+2023-06-26 17:10:58,260 - INFO - Computing intermediate summary statistics.
+2023-06-26 17:10:58,264 - INFO - Outputting results.
+2023-06-26 17:10:58,275 - INFO - Pipeline executed succesfully.

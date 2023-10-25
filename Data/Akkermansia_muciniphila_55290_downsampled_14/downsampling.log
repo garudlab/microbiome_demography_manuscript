@@ -1,0 +1,13 @@
+2023-03-08 13:31:47,598 - INFO - Beginning execution of compute_downsampled_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-03-08 13:31:47,598 - INFO - Progress is being logged to ../Analysis/Akkermansia_muciniphila_55290_downsampled_14/downsampling.log
+
+2023-03-08 13:31:47,598 - INFO - Parsed the following arguments:
+	outprefix = ../Analysis/Akkermansia_muciniphila_55290_downsampled_14/
+	species = Akkermansia_muciniphila_55290
+	sample_size = 14
+
+2023-03-08 13:33:38,332 - INFO - Formatting intermediate files.
+2023-03-08 13:33:43,323 - INFO - Formatting output SFSs.
+2023-03-08 13:33:44,147 - INFO - Finished downsampling.
+2023-03-08 13:33:44,148 - INFO - Pipeline executed succesfully.

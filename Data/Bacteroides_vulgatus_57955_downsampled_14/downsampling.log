@@ -1,0 +1,13 @@
+2023-03-08 13:36:42,381 - INFO - Beginning execution of compute_downsampled_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-03-08 13:36:42,382 - INFO - Progress is being logged to ../Analysis/Bacteroides_vulgatus_57955_downsampled_14/downsampling.log
+
+2023-03-08 13:36:42,382 - INFO - Parsed the following arguments:
+	outprefix = ../Analysis/Bacteroides_vulgatus_57955_downsampled_14/
+	species = Bacteroides_vulgatus_57955
+	sample_size = 14
+
+2023-03-08 13:45:49,419 - INFO - Formatting intermediate files.
+2023-03-08 13:45:55,405 - INFO - Formatting output SFSs.
+2023-03-08 13:45:55,854 - INFO - Finished downsampling.
+2023-03-08 13:45:55,854 - INFO - Pipeline executed succesfully.

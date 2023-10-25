@@ -1,0 +1,24 @@
+2023-04-11 16:30:51,008 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-04-11 16:30:51,008 - INFO - Progress is being logged to ../Analysis/Alistipes_onderdonkii_55464_downsampled_14/8_log.log
+
+2023-04-11 16:30:51,008 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Alistipes_onderdonkii_55464_downsampled_14/empirical_syn_downsampled_sfs.txt
+	input_shape = 2.0
+	input_scale = 1.5
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Alistipes_onderdonkii_55464_downsampled_14/8
+
+2023-04-11 16:30:51,010 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-04-11 16:31:50,480 - INFO - Finished plotting likelihood surface.
+2023-04-11 16:31:50,480 - INFO - Pipeline executed succesfully.
+2023-04-11 16:31:50,480 - INFO - The best fit parameters are: [1.5007375366673057, 0.09228837497642595].
+2023-04-11 16:31:50,480 - INFO - The likelihood of the mle is: -665.3380462443711.
+2023-04-11 16:31:50,481 - INFO - Non-scaled best-fit model spectrum: [-- 0.07893754846997317 0.070937246614227 0.06751035133308553 0.06523631321674274 0.0634309683390033 0.06186621741467573 0.060444265455238025 0.059116181681612735 0.05785475282821645 0.05664362446449667 0.055472365231861144 0.05433399896210908 0.05322367581808127 --].
+
+2023-04-11 16:31:50,481 - INFO - Scaled best-fit model spectrum: [-- 2371.5151354875966 2131.162637758476 2028.2086673796089 1959.8899025317999 1905.6520552041409 1858.642354849403 1815.922753606333 1776.023227570939 1738.1262105473108 1701.7403675454555 1666.5523100035962 1632.3524533983143 1598.995094417933 --].
+
+2023-04-11 16:31:50,481 - INFO - Scaled best-fit theta: 30042.928637309917.
+2023-04-11 16:31:50,481 - INFO - Best low estimate for time is: 1332972806276.5508 generations.
+2023-04-11 16:31:50,481 - INFO - Best high estimate for time is: 2264093516543.259 generations.

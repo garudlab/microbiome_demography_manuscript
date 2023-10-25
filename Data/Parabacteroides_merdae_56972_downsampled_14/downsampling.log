@@ -1,0 +1,13 @@
+2023-03-08 13:43:20,808 - INFO - Beginning execution of compute_downsampled_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-03-08 13:43:20,808 - INFO - Progress is being logged to ../Analysis/Parabacteroides_merdae_56972_downsampled_14/downsampling.log
+
+2023-03-08 13:43:20,808 - INFO - Parsed the following arguments:
+	outprefix = ../Analysis/Parabacteroides_merdae_56972_downsampled_14/
+	species = Parabacteroides_merdae_56972
+	sample_size = 14
+
+2023-03-08 13:50:38,374 - INFO - Formatting intermediate files.
+2023-03-08 13:50:47,248 - INFO - Formatting output SFSs.
+2023-03-08 13:50:48,482 - INFO - Finished downsampling.
+2023-03-08 13:50:48,482 - INFO - Pipeline executed succesfully.

@@ -1,0 +1,24 @@
+2023-06-22 16:54:56,710 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-06-22 16:54:56,710 - INFO - Progress is being logged to ../Analysis/Bacteroides_stercoris_56735_downsampled_14/complete_evaluate_demography.log
+
+2023-06-22 16:54:56,711 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Bacteroides_stercoris_56735_downsampled_14/empirical_syn_downsampled_sfs.txt
+	model_type = two_epoch
+	params_list = [2.831833, 4.186851]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Bacteroides_stercoris_56735_downsampled_14/complete
+
+2023-06-22 16:54:56,728 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2023-06-22 16:54:56,729 - INFO - Beginning optimization with guess, [2.831833, 4.186851].
+2023-06-22 16:54:56,730 - INFO - Finished optimization with guess, [2.831833, 4.186851].
+2023-06-22 16:54:56,730 - INFO - Best fit parameters: [2.831833, 4.186851].
+2023-06-22 16:54:56,780 - INFO - Maximum log composite likelihood: -64.0089867909901.
+2023-06-22 16:54:56,780 - INFO - Outputting residual between model and data.
+2023-06-22 16:54:57,183 - INFO - Optimal value of theta: 4803.673709201156.
+2023-06-22 16:54:57,183 - INFO - Synonymous input SFS: [-- 13473.299850288964 7420.093808277598 5250.026985745037 4069.4906738344816 3369.984690907585 3001.243397394743 1443.870388649085 -- -- -- -- -- -- --].
+2023-06-22 16:54:57,184 - INFO - Scaled spectrum: [-- 13844.158917420826 7130.020295025925 4966.086956563097 3956.3172999677126 3427.4217196483896 3162.9856980281265 1541.0189084434164 -- -- -- -- -- -- --].
+2023-06-22 16:54:57,185 - INFO - Converting and interpreting Tau estimates.
+2023-06-22 16:54:57,185 - INFO - Finished demographic evaluation.
+2023-06-22 16:54:57,185 - INFO - Pipeline executed succesfully.

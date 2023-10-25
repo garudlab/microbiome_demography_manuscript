@@ -1,0 +1,10 @@
+2023-03-29 14:54:23,450 - INFO - Beginning execution of fit_one_epoch.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-03-29 14:54:23,450 - INFO - Progress is being logged to ../Analysis/Coprococcus_sp_62244_downsampled_14/log.log
+
+2023-03-29 14:54:23,450 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Coprococcus_sp_62244_downsampled_14/downsampled_syn_sfs.txt
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Coprococcus_sp_62244_downsampled_14/
+

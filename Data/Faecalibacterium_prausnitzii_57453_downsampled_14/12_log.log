@@ -1,0 +1,24 @@
+2023-04-11 16:30:57,998 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-04-11 16:30:57,998 - INFO - Progress is being logged to ../Analysis/Faecalibacterium_prausnitzii_57453_downsampled_14/12_log.log
+
+2023-04-11 16:30:57,998 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Faecalibacterium_prausnitzii_57453_downsampled_14/empirical_syn_downsampled_sfs.txt
+	input_shape = 1.5
+	input_scale = 5.0
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Faecalibacterium_prausnitzii_57453_downsampled_14/12
+
+2023-04-11 16:30:57,999 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-04-11 16:31:54,041 - INFO - Finished plotting likelihood surface.
+2023-04-11 16:31:54,042 - INFO - Pipeline executed succesfully.
+2023-04-11 16:31:54,042 - INFO - The best fit parameters are: [5.237392804143221, 13.42821296106717].
+2023-04-11 16:31:54,042 - INFO - The likelihood of the mle is: -216.53618203530368.
+2023-04-11 16:31:54,042 - INFO - Non-scaled best-fit model spectrum: [-- 4.843711434483199 2.4008873424271364 1.586629885971968 1.1795142293975645 0.9352552924561655 0.7724247144662261 0.6561246265092403 0.5689060941122596 0.501075264785695 0.4468158270338772 0.4024264917222809 0.3654397327608176 0.3341472628561233 --].
+
+2023-04-11 16:31:54,042 - INFO - Scaled best-fit model spectrum: [-- 15948.267292409933 7905.093768261831 5224.092693768546 3883.6351958775085 3079.395127576048 2543.2637712211604 2160.3373904990826 1873.1641172078391 1649.8262467755737 1471.173156452864 1325.0180863052385 1203.2365297083822 1100.2038282293342 --].
+
+2023-04-11 16:31:54,042 - INFO - Scaled best-fit theta: 3292.57172069986.
+2023-04-11 16:31:54,042 - INFO - Best low estimate for time is: 6090810482998.068 generations.
+2023-04-11 16:31:54,042 - INFO - Best high estimate for time is: 10345420746857.014 generations.

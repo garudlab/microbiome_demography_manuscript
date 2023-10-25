@@ -1,0 +1,13 @@
+2023-07-20 15:32:01,222 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-07-20 15:32:01,222 - INFO - Progress is being logged to ../Analysis/Barnesiella_intestinihominis_62208_downsampled_14/accessory_empirical_syn_downsampling.log
+
+2023-07-20 15:32:01,222 - INFO - Parsed the following arguments:
+	input_sfs = ../Analysis/Barnesiella_intestinihominis_62208/accessory_empirical_syn_sfs.txt
+	sample_size = 14
+	outprefix = ../Analysis/Barnesiella_intestinihominis_62208_downsampled_14/accessory_empirical_syn
+
+2023-07-20 15:32:01,222 - INFO - Parsing input SFS.
+2023-07-20 15:32:01,224 - INFO - Formatting output SFS.
+2023-07-20 15:32:01,231 - INFO - Finished downsampling.
+2023-07-20 15:32:01,231 - INFO - Pipeline executed succesfully.

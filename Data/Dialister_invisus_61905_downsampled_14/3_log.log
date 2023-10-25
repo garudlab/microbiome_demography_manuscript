@@ -1,0 +1,24 @@
+2023-04-11 16:30:39,084 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-04-11 16:30:39,085 - INFO - Progress is being logged to ../Analysis/Dialister_invisus_61905_downsampled_14/3_log.log
+
+2023-04-11 16:30:39,085 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Dialister_invisus_61905_downsampled_14/empirical_syn_downsampled_sfs.txt
+	input_shape = 1.5
+	input_scale = 0.1
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Dialister_invisus_61905_downsampled_14/3
+
+2023-04-11 16:30:39,088 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-04-11 16:32:21,804 - INFO - Finished plotting likelihood surface.
+2023-04-11 16:32:21,804 - INFO - Pipeline executed succesfully.
+2023-04-11 16:32:21,804 - INFO - The best fit parameters are: [0.015885750209411846, 0.2728494073695601].
+2023-04-11 16:32:21,804 - INFO - The likelihood of the mle is: -98.43357959815603.
+2023-04-11 16:32:21,805 - INFO - Non-scaled best-fit model spectrum: [-- 0.024849057280670408 0.012516634082181647 0.008405825339851097 0.006350420930621247 0.005117178258867748 0.00429501645635448 0.0037077580078424734 0.0032673141556416045 0.0029247467010122714 0.0026506927246994607 0.002426466732628203 0.0022396117287453265 0.0020815036388569046 --].
+
+2023-04-11 16:32:21,805 - INFO - Scaled best-fit model spectrum: [-- 8419.64975969021 4241.033128614841 2848.1605762053982 2151.72428710319 1733.862504759191 1455.2879759644088 1256.3061635341885 1107.0697988522675 990.9970660129742 898.1388754690933 822.1639884166324 758.8515789851817 705.2795369556576 --].
+
+2023-04-11 16:32:21,805 - INFO - Scaled best-fit theta: 338831.7578647014.
+2023-04-11 16:32:21,805 - INFO - Best low estimate for time is: 4198906114508695.0 generations.
+2023-04-11 16:32:21,805 - INFO - Best high estimate for time is: 7131965532731681.0 generations.

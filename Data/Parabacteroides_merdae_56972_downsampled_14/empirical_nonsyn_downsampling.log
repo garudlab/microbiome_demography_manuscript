@@ -1,0 +1,13 @@
+2023-07-20 15:32:01,411 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-07-20 15:32:01,411 - INFO - Progress is being logged to ../Analysis/Parabacteroides_merdae_56972_downsampled_14/empirical_nonsyn_downsampling.log
+
+2023-07-20 15:32:01,411 - INFO - Parsed the following arguments:
+	input_sfs = ../Analysis/Parabacteroides_merdae_56972/empirical_nonsyn_sfs.txt
+	sample_size = 14
+	outprefix = ../Analysis/Parabacteroides_merdae_56972_downsampled_14/empirical_nonsyn
+
+2023-07-20 15:32:01,411 - INFO - Parsing input SFS.
+2023-07-20 15:32:01,422 - INFO - Formatting output SFS.
+2023-07-20 15:32:01,427 - INFO - Finished downsampling.
+2023-07-20 15:32:01,427 - INFO - Pipeline executed succesfully.

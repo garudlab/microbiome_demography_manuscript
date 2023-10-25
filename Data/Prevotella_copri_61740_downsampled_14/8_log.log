@@ -1,0 +1,24 @@
+2023-04-11 16:30:51,287 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-04-11 16:30:51,287 - INFO - Progress is being logged to ../Analysis/Prevotella_copri_61740_downsampled_14/8_log.log
+
+2023-04-11 16:30:51,287 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Prevotella_copri_61740_downsampled_14/empirical_syn_downsampled_sfs.txt
+	input_shape = 2.0
+	input_scale = 1.5
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Prevotella_copri_61740_downsampled_14/8
+
+2023-04-11 16:30:51,289 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-04-11 16:31:39,135 - INFO - Finished plotting likelihood surface.
+2023-04-11 16:31:39,137 - INFO - Pipeline executed succesfully.
+2023-04-11 16:31:39,137 - INFO - The best fit parameters are: [1.1790036385936888, 1.3454910923571979].
+2023-04-11 16:31:39,137 - INFO - The likelihood of the mle is: -859.4210823204558.
+2023-04-11 16:31:39,137 - INFO - Non-scaled best-fit model spectrum: [-- 1.4159221084365565 0.5213449324509899 0.3349265946590107 0.2501416632727291 0.2000138798226565 0.16666809077018468 0.14285728449976673 0.12500000871760936 0.11111110786534457 0.09999999702065125 0.09090908902243379 0.08333333228901778 0.07692307644040691 --].
+
+2023-04-11 16:31:39,137 - INFO - Scaled best-fit model spectrum: [-- 18927.728762360257 6969.221975041658 4477.223500667433 3343.8375786220117 2673.7406269973467 2227.981607633642 1909.684096764758 1670.9720444382692 1485.3083369697442 1336.777502495315 1215.252285981937 1113.981271308641 1028.290410718991 --].
+
+2023-04-11 16:31:39,137 - INFO - Scaled best-fit theta: 13367.775423225801.
+2023-04-11 16:31:39,137 - INFO - Best low estimate for time is: 11006813101463.756 generations.
+2023-04-11 16:31:39,137 - INFO - Best high estimate for time is: 18695395782633.293 generations.

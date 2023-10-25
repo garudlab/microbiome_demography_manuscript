@@ -1,0 +1,27 @@
+2023-08-01 08:03:46,923 - INFO - Beginning execution of fit_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-08-01 08:03:46,923 - INFO - Progress is being logged to ../Analysis/Bacteroides_uniformis_57318_downsampled_14/accessory_log.log
+
+2023-08-01 08:03:46,923 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Bacteroides_uniformis_57318_downsampled_14/accessory_empirical_syn_downsampled_sfs.txt
+	nonsyn_input_sfs = ../Analysis/Bacteroides_uniformis_57318_downsampled_14/accessory_empirical_nonsyn_downsampled_sfs.txt
+	input_demography = ../Analysis/Bacteroides_uniformis_57318_downsampled_14/accessory_two_epoch_demography.txt
+	input_model = two_epoch
+	initial_alpha = 0.2
+	initial_beta = 0.1
+	outprefix = ../Analysis/Bacteroides_uniformis_57318_downsampled_14/accessory
+
+2023-08-01 08:03:46,975 - INFO - Loading input demography.
+2023-08-01 08:03:46,986 - INFO - Input demographic parameters are: [0.45802074, 0.03636818].
+2023-08-01 08:03:46,986 - INFO - Input theta_syn is: 899.5440827606402.
+2023-08-01 08:03:46,986 - INFO - Generating spectrum from input demography.
+2023-08-01 08:03:51,410 - INFO - Fitting DFE.
+2023-08-01 08:04:49,612 - WARNING - The integral is probably divergent, or slowly convergent.
+2023-08-01 08:04:49,733 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2023-08-01 08:05:36,249 - INFO - Fitting Neutral + Gamma DFE
+2023-08-01 08:06:48,315 - INFO - Computing intermediate summary statistics.
+2023-08-01 08:06:48,318 - INFO - Outputting results.
+2023-08-01 08:06:48,323 - INFO - Pipeline executed succesfully.

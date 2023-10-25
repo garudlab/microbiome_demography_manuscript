@@ -1,0 +1,13 @@
+2023-03-08 13:35:37,549 - INFO - Beginning execution of compute_downsampled_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-03-08 13:35:37,549 - INFO - Progress is being logged to ../Analysis/Bacteroides_stercoris_56735_downsampled_14/downsampling.log
+
+2023-03-08 13:35:37,549 - INFO - Parsed the following arguments:
+	outprefix = ../Analysis/Bacteroides_stercoris_56735_downsampled_14/
+	species = Bacteroides_stercoris_56735
+	sample_size = 14
+
+2023-03-08 13:41:21,237 - INFO - Formatting intermediate files.
+2023-03-08 13:41:35,154 - INFO - Formatting output SFSs.
+2023-03-08 13:41:36,803 - INFO - Finished downsampling.
+2023-03-08 13:41:36,803 - INFO - Pipeline executed succesfully.

@@ -1,0 +1,24 @@
+2023-04-11 16:30:51,069 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-04-11 16:30:51,069 - INFO - Progress is being logged to ../Analysis/Bacteroides_vulgatus_57955_downsampled_14/10_log.log
+
+2023-04-11 16:30:51,069 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Bacteroides_vulgatus_57955_downsampled_14/empirical_syn_downsampled_sfs.txt
+	input_shape = 1.0
+	input_scale = 15.0
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Bacteroides_vulgatus_57955_downsampled_14/10
+
+2023-04-11 16:30:51,074 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-04-11 16:32:30,555 - INFO - Finished plotting likelihood surface.
+2023-04-11 16:32:30,556 - INFO - Pipeline executed succesfully.
+2023-04-11 16:32:30,556 - INFO - The best fit parameters are: [2.1167900805288897, 1.0511515179619988].
+2023-04-11 16:32:30,556 - INFO - The likelihood of the mle is: -65.46227208081973.
+2023-04-11 16:32:30,556 - INFO - Non-scaled best-fit model spectrum: [-- 0.7965157758420478 0.403011719807117 0.2717830287214047 0.20612349676787156 0.1666918640896412 0.14037437690676705 0.121550854678353 0.10741120683392551 0.096394271680163 0.08756335196285497 0.08032236739483435 0.07427393091988534 0.0691429282393782 --].
+
+2023-04-11 16:32:30,556 - INFO - Scaled best-fit model spectrum: [-- 5347.815186346544 2705.824869798347 1824.7540757759089 1383.9152967343973 1119.1709056567047 942.4750235515843 816.0936999334484 721.1599575451288 647.1921405737677 587.9012539322556 539.2852083856063 498.67594311375433 464.22633786018275 --].
+
+2023-04-11 16:32:30,556 - INFO - Scaled best-fit theta: 6714.010379383919.
+2023-04-11 16:32:30,556 - INFO - Best low estimate for time is: 2405505244690.9155 generations.
+2023-04-11 16:32:30,557 - INFO - Best high estimate for time is: 4085821408261.776 generations.

@@ -1,0 +1,24 @@
+2023-02-22 23:30:41,083 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-02-22 23:30:41,084 - INFO - Progress is being logged to ../Analysis/Phascolarctobacterium_sp_59817_downsampled_14/likelihood_surface_unmasked/log.log
+
+2023-02-22 23:30:41,084 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Phascolarctobacterium_sp_59817_downsampled_14/empirical_sfs.txt
+	input_shape = 1.0
+	input_scale = 0.005
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Phascolarctobacterium_sp_59817_downsampled_14/likelihood_surface_unmasked/
+
+2023-02-22 23:30:41,086 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-02-23 00:23:38,466 - INFO - Finished plotting likelihood surface.
+2023-02-23 00:23:38,468 - INFO - Pipeline executed succesfully.
+2023-02-23 00:23:38,468 - INFO - The best fit parameters are: [0.0002042243140799082, 0.0003690869375185479].
+2023-02-23 00:23:38,468 - INFO - The likelihood of the mle is: -393.1705445351304.
+2023-02-23 00:23:38,469 - INFO - Non-scaled best-fit model spectrum: [-- 0.00013053926816105417 6.526964376576444e-05 4.351309708922664e-05 3.26348236478839e-05 2.610785952302931e-05 2.175655005908288e-05 1.8648471830753093e-05 1.631741312501363e-05 1.45043674344996e-05 1.3053930854731886e-05 1.1867209991916747e-05 1.0878275916837448e-05 1.0041485524640608e-05 --].
+
+2023-02-23 00:23:38,469 - INFO - Scaled best-fit model spectrum: [-- 4542.47364104287 2271.2371575459642 1514.1581483672007 1135.6186401910804 908.4949331958397 757.079126883743 648.9249781331264 567.8093653699154 504.7194432707242 454.2475046394267 412.95228125911285 378.5395943177818 349.42116617597213 --].
+
+2023-02-23 00:23:38,470 - INFO - Scaled best-fit theta: 34797756.29995525.
+2023-02-23 00:23:38,470 - INFO - Best low estimate for time is: 4.5374227177695224e+16 generations.
+2023-02-23 00:23:38,470 - INFO - Best high estimate for time is: 7.70694593974088e+16 generations.

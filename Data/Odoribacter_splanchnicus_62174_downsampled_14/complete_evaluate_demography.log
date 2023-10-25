@@ -1,0 +1,24 @@
+2023-06-22 16:55:15,057 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-06-22 16:55:15,057 - INFO - Progress is being logged to ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/complete_evaluate_demography.log
+
+2023-06-22 16:55:15,057 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/empirical_syn_downsampled_sfs.txt
+	model_type = two_epoch
+	params_list = [0.7516755, 0.2090903]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Odoribacter_splanchnicus_62174_downsampled_14/complete
+
+2023-06-22 16:55:15,083 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2023-06-22 16:55:15,085 - INFO - Beginning optimization with guess, [0.7516755, 0.2090903].
+2023-06-22 16:55:15,085 - INFO - Finished optimization with guess, [0.7516755, 0.2090903].
+2023-06-22 16:55:15,085 - INFO - Best fit parameters: [0.7516755, 0.2090903].
+2023-06-22 16:55:15,115 - INFO - Maximum log composite likelihood: -31.802972609671542.
+2023-06-22 16:55:15,115 - INFO - Outputting residual between model and data.
+2023-06-22 16:55:15,552 - INFO - Optimal value of theta: 3800.847031396657.
+2023-06-22 16:55:15,553 - INFO - Synonymous input SFS: [-- 3445.9000999783193 2006.734116145115 1517.4342825191948 1274.8628846527627 1151.2172817496298 1097.122177734005 541.8397108633046 -- -- -- -- -- -- --].
+2023-06-22 16:55:15,553 - INFO - Scaled spectrum: [-- 3448.0387034735804 1999.990814172332 1516.505729294701 1283.083646826959 1157.3902438771627 1093.3340528801607 536.7673631174347 -- -- -- -- -- -- --].
+2023-06-22 16:55:15,554 - INFO - Converting and interpreting Tau estimates.
+2023-06-22 16:55:15,554 - INFO - Finished demographic evaluation.
+2023-06-22 16:55:15,555 - INFO - Pipeline executed succesfully.

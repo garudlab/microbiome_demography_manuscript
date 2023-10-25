@@ -1,0 +1,13 @@
+2023-07-20 15:32:01,633 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-07-20 15:32:01,633 - INFO - Progress is being logged to ../Analysis/Parabacteroides_distasonis_56985_downsampled_14/accessory_empirical_syn_downsampling.log
+
+2023-07-20 15:32:01,633 - INFO - Parsed the following arguments:
+	input_sfs = ../Analysis/Parabacteroides_distasonis_56985/accessory_empirical_syn_sfs.txt
+	sample_size = 14
+	outprefix = ../Analysis/Parabacteroides_distasonis_56985_downsampled_14/accessory_empirical_syn
+
+2023-07-20 15:32:01,633 - INFO - Parsing input SFS.
+2023-07-20 15:32:01,640 - INFO - Formatting output SFS.
+2023-07-20 15:32:01,647 - INFO - Finished downsampling.
+2023-07-20 15:32:01,648 - INFO - Pipeline executed succesfully.

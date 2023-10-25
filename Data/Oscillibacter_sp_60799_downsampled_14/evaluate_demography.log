@@ -1,0 +1,22 @@
+2023-03-09 12:17:26,561 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-03-09 12:17:26,561 - INFO - Progress is being logged to ../Analysis/Oscillibacter_sp_60799_downsampled_14/evaluate_demography.log
+
+2023-03-09 12:17:26,561 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Oscillibacter_sp_60799_downsampled_14/downsampled_syn_sfs.txt
+	model_type = two_epoch
+	nu = 5.09949
+	tau = 0.0852462
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Oscillibacter_sp_60799_downsampled_14/
+
+2023-03-09 12:17:26,563 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2023-03-09 12:17:26,565 - INFO - Beginning optimization with guess, [5.09949, 0.0852462].
+2023-03-09 12:17:26,880 - INFO - Finished optimization with guess, [5.09949, 0.0852462].
+2023-03-09 12:17:26,880 - INFO - Best fit parameters: [5.10340207 0.08553574].
+2023-03-09 12:17:26,914 - INFO - Maximum log composite likelihood: -36.75208481708387.
+2023-03-09 12:17:26,915 - INFO - Optimal value of theta: 4678.834219575353.
+2023-03-09 12:17:26,916 - INFO - Converting and interpreting Tau estimates.
+2023-03-09 12:17:26,917 - INFO - Finished demographic evaluation.
+2023-03-09 12:17:26,917 - INFO - Pipeline executed succesfully.

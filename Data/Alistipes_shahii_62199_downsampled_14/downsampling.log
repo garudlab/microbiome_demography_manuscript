@@ -1,0 +1,13 @@
+2023-03-08 13:31:47,592 - INFO - Beginning execution of compute_downsampled_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-03-08 13:31:47,592 - INFO - Progress is being logged to ../Analysis/Alistipes_shahii_62199_downsampled_14/downsampling.log
+
+2023-03-08 13:31:47,592 - INFO - Parsed the following arguments:
+	outprefix = ../Analysis/Alistipes_shahii_62199_downsampled_14/
+	species = Alistipes_shahii_62199
+	sample_size = 14
+
+2023-03-08 13:36:23,010 - INFO - Formatting intermediate files.
+2023-03-08 13:36:32,047 - INFO - Formatting output SFSs.
+2023-03-08 13:36:33,030 - INFO - Finished downsampling.
+2023-03-08 13:36:33,031 - INFO - Pipeline executed succesfully.

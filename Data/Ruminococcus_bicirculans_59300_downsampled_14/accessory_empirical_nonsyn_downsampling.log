@@ -1,0 +1,13 @@
+2023-07-20 15:32:05,275 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-07-20 15:32:05,275 - INFO - Progress is being logged to ../Analysis/Ruminococcus_bicirculans_59300_downsampled_14/accessory_empirical_nonsyn_downsampling.log
+
+2023-07-20 15:32:05,275 - INFO - Parsed the following arguments:
+	input_sfs = ../Analysis/Ruminococcus_bicirculans_59300/accessory_empirical_nonsyn_sfs.txt
+	sample_size = 14
+	outprefix = ../Analysis/Ruminococcus_bicirculans_59300_downsampled_14/accessory_empirical_nonsyn
+
+2023-07-20 15:32:05,275 - INFO - Parsing input SFS.
+2023-07-20 15:32:05,277 - INFO - Formatting output SFS.
+2023-07-20 15:32:05,282 - INFO - Finished downsampling.
+2023-07-20 15:32:05,283 - INFO - Pipeline executed succesfully.

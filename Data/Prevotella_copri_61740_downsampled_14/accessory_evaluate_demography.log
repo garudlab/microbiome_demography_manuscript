@@ -1,0 +1,24 @@
+2023-09-27 14:17:06,342 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-09-27 14:17:06,343 - INFO - Progress is being logged to ../Analysis/Prevotella_copri_61740_downsampled_14/accessory_evaluate_demography.log
+
+2023-09-27 14:17:06,343 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Prevotella_copri_61740_downsampled_14/accessory_empirical_syn_downsampled_sfs.txt
+	model_type = three_epoch
+	params_list = [0.05227766, 0.03266077, 0.00544861, 0.00150649]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Prevotella_copri_61740_downsampled_14/accessory
+
+2023-09-27 14:17:06,344 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2023-09-27 14:17:06,345 - INFO - Beginning optimization with guess, [0.05227766, 0.03266077, 0.00544861, 0.00150649].
+2023-09-27 14:17:06,345 - INFO - Finished optimization with guess, [0.05227766, 0.03266077, 0.00544861, 0.00150649].
+2023-09-27 14:17:06,345 - INFO - Best fit parameters: [0.05227766, 0.03266077, 0.00544861, 0.00150649].
+2023-09-27 14:17:06,374 - INFO - Maximum log composite likelihood: -100.27108074970124.
+2023-09-27 14:17:06,374 - INFO - Outputting residual between model and data.
+2023-09-27 14:17:06,812 - INFO - Optimal value of theta: 814.2153821992098.
+2023-09-27 14:17:06,812 - INFO - Synonymous input SFS: [-- 433.0 379.0 456.0 177.0 263.0 153.0 159.0 -- -- -- -- -- -- --].
+2023-09-27 14:17:06,812 - INFO - Scaled spectrum: [-- 467.552102303682 370.2922270761328 310.5055057489852 272.19409555523646 248.41144138041957 235.40881553956964 115.63581239597433 -- -- -- -- -- -- --].
+2023-09-27 14:17:06,813 - INFO - Converting and interpreting Tau estimates.
+2023-09-27 14:17:06,814 - INFO - Finished demographic evaluation.
+2023-09-27 14:17:06,814 - INFO - Pipeline executed succesfully.

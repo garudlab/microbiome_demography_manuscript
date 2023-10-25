@@ -1,0 +1,13 @@
+2023-02-22 23:30:39,829 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-02-22 23:30:39,829 - INFO - Progress is being logged to ../Analysis/Eubacterium_rectale_56927_downsampled_14/likelihood_surface_unmasked/log.log
+
+2023-02-22 23:30:39,829 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Eubacterium_rectale_56927_downsampled_14/empirical_sfs.txt
+	input_shape = 1.0
+	input_scale = 0.005
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Eubacterium_rectale_56927_downsampled_14/likelihood_surface_unmasked/
+
+2023-02-22 23:30:39,833 - INFO - Beginning demographic inference for two-epoch demographic model.

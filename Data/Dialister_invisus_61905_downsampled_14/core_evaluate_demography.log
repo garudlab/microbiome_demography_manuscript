@@ -1,0 +1,24 @@
+2023-09-27 14:14:40,340 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-09-27 14:14:40,340 - INFO - Progress is being logged to ../Analysis/Dialister_invisus_61905_downsampled_14/core_evaluate_demography.log
+
+2023-09-27 14:14:40,340 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Dialister_invisus_61905_downsampled_14/core_empirical_syn_downsampled_sfs.txt
+	model_type = three_epoch
+	params_list = [1.52479056, 36.1811621, 0.00652143522, 0.0191943765]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Dialister_invisus_61905_downsampled_14/core
+
+2023-09-27 14:14:40,341 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2023-09-27 14:14:40,343 - INFO - Beginning optimization with guess, [1.52479056, 36.1811621, 0.00652143522, 0.0191943765].
+2023-09-27 14:14:40,343 - INFO - Finished optimization with guess, [1.52479056, 36.1811621, 0.00652143522, 0.0191943765].
+2023-09-27 14:14:40,343 - INFO - Best fit parameters: [1.52479056, 36.1811621, 0.00652143522, 0.0191943765].
+2023-09-27 14:14:40,369 - INFO - Maximum log composite likelihood: -38.98430374226882.
+2023-09-27 14:14:40,369 - INFO - Outputting residual between model and data.
+2023-09-27 14:14:40,767 - INFO - Optimal value of theta: 6984.402385599577.
+2023-09-27 14:14:40,767 - INFO - Synonymous input SFS: [-- 8535.984573812915 3953.195850273138 2918.9021645689554 2508.9183571260273 2254.4005482837715 2063.0188792036924 992.9165429050341 -- -- -- -- -- -- --].
+2023-09-27 14:14:40,768 - INFO - Scaled spectrum: [-- 8531.616581736687 4080.137355607015 2963.2208313486635 2444.5477404258218 2172.925471445209 2037.1172384000624 997.7716972100768 -- -- -- -- -- -- --].
+2023-09-27 14:14:40,768 - INFO - Converting and interpreting Tau estimates.
+2023-09-27 14:14:40,770 - INFO - Finished demographic evaluation.
+2023-09-27 14:14:40,770 - INFO - Pipeline executed succesfully.

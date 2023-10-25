@@ -1,0 +1,24 @@
+2023-09-27 14:16:53,685 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-09-27 14:16:53,685 - INFO - Progress is being logged to ../Analysis/Faecalibacterium_prausnitzii_57453_downsampled_14/accessory_evaluate_demography.log
+
+2023-09-27 14:16:53,685 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Faecalibacterium_prausnitzii_57453_downsampled_14/accessory_empirical_syn_downsampled_sfs.txt
+	model_type = three_epoch
+	params_list = [0.04513877, 0.05480909, 0.00410616, 0.0039278]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Faecalibacterium_prausnitzii_57453_downsampled_14/accessory
+
+2023-09-27 14:16:53,686 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2023-09-27 14:16:53,688 - INFO - Beginning optimization with guess, [0.04513877, 0.05480909, 0.00410616, 0.0039278].
+2023-09-27 14:16:53,688 - INFO - Finished optimization with guess, [0.04513877, 0.05480909, 0.00410616, 0.0039278].
+2023-09-27 14:16:53,688 - INFO - Best fit parameters: [0.04513877, 0.05480909, 0.00410616, 0.0039278].
+2023-09-27 14:16:53,717 - INFO - Maximum log composite likelihood: -28.27617085263944.
+2023-09-27 14:16:53,717 - INFO - Outputting residual between model and data.
+2023-09-27 14:16:54,154 - INFO - Optimal value of theta: 1198.0963349812962.
+2023-09-27 14:16:54,155 - INFO - Synonymous input SFS: [-- 654.8931134020286 558.4485465213822 454.1258679225988 390.7994974133218 355.1745131562242 343.4039421465782 171.4969796835355 -- -- -- -- -- -- --].
+2023-09-27 14:16:54,155 - INFO - Scaled spectrum: [-- 669.304644017566 532.4783622565001 450.26708810550423 397.1548716820253 363.8408856902487 345.48565085516225 169.81095763866264 -- -- -- -- -- -- --].
+2023-09-27 14:16:54,156 - INFO - Converting and interpreting Tau estimates.
+2023-09-27 14:16:54,157 - INFO - Finished demographic evaluation.
+2023-09-27 14:16:54,157 - INFO - Pipeline executed succesfully.

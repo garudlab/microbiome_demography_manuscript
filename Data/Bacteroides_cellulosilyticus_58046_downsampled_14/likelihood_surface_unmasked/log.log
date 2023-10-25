@@ -1,0 +1,24 @@
+2023-02-22 23:30:39,949 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-02-22 23:30:39,950 - INFO - Progress is being logged to ../Analysis/Bacteroides_cellulosilyticus_58046_downsampled_14/likelihood_surface_unmasked/log.log
+
+2023-02-22 23:30:39,950 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Bacteroides_cellulosilyticus_58046_downsampled_14/empirical_sfs.txt
+	input_shape = 1.0
+	input_scale = 0.005
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Bacteroides_cellulosilyticus_58046_downsampled_14/likelihood_surface_unmasked/
+
+2023-02-22 23:30:39,951 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-02-23 00:05:07,643 - INFO - Finished plotting likelihood surface.
+2023-02-23 00:05:07,643 - INFO - Pipeline executed succesfully.
+2023-02-23 00:05:07,644 - INFO - The best fit parameters are: [0.0005321307995345788, 0.0008165690742548795].
+2023-02-23 00:05:07,644 - INFO - The likelihood of the mle is: -150.2710500388157.
+2023-02-23 00:05:07,644 - INFO - Non-scaled best-fit model spectrum: [-- 1.439242019897564 0.54180010771448 0.338691662851665 0.2507724307095751 0.20011747094042193 0.16668486150436126 0.14285993699108507 0.12500041256149408 0.1111111659074467 0.1000000046924864 0.0909090899208285 0.08333333237684086 0.07692307644674277 --].
+
+2023-02-23 00:05:07,644 - INFO - Scaled best-fit model spectrum: [-- 11852.94846763809 4462.02144442501 2789.3118535304893 2065.248691471983 1648.0772779964461 1372.7413780534314 1176.5300400038868 1029.4470478497722 915.0614736595081 823.5549587886339 748.6862829005993 686.2957589089519 633.503780802843 --].
+
+2023-02-23 00:05:07,644 - INFO - Scaled best-fit theta: 8235.549201434313.
+2023-02-23 00:05:07,644 - INFO - Best low estimate for time is: 9118089848146.756 generations.
+2023-02-23 00:05:07,644 - INFO - Best high estimate for time is: 15487343786190.447 generations.

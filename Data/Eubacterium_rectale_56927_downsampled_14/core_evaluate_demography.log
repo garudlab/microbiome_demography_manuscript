@@ -1,0 +1,24 @@
+2023-09-27 14:14:45,156 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-09-27 14:14:45,156 - INFO - Progress is being logged to ../Analysis/Eubacterium_rectale_56927_downsampled_14/core_evaluate_demography.log
+
+2023-09-27 14:14:45,156 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Eubacterium_rectale_56927_downsampled_14/core_empirical_syn_downsampled_sfs.txt
+	model_type = three_epoch
+	params_list = [0.0007802, 0.00337832, 0.356286, 0.00390954]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Eubacterium_rectale_56927_downsampled_14/core
+
+2023-09-27 14:14:45,157 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2023-09-27 14:14:45,158 - INFO - Beginning optimization with guess, [0.0007802, 0.00337832, 0.356286, 0.00390954].
+2023-09-27 14:14:45,158 - INFO - Finished optimization with guess, [0.0007802, 0.00337832, 0.356286, 0.00390954].
+2023-09-27 14:14:45,158 - INFO - Best fit parameters: [0.0007802, 0.00337832, 0.356286, 0.00390954].
+2023-09-27 14:14:53,462 - INFO - Maximum log composite likelihood: -36.695123737616996.
+2023-09-27 14:14:53,463 - INFO - Outputting residual between model and data.
+2023-09-27 14:14:53,908 - INFO - Optimal value of theta: 3927593.3636905816.
+2023-09-27 14:14:53,908 - INFO - Synonymous input SFS: [-- 13065.136712312938 6360.102311638308 4299.841902986458 3355.7445949667904 2861.213554034498 2617.4289541173357 1271.995530511503 -- -- -- -- -- -- --].
+2023-09-27 14:14:53,909 - INFO - Scaled spectrum: [-- 12998.423826966276 6451.1660922101055 4341.892579309337 3358.078319698936 2842.9914994653373 2585.539758965839 1253.3714839520076 -- -- -- -- -- -- --].
+2023-09-27 14:14:53,910 - INFO - Converting and interpreting Tau estimates.
+2023-09-27 14:14:53,911 - INFO - Finished demographic evaluation.
+2023-09-27 14:14:53,911 - INFO - Pipeline executed succesfully.

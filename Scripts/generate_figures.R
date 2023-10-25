@@ -3211,9 +3211,7 @@ pheatmap(dfe_constant_s_matrix,
 
 color_scale = colorRampPalette(c('red','orange', 'yellow', 'white'), bias=0.5)(100)
 
-
-col_scheme = c(rep('black', each=1), rep('darkorange', each=4), rep('black', each=4), rep('darkviolet', each=8), rep('black', each=10
-))
+col_scheme = c(rep('black', each=1), rep('darkorange', each=4), rep('black', each=4), rep('darkviolet', each=8), rep('black', each=10))
 
 ### Figure S4A
 # 800 x 1200

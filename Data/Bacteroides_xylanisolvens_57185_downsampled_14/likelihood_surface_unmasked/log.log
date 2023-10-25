@@ -1,0 +1,24 @@
+2023-02-22 23:30:39,881 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-02-22 23:30:39,881 - INFO - Progress is being logged to ../Analysis/Bacteroides_xylanisolvens_57185_downsampled_14/likelihood_surface_unmasked/log.log
+
+2023-02-22 23:30:39,882 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../Analysis/Bacteroides_xylanisolvens_57185_downsampled_14/empirical_sfs.txt
+	input_shape = 1.0
+	input_scale = 0.005
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../Analysis/Bacteroides_xylanisolvens_57185_downsampled_14/likelihood_surface_unmasked/
+
+2023-02-22 23:30:39,885 - INFO - Beginning demographic inference for two-epoch demographic model.
+2023-02-23 00:13:45,689 - INFO - Finished plotting likelihood surface.
+2023-02-23 00:13:45,690 - INFO - Pipeline executed succesfully.
+2023-02-23 00:13:45,690 - INFO - The best fit parameters are: [0.000183605086789186, 0.0019191346607368546].
+2023-02-23 00:13:45,690 - INFO - The likelihood of the mle is: -32.97718199419819.
+2023-02-23 00:13:45,690 - INFO - Non-scaled best-fit model spectrum: [-- 0.00018314748012031185 9.33728313461586e-05 6.344794125266941e-05 4.84854960639704e-05 3.950802886803884e-05 3.352305067215981e-05 2.924806619169417e-05 2.6041827783815683e-05 2.354808675786844e-05 2.1553093899395887e-05 1.9920826980972274e-05 1.8560604517632294e-05 1.740964701976598e-05 --].
+
+2023-02-23 00:13:45,690 - INFO - Scaled best-fit model spectrum: [-- 2158.828679726443 1100.6209099078496 747.8849021339623 571.5168965737482 465.6960922626604 395.1488886193811 344.7580282277882 306.9648823738482 277.5702128807772 254.05447684176227 234.81432877012742 218.7808716745808 205.21409994554722 --].
+
+2023-02-23 00:13:45,690 - INFO - Scaled best-fit theta: 11787378.555840801.
+2023-02-23 00:13:45,690 - INFO - Best low estimate for time is: 8.889446917812597e+16 generations.
+2023-02-23 00:13:45,690 - INFO - Best high estimate for time is: 1.5098987044225808e+17 generations.

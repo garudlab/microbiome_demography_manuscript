@@ -1,0 +1,13 @@
+2023-03-08 13:40:12,986 - INFO - Beginning execution of compute_downsampled_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2023-03-08 13:40:12,986 - INFO - Progress is being logged to ../Analysis/Dialister_invisus_61905_downsampled_14/downsampling.log
+
+2023-03-08 13:40:12,986 - INFO - Parsed the following arguments:
+	outprefix = ../Analysis/Dialister_invisus_61905_downsampled_14/
+	species = Dialister_invisus_61905
+	sample_size = 14
+
+2023-03-08 13:41:54,212 - INFO - Formatting intermediate files.
+2023-03-08 13:42:00,560 - INFO - Formatting output SFSs.
+2023-03-08 13:42:01,481 - INFO - Finished downsampling.
+2023-03-08 13:42:01,482 - INFO - Pipeline executed succesfully.
