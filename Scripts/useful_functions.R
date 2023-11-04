@@ -930,7 +930,7 @@ plot_best_fit_sfs = function(input_data) {
     theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
                        panel.grid.minor = element_blank(), axis.line = element_line(colour = "black")) +
     scale_fill_manual(values=c("blue4", "steelblue3", "goldenrod3", "goldenrod1")) +
-    theme(legend.position="none") +
+    # theme(legend.position="none") +
     theme(plot.title = element_text(face = "italic"))
   return(fig)
 }

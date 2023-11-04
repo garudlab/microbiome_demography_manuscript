@@ -1,5 +1,7 @@
 # Figure 3
 
+[Figure 3](../Summary/figure_3.png) is comprised of several components.
+
 Figures 3A-B are comprised of the synonymous and nonsynonymous SFSs of empirical and model data.
 
 Figures 3C-D are comprised of the likelihood surfaces of demographic inference performed via `Dadi`.

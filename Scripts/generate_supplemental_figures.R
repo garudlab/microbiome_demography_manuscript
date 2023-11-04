@@ -1,6 +1,28 @@
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 source('useful_functions.R')
 
+plot_best_fit_sfs = function(input_data) {
+  input_data = data.frame(input_data)
+  colnames(input_data) = c(
+    'Empirical Synonymous', 
+    'Model Synonymous',
+    'Empirical Nonsynonymous',
+    'Model Nonsynonymous',
+    'Species',
+    'X.axis')
+  fig = ggplot(melt(input_data, id=c('Species', 'X.axis')), aes(x=X.axis, y=as.numeric(value), fill=variable)) +
+    geom_bar(position='dodge2', stat='identity') +
+    labs(x = "", fill = "") +
+    xlab('Minor allele frequency') + 
+    ylab('Proportion of segregating sites') +
+    theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+                       panel.grid.minor = element_blank(), axis.line = element_line(colour = "black")) +
+    scale_fill_manual(values=c("blue4", "steelblue3", "goldenrod3", "goldenrod1")) +
+    # theme(legend.position="none") +
+    theme(plot.title = element_text(face = "italic"))
+  return(fig)
+}
+
 # Supplemental Figure 1
 
 phylogenetic_levels_MIDAS = c(
@@ -38,10 +60,13 @@ table_s3 = read.csv('../Supplement/Supplemental_Table_3.csv')
 table_s3$Species = factor(table_s3$Species, levels=phylogenetic_levels_MIDAS)
 table_s3 = table_s3[order(table_s3$Species), ]
 
-plot_AIC = ggplot() +
-  geom_jitter(data=table_s3, mapping=aes(x=Species, y=`Three.epoch..AIC`), size=2, shape=21, fill="blue", width = 0.15) +
-  geom_jitter(data=table_s3, mapping=aes(x=Species, y=`Two.epoch..AIC`), size=2, shape=21, fill="green", width = 0.15) +
-  geom_jitter(data=table_s3, mapping=aes(x=Species, y=`One.epoch..AIC`), size=2, shape=21, fill="red", width = 0.15) +
+plot_AIC_table = data.frame(table_s3$Species, table_s3$`Three.epoch..AIC`, table_s3$`Two.epoch..AIC`, table_s3$`One.epoch..AIC`)
+names(plot_AIC_table) = c('Species', 'Three-epoch', 'Two-epoch', 'One-epoch')
+plot_AIC_table = melt(plot_AIC_table)
+names(plot_AIC_table) = c('Species', 'Model', 'AIC')
+
+plot_AIC = ggplot(data=plot_AIC_table) +
+  geom_jitter(mapping=aes(x=Species, y=AIC, colour=Model, fill=Model), size=2, shape=21, width = 0.15) +
   scale_y_log10() +
   # coord_flip() +
   theme_bw() +
@@ -230,7 +255,8 @@ p_copri_core_gamma_dfe = gamma_sfs_from_dfe('../Analysis/Prevotella_copri_61740_
 r_bicirculans_core_gamma_dfe = gamma_sfs_from_dfe('../Analysis/Ruminococcus_bicirculans_59300_downsampled_14/core_inferred_DFE.txt') 
 r_bromii_core_gamma_dfe = gamma_sfs_from_dfe('../Analysis/Ruminococcus_bromii_62047_downsampled_14/core_inferred_DFE.txt') 
 
-x_axis = 1:14
+one_epoch_14 = sfs_from_demography('../Analysis/Akkermansia_muciniphila_55290_downsampled_14/core_one_epoch_demography.txt')
+x_axis = 1:length(one_epoch_14)
 
 a_muciniphila_best_fit = cbind(
   proportional_sfs(a_muciniphila_hmp_qp_syn[-1]),
@@ -965,11 +991,12 @@ rownames(dfe_constant_s_matrix) = phylogenetic_levels
 colnames(dfe_constant_s_matrix) = phylogenetic_levels
 dfe_constant_s_matrix
 
-color_scale = colorRampPalette(c('red','orange', 'yellow', 'white'), bias=0.5)(100)
+color_scale = colorRampPalette(c('white', 'yellow', 'orange', 'red'), bias=2.5)(100)
+
 col_scheme = c(rep('black', each=1), rep('darkorange', each=4), rep('black', each=4), rep('darkviolet', each=8), rep('black', each=10))
 
 ### Figure S6A
-png("../Supplement/Supplemental_Figure_6A.png", width = 800, height = 1200)
+png("../Supplement/Supplemental_Figure_6A.png", width = 1200, height = 800)
 # 800 x 1200 dimensions of saved image
 Heatmap(dfe_comparison_matrix, rect_gp = gpar(type = "none"),
   col=color_scale,
@@ -993,7 +1020,7 @@ dev.off()
 
 ### Figure S6B
 
-png("../Supplement/Supplemental_Figure_6B.png", width = 800, height = 1200)
+png("../Supplement/Supplemental_Figure_6B.png", width = 1200, height = 800)
 # 800 x 1200 dimensions of saved image
 Heatmap(dfe_constant_s_matrix, rect_gp = gpar(type = "none"),
   col=color_scale,
@@ -2000,6 +2027,8 @@ difference_plot =
 png("../Supplement/Supplemental_Figure_9.png", width = 800, height = 750)
 # 800 x 750 dimensions of saved image
 difference_plot
+dev.off()
+
 # Supplemental Figure 10
 
 design = "
