@@ -1204,7 +1204,7 @@ compare_core_accessory_sfs_syn_ns = function(core_syn, core_nonsyn, accessory_sy
     ylab('Proportion of segregating sites') +
     theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
                        panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
-    scale_fill_manual(values=c("blue4", "steelblue3", "goldenrod3", "goldenrod1"))
+    scale_fill_manual(values=c('#a6611a', '#dfc27d', '#80cdc1', '#018571'))
   
   return(p_input_comparison)
 }
@@ -1234,7 +1234,7 @@ compare_core_accessory_sfs_syn_ns_5A = function(core_syn, core_nonsyn, accessory
     ylab('Proportion of segregating sites') +
     theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
                        panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
-    scale_fill_manual(values=c("blue4", "steelblue3", "goldenrod3", "goldenrod1")) +
+    scale_fill_manual(values=c('#a6611a', '#dfc27d', '#80cdc1', '#018571')) +
     theme(legend.position = c(0.72, 0.75)) +
     theme(plot.title = element_text(face = "italic", size=16)) +
     theme(legend.text=element_text(size=10))
@@ -1267,7 +1267,7 @@ compare_core_accessory_sfs_syn_ns_5B = function(core_syn, core_nonsyn, accessory
     ylab('Proportion of segregating sites') +
     theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
                        panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))+
-    scale_fill_manual(values=c("blue4", "steelblue3", "goldenrod3", "goldenrod1")) +
+    scale_fill_manual(values=c('#a6611a', '#dfc27d', '#80cdc1', '#018571')) +
     theme(plot.title = element_text(face = "italic", size=16)) +
     theme(legend.position='none')
   

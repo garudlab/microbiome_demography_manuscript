@@ -800,7 +800,7 @@ plot_tau_distribution_fig = ggplot() +
 plot_tau_distribution_fig
 
 # 2000 x 1100 dimensions for saved image
-png("../Supplement/Supplemental_Figure_4.png", width = 2000, height = 1100)
+png("../Supplement/Supplemental_Figure_4A.png", width = 2000, height = 1100)
 plot_nu_distribution_fig + plot_tau_distribution_fig + plot_layout(ncol=2)
 dev.off()
 
@@ -959,7 +959,7 @@ dfe_df$species = factor(dfe_df$species, levels=phylogenetic_levels)
 dfe_df$value[dfe_df$value <= 1e-11] = 1e-11
 dfe_df$value[dfe_df$value >= 0.5] = 0.5
 
-png("../Supplement/Supplemental_Figure_5.png", width = 600, height = 1000)
+png("../Supplement/Supplemental_Figure_5A.png", width = 600, height = 1000)
 # 600 x 1000 dimensions for saved image
 ggplot(dfe_df[dfe_df$variable == 'neugamma_dfe_dist_low', ], aes(x=value, y=fct_rev(species), fill=species)) +
   geom_density_ridges2(aes(fill = species), stat = "binline", binwidth = 1, scale = 0.95) +
@@ -993,7 +993,7 @@ dfe_constant_s_matrix
 
 color_scale = colorRampPalette(c('white', 'yellow', 'orange', 'red'), bias=2.5)(100)
 
-col_scheme = c(rep('black', each=1), rep('darkorange', each=4), rep('black', each=4), rep('darkviolet', each=8), rep('black', each=10))
+# col_scheme = c(rep('black', each=1), rep('darkorange', each=4), rep('black', each=4), rep('darkviolet', each=8), rep('black', each=10))
 
 ### Figure S6A
 png("../Supplement/Supplemental_Figure_6A.png", width = 1200, height = 800)
@@ -1012,9 +1012,10 @@ Heatmap(dfe_comparison_matrix, rect_gp = gpar(type = "none"),
     }
   },
   row_names_side='left',
-  column_names_gp = gpar(fontsize = 12,fontface='italic', col=col_scheme),
-  row_names_gp = gpar(fontsize = 12,fontface='italic', col=col_scheme),
-  show_heatmap_legend = F
+  column_names_gp = gpar(fontsize = 12,fontface='italic', col='black'),
+  row_names_gp = gpar(fontsize = 12,fontface='italic', col='black'),
+  show_heatmap_legend = T,
+  name='LRT Statistic'
   )
 dev.off()
 
@@ -1036,9 +1037,10 @@ Heatmap(dfe_constant_s_matrix, rect_gp = gpar(type = "none"),
     }
   },
   row_names_side='left',
-  column_names_gp = gpar(fontsize = 12,fontface='italic', col=col_scheme),
-  row_names_gp = gpar(fontsize = 12,fontface='italic', col=col_scheme),
-  show_heatmap_legend = F
+  column_names_gp = gpar(fontsize = 12,fontface='italic', col='black'),
+  row_names_gp = gpar(fontsize = 12,fontface='italic', col='black'),
+  show_heatmap_legend = T,
+  name='LRT Statistic'
   )
 dev.off()
 
@@ -2186,7 +2188,7 @@ plot_N_curr_distribution = ggplot() +
   theme(axis.text=element_text(size=16)) +
   theme(axis.title=element_text(size=16,face="bold"))
 
-png("../Supplement/Supplemental_Figure_11.png", width = 800, height = 1200)
+png("../Supplement/Supplemental_Figure_11A.png", width = 800, height = 1200)
 # 800 x 1200 dimensions of saved image
 plot_N_curr_distribution
 dev.off()
