@@ -210,7 +210,7 @@ compare_iid_over_5_means <- ggplot(data=over_5_species_df, aes(x=Cohort, y=pairw
 compare_iid_over_5_means
 
 ### Figure 1
-png("../Summary/figure_1.png", width = 1600, height = 900)
+png("../Summary/figure_1_output.png", width = 1600, height = 900)
 # 1600 x 900 dimensions for saved image
 better_pi_comparison_iid + compare_iid_over_5_means + plot_layout(widths = c(3, 1))
 dev.off()

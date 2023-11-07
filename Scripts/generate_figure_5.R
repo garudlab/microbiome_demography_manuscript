@@ -37,7 +37,7 @@ DFF
 ### Figure 5
 # 1000 x 800
 
-png("../Summary/figure_5.png", width = 1000, height = 800)
+png("../Summary/figure_5_output.png", width = 1000, height = 800)
 fig_5A + p13_core_dfe + p13_acc_dfe +
   fig_5B + p21_core_dfe + p21_acc_dfe +
   plot_layout(design=design)

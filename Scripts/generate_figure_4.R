@@ -161,7 +161,7 @@ dfe_df$value[dfe_df$value >= 0.5] = 0.5
 ### Figure 4
 # 600 x 1000
 
-png("../Summary/figure_4.png", width = 600, height = 1000)
+png("../Summary/figure_4_output.png", width = 600, height = 1000)
 ggplot(dfe_df[dfe_df$variable == 'gamma_dfe_dist_low', ], aes(x=value, y=fct_rev(species), fill=species)) +
   geom_density_ridges2(aes(fill = species), stat = "binline", binwidth = 1, scale = 1) +
   #labs(

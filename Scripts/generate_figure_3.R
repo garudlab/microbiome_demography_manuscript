@@ -280,7 +280,7 @@ p30_l = plot_likelihood_surface_contour_3D('../Analysis/Ruminococcus_bromii_6204
 # 2000 x 900 dimensions for saved image
 
 
-png("../Summary/figure_3.png", width = 2000, height = 900)
+png("../Summary/figure_3_output.png", width = 2000, height = 900)
 p9 + p9_l + # B. fragilis
   p30 + p30_l + #R. bicirculans
   demography_scatter +
