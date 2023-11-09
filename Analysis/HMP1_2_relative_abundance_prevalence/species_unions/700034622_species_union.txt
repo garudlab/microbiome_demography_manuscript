@@ -1,7 +1,0 @@
-species_id	count_reads	coverage	relative_abundance
-Bacteroides_fragilis_54507
-Alistipes_putredinis_61533
-Bacteroides_ovatus_58035
-Alistipes_shahii_62199
-Odoribacter_splanchnicus_62174
-Eubacterium_rectale_56927

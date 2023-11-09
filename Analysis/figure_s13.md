@@ -1,6 +1,6 @@
 # Figure S13
 
-Supplemental Figure 13A shows the correlation between mean relative abundance and current effective population size. Supplemental Figure 13B shows the correlation between species prevalence and current effective population size.
+Supplemental Figure 13 shows a 2-dimensional scatterplot of ancestral effective population size for core and accessory genes.
 
 To recreate this figure, you must:
 

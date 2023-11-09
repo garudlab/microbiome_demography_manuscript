@@ -1,7 +1,0 @@
-species_id	count_reads	coverage	relative_abundance
-Prevotella_copri_61740
-Bacteroides_massiliensis_44749
-Sutterella_wadsworthensis_62218
-Bacteroides_coprocola_61586
-Bacteroides_stercoris_56735
-Bacteroides_vulgatus_57955
