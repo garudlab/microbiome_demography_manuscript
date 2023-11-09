@@ -24,8 +24,7 @@ This directory contains several markdown files in `.md` format, each of which de
 * [Figure S10: Phylogenetically ordered analysis of core and accessory gene DFE](./figure_s10.md)
 * [Figure S11: Distribution of N<sub>Curr</sub> for core genes](./figure_s11.md)
 * [Figure S12: Number of quasi-phaseable samples in top-level clade of core genes per species](./figure_s12.md)
-* [Figure S13: Correlation between mean relative abundance and prevalence vs. N<sub>Curr</sub>](./figure_s13.md)
-* [Figure S14: Comparison of N<sub>Anc</sub> between core and accessory genes](./figure_s14.md)
+* [Figure S13: Comparison of N<sub>Anc</sub> between core and accessory genes](./figure_s13.md)
 
 ## Supplemental Tables
 
