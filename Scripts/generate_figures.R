@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 library(ggplot2)
 library(ggrepel)
 library(ggsignif)
@@ -1727,9 +1725,7 @@ get_pangenome_size = function(input_file) {
   return(gene_count)
 }
 
->>>>>>> demo_for_ccgb/main
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
-source('useful_functions.R')
 options(digits = 15)
 # 
 
@@ -4873,8 +4869,6 @@ for (i in 1:length(core_acc_species_list)) {
   acc_core_dfe_comparison_constant_s[i] = cross_species_dfe_comparison(DFE_core_file_list_constant_s[i], DFE_acc_file_list_constant_s[i])
 }
 
-### 
-
 acc_core_dfe_LRT_table = data.frame(species=core_acc_species_list, constant_2NAs=acc_core_dfe_comparison, constant_s=acc_core_dfe_comparison_constant_s)
 
 acc_core_dfe_LRT_table
@@ -4941,7 +4935,9 @@ pheatmap(dfe_constant_s_matrix,
 
 color_scale = colorRampPalette(c('red','orange', 'yellow', 'white'), bias=0.5)(100)
 
-col_scheme = c(rep('black', each=1), rep('darkorange', each=4), rep('black', each=4), rep('darkviolet', each=8), rep('black', each=10))
+
+col_scheme = c(rep('black', each=1), rep('darkorange', each=4), rep('black', each=4), rep('darkviolet', each=8), rep('black', each=10
+))
 
 ### Figure S4A
 # 800 x 1200
