@@ -1,0 +1,72 @@
+2024-06-05 07:47:39,957 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:39,957 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/survival_curve.log
+
+2024-06-05 07:47:39,957 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/
+	species = Bacteroides_cellulosilyticus_58046
+
+2024-06-05 07:47:39,957 - INFO - Computing SFS of Bacteroides_cellulosilyticus_58046.
+2024-06-05 07:47:40,609 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:49:50,459 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:50,459 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/survival_curve.log
+
+2024-06-05 08:49:50,459 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/
+	species = Bacteroides_cellulosilyticus_58046
+
+2024-06-05 08:49:50,459 - INFO - Computing SFS of Bacteroides_cellulosilyticus_58046.
+2024-06-05 08:49:51,301 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 13:01:29,390 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,391 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/survival_curve.log
+
+2024-06-05 13:01:29,391 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/
+	species = Bacteroides_cellulosilyticus_58046
+
+2024-06-05 13:01:29,391 - INFO - Computing SFS of Bacteroides_cellulosilyticus_58046.
+2024-06-05 13:01:30,188 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 20:44:16,178 - INFO - Pipeline executed succesfully.
+2024-07-12 12:51:58,987 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:51:58,987 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/survival_curve.log
+
+2024-07-12 12:51:58,987 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/
+	species = Bacteroides_cellulosilyticus_58046
+
+2024-07-12 12:51:59,725 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:41:01,484 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:41:01,485 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/survival_curve.log
+
+2024-07-15 11:41:01,485 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/
+	species = Bacteroides_cellulosilyticus_58046
+
+2024-07-15 11:41:02,441 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 19:06:00,458 - INFO - The 25th percentile of recombination is: 0.0001
+2024-07-15 19:06:00,492 - INFO - The 50th percentile of recombination is: 0.000366666666667
+2024-07-15 19:06:00,518 - INFO - The 75th percentile of recombination is: 0.0008
+2024-07-15 19:06:00,518 - INFO - Pipeline executed succesfully.
+2024-07-16 10:24:25,672 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 10:24:25,672 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/survival_curve.log
+
+2024-07-16 10:24:25,672 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/
+	species = Bacteroides_cellulosilyticus_58046
+
+2024-07-16 10:24:26,890 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 15:29:58,195 - INFO - The 25th percentile of recombination is: 0.0001
+2024-07-16 15:29:58,233 - INFO - The 50th percentile of recombination is: 0.000366666666667
+2024-07-16 15:29:58,259 - INFO - The 75th percentile of recombination is: 0.0008
+2024-07-16 15:29:58,260 - INFO - Pipeline executed succesfully.

@@ -1,0 +1,16 @@
+2024-06-03 16:36:38,606 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-03 16:36:38,607 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/log.log
+
+2024-06-03 16:36:38,607 - INFO - Parsed the following arguments:
+	mask_doubletons = False
+	input_demography = ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_two_epoch_demography.txt
+	syn_input_sfs = ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_empirical_syn_14_downsampled_sfs.txt
+	mask_singletons = False
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/
+
+2024-06-03 16:36:38,609 - INFO - Beginning demographic inference for two-epoch demographic model.
+2024-06-03 21:02:28,028 - INFO - Maximum likelihood computed to be: -35.166667477.
+2024-06-03 21:02:28,033 - INFO - Maximum likelihood found at ([7.785653102289156, 8.476742271686748]).
+2024-06-03 21:02:28,033 - INFO - Finished plotting likelihood surface.
+2024-06-03 21:02:28,033 - INFO - Pipeline executed succesfully.

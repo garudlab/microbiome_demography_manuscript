@@ -1,0 +1,73 @@
+2024-06-05 07:47:41,369 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:41,369 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/survival_curve.log
+
+2024-06-05 07:47:41,369 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/
+	species = Parabacteroides_merdae_56972
+
+2024-06-05 07:47:41,369 - INFO - Computing SFS of Parabacteroides_merdae_56972.
+2024-06-05 07:47:42,053 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:49:43,403 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:43,403 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/survival_curve.log
+
+2024-06-05 08:49:43,403 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/
+	species = Parabacteroides_merdae_56972
+
+2024-06-05 08:49:43,403 - INFO - Computing SFS of Parabacteroides_merdae_56972.
+2024-06-05 08:49:44,110 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 10:40:56,014 - INFO - Pipeline executed succesfully.
+2024-06-05 13:01:29,388 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,389 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/survival_curve.log
+
+2024-06-05 13:01:29,389 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/
+	species = Parabacteroides_merdae_56972
+
+2024-06-05 13:01:29,389 - INFO - Computing SFS of Parabacteroides_merdae_56972.
+2024-06-05 13:01:30,120 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 14:18:42,041 - INFO - Pipeline executed succesfully.
+2024-07-12 12:52:00,666 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:52:00,666 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/survival_curve.log
+
+2024-07-12 12:52:00,666 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/
+	species = Parabacteroides_merdae_56972
+
+2024-07-12 12:52:01,389 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:41:01,484 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:41:01,484 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/survival_curve.log
+
+2024-07-15 11:41:01,484 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/
+	species = Parabacteroides_merdae_56972
+
+2024-07-15 11:41:01,930 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 12:50:31,222 - INFO - The 25th percentile of recombination is: 0.000466666666667
+2024-07-15 12:50:31,229 - INFO - The 50th percentile of recombination is: 0.000933333333333
+2024-07-15 12:50:31,233 - INFO - The 75th percentile of recombination is: 0.0019
+2024-07-15 12:50:31,233 - INFO - Pipeline executed succesfully.
+2024-07-16 12:07:50,497 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 12:07:50,498 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/survival_curve.log
+
+2024-07-16 12:07:50,498 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Parabacteroides_merdae_56972/
+	species = Parabacteroides_merdae_56972
+
+2024-07-16 12:07:50,998 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 13:20:30,844 - INFO - The 25th percentile of recombination is: 0.000466666666667
+2024-07-16 13:20:30,856 - INFO - The 50th percentile of recombination is: 0.000933333333333
+2024-07-16 13:20:30,865 - INFO - The 75th percentile of recombination is: 0.0019
+2024-07-16 13:20:30,865 - INFO - Pipeline executed succesfully.

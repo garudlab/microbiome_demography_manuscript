@@ -1,0 +1,23 @@
+2024-06-03 16:26:05,878 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-03 16:26:05,879 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_evaluate_demography.log
+
+2024-06-03 16:26:05,879 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_empirical_syn_14_downsampled_sfs.txt
+	mask_singletons = False
+	mask_doubletons = False
+	model_type = three_epoch
+	outprefix = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5
+	params_list = [0.0328203489, 1.06905799, 0.000868026672, 0.00734604042]
+
+2024-06-03 16:26:05,880 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2024-06-03 16:26:05,881 - INFO - Beginning optimization with guess, [0.0328203489, 1.06905799, 0.000868026672, 0.00734604042].
+2024-06-03 16:26:05,881 - INFO - Finished optimization with guess, [0.0328203489, 1.06905799, 0.000868026672, 0.00734604042].
+2024-06-03 16:26:05,881 - INFO - Best fit parameters: [0.0328203489, 1.06905799, 0.000868026672, 0.00734604042].
+2024-06-03 16:26:05,913 - INFO - Maximum log composite likelihood: -39.917965991.
+2024-06-03 16:26:05,914 - INFO - Optimal value of theta: 8141.05191133.
+2024-06-03 16:26:05,914 - INFO - Synonymous input SFS: [-- 7666.8110407943905 4577.389792947036 3545.3017567644456 2920.2426790014024 2520.120341797425 2294.502355573739 1110.600652931407 -- -- -- -- -- -- --].
+2024-06-03 16:26:05,914 - INFO - Scaled spectrum: [-- 7664.139976647897 4618.2832743303425 3436.015213395697 2846.7525974183022 2532.3702621399366 2374.4095555576164 1162.9977403200533 -- -- -- -- -- -- --].
+2024-06-03 16:26:05,916 - INFO - Converting and interpreting Tau estimates.
+2024-06-03 16:26:05,929 - INFO - Finished demographic evaluation.
+2024-06-03 16:26:05,929 - INFO - Pipeline executed succesfully.

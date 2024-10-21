@@ -1,0 +1,74 @@
+2024-06-05 07:47:40,809 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:40,810 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Oscillibacter_sp_60799/survival_curve.log
+
+2024-06-05 07:47:40,810 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Oscillibacter_sp_60799/
+	species = Oscillibacter_sp_60799
+
+2024-06-05 07:47:40,810 - INFO - Computing SFS of Oscillibacter_sp_60799.
+2024-06-05 07:47:41,550 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:10:20,569 - INFO - Pipeline executed succesfully.
+2024-06-05 08:49:47,238 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:47,238 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Oscillibacter_sp_60799/survival_curve.log
+
+2024-06-05 08:49:47,238 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Oscillibacter_sp_60799/
+	species = Oscillibacter_sp_60799
+
+2024-06-05 08:49:47,238 - INFO - Computing SFS of Oscillibacter_sp_60799.
+2024-06-05 08:49:48,000 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 09:14:46,958 - INFO - Pipeline executed succesfully.
+2024-06-05 13:01:29,391 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,392 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Oscillibacter_sp_60799/survival_curve.log
+
+2024-06-05 13:01:29,392 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Oscillibacter_sp_60799/
+	species = Oscillibacter_sp_60799
+
+2024-06-05 13:01:29,392 - INFO - Computing SFS of Oscillibacter_sp_60799.
+2024-06-05 13:01:30,163 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 13:23:59,083 - INFO - Pipeline executed succesfully.
+2024-07-12 12:51:58,968 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:51:58,968 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Oscillibacter_sp_60799/survival_curve.log
+
+2024-07-12 12:51:58,968 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Oscillibacter_sp_60799/
+	species = Oscillibacter_sp_60799
+
+2024-07-12 12:51:59,693 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:40:52,212 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:40:52,212 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Oscillibacter_sp_60799/survival_curve.log
+
+2024-07-15 11:40:52,213 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Oscillibacter_sp_60799/
+	species = Oscillibacter_sp_60799
+
+2024-07-15 11:40:52,866 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 12:03:21,930 - INFO - The 25th percentile of recombination is: 0.00116666666667
+2024-07-15 12:03:21,933 - INFO - The 50th percentile of recombination is: 0.00283333333333
+2024-07-15 12:03:21,935 - INFO - The 75th percentile of recombination is: 0.00733333333333
+2024-07-15 12:03:21,935 - INFO - Pipeline executed succesfully.
+2024-07-16 12:00:36,054 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 12:00:36,056 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Oscillibacter_sp_60799/survival_curve.log
+
+2024-07-16 12:00:36,056 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Oscillibacter_sp_60799/
+	species = Oscillibacter_sp_60799
+
+2024-07-16 12:00:36,787 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 12:23:22,547 - INFO - The 25th percentile of recombination is: 0.00116666666667
+2024-07-16 12:23:22,550 - INFO - The 50th percentile of recombination is: 0.00283333333333
+2024-07-16 12:23:22,552 - INFO - The 75th percentile of recombination is: 0.00733333333333
+2024-07-16 12:23:22,553 - INFO - Pipeline executed succesfully.

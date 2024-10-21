@@ -1,0 +1,13 @@
+2024-05-30 17:13:59,397 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-05-30 17:13:59,398 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_empirical_nonsyn_14_downsampling.log
+
+2024-05-30 17:13:59,399 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_empirical_nonsyn_sfs.txt
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_empirical_nonsyn_14
+
+2024-05-30 17:13:59,399 - INFO - Parsing input SFS.
+2024-05-30 17:13:59,411 - INFO - Formatting output SFS.
+2024-05-30 17:13:59,417 - INFO - Finished downsampling.
+2024-05-30 17:13:59,418 - INFO - Pipeline executed succesfully.

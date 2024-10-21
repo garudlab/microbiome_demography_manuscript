@@ -1,0 +1,23 @@
+2024-06-03 16:26:11,841 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-03 16:26:11,841 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_evaluate_demography.log
+
+2024-06-03 16:26:11,841 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_empirical_syn_14_downsampled_sfs.txt
+	mask_singletons = False
+	mask_doubletons = False
+	model_type = three_epoch
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5
+	params_list = [0.508124259, 1.39654114, 0.000690126767, 0.230939562]
+
+2024-06-03 16:26:11,842 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2024-06-03 16:26:11,844 - INFO - Beginning optimization with guess, [0.508124259, 1.39654114, 0.000690126767, 0.230939562].
+2024-06-03 16:26:11,844 - INFO - Finished optimization with guess, [0.508124259, 1.39654114, 0.000690126767, 0.230939562].
+2024-06-03 16:26:11,844 - INFO - Best fit parameters: [0.508124259, 1.39654114, 0.000690126767, 0.230939562].
+2024-06-03 16:26:11,880 - INFO - Maximum log composite likelihood: -36.2192021496.
+2024-06-03 16:26:11,880 - INFO - Optimal value of theta: 7992.82881499.
+2024-06-03 16:26:11,881 - INFO - Synonymous input SFS: [-- 10264.105106795518 5211.911824123605 3592.2012164993575 2865.743790849674 2507.4554523563847 2319.6542827657318 1124.625902992773 -- -- -- -- -- -- --].
+2024-06-03 16:26:11,881 - INFO - Scaled spectrum: [-- 10344.236271520138 5128.235955629385 3553.5587231714762 2859.8245219207474 2511.748083510404 2342.4443034864935 1145.6497171443973 -- -- -- -- -- -- --].
+2024-06-03 16:26:11,882 - INFO - Converting and interpreting Tau estimates.
+2024-06-03 16:26:11,884 - INFO - Finished demographic evaluation.
+2024-06-03 16:26:11,884 - INFO - Pipeline executed succesfully.

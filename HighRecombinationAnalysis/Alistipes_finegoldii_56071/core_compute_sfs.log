@@ -1,0 +1,14 @@
+2024-05-09 06:54:00,780 - INFO - Beginning execution of compute_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-05-09 06:54:00,780 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_compute_sfs.log
+
+2024-05-09 06:54:00,780 - INFO - Parsed the following arguments:
+	core = True
+	accessory = False
+	min_depth = 20
+	min_MAF = 0.0
+	outprefix = ../HighRecombinationAnalysis/Alistipes_finegoldii_56071/
+	species = Alistipes_finegoldii_56071
+	f_star = 0.2
+
+2024-05-09 06:54:00,780 - INFO - Computing SFS of Alistipes_finegoldii_56071.

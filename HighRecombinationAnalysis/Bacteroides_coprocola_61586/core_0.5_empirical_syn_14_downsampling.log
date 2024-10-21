@@ -1,0 +1,13 @@
+2024-05-30 17:13:56,245 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-05-30 17:13:56,245 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_coprocola_61586/core_0.5_empirical_syn_14_downsampling.log
+
+2024-05-30 17:13:56,246 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../HighRecombinationAnalysis/Bacteroides_coprocola_61586/core_0.5_empirical_syn_sfs.txt
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_coprocola_61586/core_0.5_empirical_syn_14
+
+2024-05-30 17:13:56,246 - INFO - Parsing input SFS.
+2024-05-30 17:13:56,250 - INFO - Formatting output SFS.
+2024-05-30 17:13:56,255 - INFO - Finished downsampling.
+2024-05-30 17:13:56,255 - INFO - Pipeline executed succesfully.

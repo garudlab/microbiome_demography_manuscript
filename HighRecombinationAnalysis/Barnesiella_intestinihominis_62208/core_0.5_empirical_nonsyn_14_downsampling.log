@@ -1,0 +1,13 @@
+2024-05-30 17:13:58,799 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-05-30 17:13:58,800 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_empirical_nonsyn_14_downsampling.log
+
+2024-05-30 17:13:58,800 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_empirical_nonsyn_sfs.txt
+	outprefix = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_empirical_nonsyn_14
+
+2024-05-30 17:13:58,800 - INFO - Parsing input SFS.
+2024-05-30 17:13:58,802 - INFO - Formatting output SFS.
+2024-05-30 17:13:58,849 - INFO - Finished downsampling.
+2024-05-30 17:13:58,849 - INFO - Pipeline executed succesfully.

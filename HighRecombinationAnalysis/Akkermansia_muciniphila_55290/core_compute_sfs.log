@@ -1,0 +1,38 @@
+2024-05-09 06:52:13,314 - INFO - Beginning execution of compute_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-05-09 06:52:13,314 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_compute_sfs.log
+
+2024-05-09 06:52:13,314 - INFO - Parsed the following arguments:
+	core = True
+	accessory = False
+	min_depth = 20
+	min_MAF = 0.0
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+	f_star = 0.2
+
+2024-05-09 06:52:13,314 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-05-09 06:53:03,137 - INFO - Looping over genes.
+2024-05-09 06:53:03,163 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:03,190 - INFO - Ignoring non-core gene.
+2024-05-09 06:53:03,224 - INFO - Ignoring non-core gene.
+2024-05-09 06:53:03,277 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:03,350 - INFO - Ignoring non-core gene.
+2024-05-09 06:53:03,407 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:03,534 - INFO - Processing 349741.6.peg.4.
+2024-05-09 06:53:04,254 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:04,357 - INFO - Processing 349741.6.peg.5.
+2024-05-09 06:53:04,699 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:04,787 - INFO - Processing 349741.6.peg.6.
+2024-05-09 06:53:05,105 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:05,241 - INFO - Processing 349741.6.peg.7.
+2024-05-09 06:53:05,583 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:05,759 - INFO - Processing 349741.6.peg.8.
+2024-05-09 06:53:06,113 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:06,207 - INFO - Processing 349741.6.peg.9.
+2024-05-09 06:53:06,525 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:06,627 - INFO - Processing 349741.6.peg.10.
+2024-05-09 06:53:06,959 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:06,990 - INFO - Ignoring non-core gene.
+2024-05-09 06:53:07,022 - INFO - Ignoring non-coding gene.
+2024-05-09 06:53:07,133 - INFO - Processing 349741.6.peg.12.

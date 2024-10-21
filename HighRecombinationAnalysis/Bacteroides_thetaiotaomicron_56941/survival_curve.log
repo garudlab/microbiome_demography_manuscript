@@ -1,0 +1,72 @@
+2024-06-05 07:47:39,804 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:39,804 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/survival_curve.log
+
+2024-06-05 07:47:39,804 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/
+	species = Bacteroides_thetaiotaomicron_56941
+
+2024-06-05 07:47:39,804 - INFO - Computing SFS of Bacteroides_thetaiotaomicron_56941.
+2024-06-05 07:47:40,441 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:49:53,111 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:53,111 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/survival_curve.log
+
+2024-06-05 08:49:53,111 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/
+	species = Bacteroides_thetaiotaomicron_56941
+
+2024-06-05 08:49:53,111 - INFO - Computing SFS of Bacteroides_thetaiotaomicron_56941.
+2024-06-05 08:49:53,802 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 13:01:29,391 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,392 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/survival_curve.log
+
+2024-06-05 13:01:29,393 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/
+	species = Bacteroides_thetaiotaomicron_56941
+
+2024-06-05 13:01:29,393 - INFO - Computing SFS of Bacteroides_thetaiotaomicron_56941.
+2024-06-05 13:01:30,120 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 16:41:44,584 - INFO - Pipeline executed succesfully.
+2024-07-12 12:51:58,081 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:51:58,081 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/survival_curve.log
+
+2024-07-12 12:51:58,081 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/
+	species = Bacteroides_thetaiotaomicron_56941
+
+2024-07-12 12:51:58,800 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:40:57,093 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:40:57,093 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/survival_curve.log
+
+2024-07-15 11:40:57,094 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/
+	species = Bacteroides_thetaiotaomicron_56941
+
+2024-07-15 11:40:57,771 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 15:02:59,197 - INFO - The 25th percentile of recombination is: 0.000366666666667
+2024-07-15 15:02:59,223 - INFO - The 50th percentile of recombination is: 0.000666666666667
+2024-07-15 15:02:59,244 - INFO - The 75th percentile of recombination is: 0.0016
+2024-07-15 15:02:59,244 - INFO - Pipeline executed succesfully.
+2024-07-16 10:24:25,578 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 10:24:25,578 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/survival_curve.log
+
+2024-07-16 10:24:25,578 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/
+	species = Bacteroides_thetaiotaomicron_56941
+
+2024-07-16 10:24:26,843 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 13:47:28,347 - INFO - The 25th percentile of recombination is: 0.000366666666667
+2024-07-16 13:47:28,372 - INFO - The 50th percentile of recombination is: 0.000666666666667
+2024-07-16 13:47:28,393 - INFO - The 75th percentile of recombination is: 0.0016
+2024-07-16 13:47:28,393 - INFO - Pipeline executed succesfully.

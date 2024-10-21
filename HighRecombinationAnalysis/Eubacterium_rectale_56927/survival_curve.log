@@ -1,0 +1,67 @@
+2024-06-05 07:47:42,575 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:42,575 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_rectale_56927/survival_curve.log
+
+2024-06-05 07:47:42,575 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_rectale_56927/
+	species = Eubacterium_rectale_56927
+
+2024-06-05 07:47:42,575 - INFO - Computing SFS of Eubacterium_rectale_56927.
+2024-06-05 07:47:43,379 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:49:57,513 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:57,513 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_rectale_56927/survival_curve.log
+
+2024-06-05 08:49:57,513 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_rectale_56927/
+	species = Eubacterium_rectale_56927
+
+2024-06-05 08:49:57,513 - INFO - Computing SFS of Eubacterium_rectale_56927.
+2024-06-05 08:49:58,245 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 13:01:29,389 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,390 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_rectale_56927/survival_curve.log
+
+2024-06-05 13:01:29,390 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_rectale_56927/
+	species = Eubacterium_rectale_56927
+
+2024-06-05 13:01:29,390 - INFO - Computing SFS of Eubacterium_rectale_56927.
+2024-06-05 13:01:30,192 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-12 12:51:57,459 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:51:57,459 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_rectale_56927/survival_curve.log
+
+2024-07-12 12:51:57,459 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_rectale_56927/
+	species = Eubacterium_rectale_56927
+
+2024-07-12 12:51:58,297 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:41:01,486 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:41:01,486 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_rectale_56927/survival_curve.log
+
+2024-07-15 11:41:01,486 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_rectale_56927/
+	species = Eubacterium_rectale_56927
+
+2024-07-15 11:41:02,604 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 10:24:25,607 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 10:24:25,607 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_rectale_56927/survival_curve.log
+
+2024-07-16 10:24:25,607 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_rectale_56927/
+	species = Eubacterium_rectale_56927
+
+2024-07-16 10:24:27,041 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 18:54:54,136 - INFO - The 25th percentile of recombination is: 3.33333333333e-05
+2024-07-16 18:54:54,221 - INFO - The 50th percentile of recombination is: 6.66666666667e-05
+2024-07-16 18:54:54,307 - INFO - The 75th percentile of recombination is: 0.000133333333333
+2024-07-16 18:54:54,308 - INFO - Pipeline executed succesfully.

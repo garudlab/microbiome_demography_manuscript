@@ -1,0 +1,16 @@
+2024-06-03 16:36:38,971 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-03 16:36:38,971 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Ruminococcus_bromii_62047/log.log
+
+2024-06-03 16:36:38,971 - INFO - Parsed the following arguments:
+	mask_doubletons = False
+	input_demography = ../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_two_epoch_demography.txt
+	syn_input_sfs = ../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_empirical_syn_14_downsampled_sfs.txt
+	mask_singletons = False
+	outprefix = ../HighRecombinationAnalysis/Ruminococcus_bromii_62047/
+
+2024-06-03 16:36:38,974 - INFO - Beginning demographic inference for two-epoch demographic model.
+2024-06-03 17:16:28,433 - INFO - Maximum likelihood computed to be: -31.7457908812.
+2024-06-03 17:16:28,435 - INFO - Maximum likelihood found at ([3.9304641607831328, 0.6038057816506024]).
+2024-06-03 17:16:28,435 - INFO - Finished plotting likelihood surface.
+2024-06-03 17:16:28,435 - INFO - Pipeline executed succesfully.

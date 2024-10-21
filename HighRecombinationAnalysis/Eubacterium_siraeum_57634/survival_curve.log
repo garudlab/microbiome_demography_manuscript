@@ -1,0 +1,73 @@
+2024-06-05 07:47:38,521 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:38,521 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/survival_curve.log
+
+2024-06-05 07:47:38,521 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/
+	species = Eubacterium_siraeum_57634
+
+2024-06-05 07:47:38,521 - INFO - Computing SFS of Eubacterium_siraeum_57634.
+2024-06-05 07:47:39,215 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:49:53,036 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:53,036 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/survival_curve.log
+
+2024-06-05 08:49:53,036 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/
+	species = Eubacterium_siraeum_57634
+
+2024-06-05 08:49:53,036 - INFO - Computing SFS of Eubacterium_siraeum_57634.
+2024-06-05 08:49:53,680 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 09:40:48,594 - INFO - Pipeline executed succesfully.
+2024-06-05 13:01:29,391 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,391 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/survival_curve.log
+
+2024-06-05 13:01:29,391 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/
+	species = Eubacterium_siraeum_57634
+
+2024-06-05 13:01:29,392 - INFO - Computing SFS of Eubacterium_siraeum_57634.
+2024-06-05 13:01:30,125 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 13:56:09,479 - INFO - Pipeline executed succesfully.
+2024-07-12 12:52:00,526 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:52:00,526 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/survival_curve.log
+
+2024-07-12 12:52:00,526 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/
+	species = Eubacterium_siraeum_57634
+
+2024-07-12 12:52:01,243 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:40:50,778 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:40:50,778 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/survival_curve.log
+
+2024-07-15 11:40:50,779 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/
+	species = Eubacterium_siraeum_57634
+
+2024-07-15 11:40:51,428 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 12:53:07,455 - INFO - The 25th percentile of recombination is: 0.0002
+2024-07-15 12:53:07,464 - INFO - The 50th percentile of recombination is: 0.0005
+2024-07-15 12:53:07,468 - INFO - The 75th percentile of recombination is: 0.00346666666667
+2024-07-15 12:53:07,468 - INFO - Pipeline executed succesfully.
+2024-07-16 11:52:46,647 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 11:52:46,647 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/survival_curve.log
+
+2024-07-16 11:52:46,647 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/
+	species = Eubacterium_siraeum_57634
+
+2024-07-16 11:52:47,657 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 12:43:10,550 - INFO - The 25th percentile of recombination is: 0.0002
+2024-07-16 12:43:10,554 - INFO - The 50th percentile of recombination is: 0.0005
+2024-07-16 12:43:10,558 - INFO - The 75th percentile of recombination is: 0.00346666666667
+2024-07-16 12:43:10,558 - INFO - Pipeline executed succesfully.

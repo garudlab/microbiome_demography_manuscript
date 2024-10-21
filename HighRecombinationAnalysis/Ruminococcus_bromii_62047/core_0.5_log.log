@@ -1,0 +1,27 @@
+2024-06-13 13:56:30,667 - INFO - Beginning execution of fit_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-13 13:56:30,668 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_log.log
+
+2024-06-13 13:56:30,668 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_empirical_syn_14_downsampled_sfs.txt
+	nonsyn_input_sfs = ../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_empirical_nonsyn_14_downsampled_sfs.txt
+	input_demography = ../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_two_epoch_demography.txt
+	input_model = two_epoch
+	initial_alpha = 0.2
+	initial_beta = 0.1
+	outprefix = ../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5
+
+2024-06-13 13:56:30,714 - INFO - Loading input demography.
+2024-06-13 13:56:30,731 - INFO - Input demographic parameters are: [4.0101847, 0.5937197].
+2024-06-13 13:56:30,731 - INFO - Input theta_syn is: 2717.1245677.
+2024-06-13 13:56:30,731 - INFO - Generating spectrum from input demography.
+2024-06-13 13:57:31,704 - INFO - Fitting DFE.
+2024-06-13 13:57:33,933 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-06-13 13:58:39,356 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-06-13 13:59:36,504 - INFO - Fitting Neutral + Gamma DFE
+2024-06-13 14:00:45,964 - INFO - Computing intermediate summary statistics.
+2024-06-13 14:00:45,968 - INFO - Outputting results.
+2024-06-13 14:00:45,976 - INFO - Pipeline executed succesfully.

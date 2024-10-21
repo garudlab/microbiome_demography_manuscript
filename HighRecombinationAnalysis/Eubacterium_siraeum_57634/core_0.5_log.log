@@ -1,0 +1,27 @@
+2024-06-13 13:54:32,481 - INFO - Beginning execution of fit_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-13 13:54:32,481 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_log.log
+
+2024-06-13 13:54:32,481 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_empirical_syn_14_downsampled_sfs.txt
+	nonsyn_input_sfs = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_empirical_nonsyn_14_downsampled_sfs.txt
+	input_demography = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_two_epoch_demography.txt
+	input_model = two_epoch
+	initial_alpha = 0.2
+	initial_beta = 0.1
+	outprefix = ../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5
+
+2024-06-13 13:54:32,517 - INFO - Loading input demography.
+2024-06-13 13:54:32,524 - INFO - Input demographic parameters are: [1.3789486, 0.6150092].
+2024-06-13 13:54:32,524 - INFO - Input theta_syn is: 7454.73134227.
+2024-06-13 13:54:32,524 - INFO - Generating spectrum from input demography.
+2024-06-13 13:55:32,502 - INFO - Fitting DFE.
+2024-06-13 13:55:35,402 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-06-13 13:56:37,152 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-06-13 13:57:31,595 - INFO - Fitting Neutral + Gamma DFE
+2024-06-13 13:58:37,788 - INFO - Computing intermediate summary statistics.
+2024-06-13 13:58:37,793 - INFO - Outputting results.
+2024-06-13 13:58:37,800 - INFO - Pipeline executed succesfully.

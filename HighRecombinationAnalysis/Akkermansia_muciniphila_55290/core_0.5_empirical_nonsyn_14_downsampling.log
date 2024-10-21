@@ -1,0 +1,13 @@
+2024-05-30 17:13:58,237 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-05-30 17:13:58,238 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_empirical_nonsyn_14_downsampling.log
+
+2024-05-30 17:13:58,238 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_empirical_nonsyn_sfs.txt
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_empirical_nonsyn_14
+
+2024-05-30 17:13:58,238 - INFO - Parsing input SFS.
+2024-05-30 17:13:58,246 - INFO - Formatting output SFS.
+2024-05-30 17:13:58,277 - INFO - Finished downsampling.
+2024-05-30 17:13:58,277 - INFO - Pipeline executed succesfully.

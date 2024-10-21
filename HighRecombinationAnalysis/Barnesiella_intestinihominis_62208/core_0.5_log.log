@@ -1,0 +1,27 @@
+2024-06-13 13:51:45,397 - INFO - Beginning execution of fit_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-13 13:51:45,397 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_log.log
+
+2024-06-13 13:51:45,397 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_empirical_syn_14_downsampled_sfs.txt
+	nonsyn_input_sfs = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_empirical_nonsyn_14_downsampled_sfs.txt
+	input_demography = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_two_epoch_demography.txt
+	input_model = two_epoch
+	initial_alpha = 0.2
+	initial_beta = 0.1
+	outprefix = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5
+
+2024-06-13 13:51:45,429 - INFO - Loading input demography.
+2024-06-13 13:51:45,442 - INFO - Input demographic parameters are: [0.37037132, 0.01428386].
+2024-06-13 13:51:45,442 - INFO - Input theta_syn is: 8130.9033758.
+2024-06-13 13:51:45,442 - INFO - Generating spectrum from input demography.
+2024-06-13 13:51:48,683 - INFO - Fitting DFE.
+2024-06-13 13:52:24,039 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-06-13 13:52:24,155 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-06-13 13:52:56,345 - INFO - Fitting Neutral + Gamma DFE
+2024-06-13 13:54:00,751 - INFO - Computing intermediate summary statistics.
+2024-06-13 13:54:00,775 - INFO - Outputting results.
+2024-06-13 13:54:00,833 - INFO - Pipeline executed succesfully.

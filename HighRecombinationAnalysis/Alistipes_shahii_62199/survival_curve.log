@@ -1,0 +1,68 @@
+2024-06-05 07:47:39,501 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:39,501 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Alistipes_shahii_62199/survival_curve.log
+
+2024-06-05 07:47:39,501 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Alistipes_shahii_62199/
+	species = Alistipes_shahii_62199
+
+2024-06-05 07:47:39,501 - INFO - Computing SFS of Alistipes_shahii_62199.
+2024-06-05 07:47:40,228 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:49:53,040 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:53,041 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Alistipes_shahii_62199/survival_curve.log
+
+2024-06-05 08:49:53,041 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Alistipes_shahii_62199/
+	species = Alistipes_shahii_62199
+
+2024-06-05 08:49:53,041 - INFO - Computing SFS of Alistipes_shahii_62199.
+2024-06-05 08:49:53,774 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 13:01:29,511 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,512 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Alistipes_shahii_62199/survival_curve.log
+
+2024-06-05 13:01:29,512 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Alistipes_shahii_62199/
+	species = Alistipes_shahii_62199
+
+2024-06-05 13:01:29,512 - INFO - Computing SFS of Alistipes_shahii_62199.
+2024-06-05 13:01:30,154 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 22:04:27,828 - INFO - Pipeline executed succesfully.
+2024-07-12 12:51:58,646 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:51:58,646 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Alistipes_shahii_62199/survival_curve.log
+
+2024-07-12 12:51:58,646 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Alistipes_shahii_62199/
+	species = Alistipes_shahii_62199
+
+2024-07-12 12:51:59,118 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:41:01,482 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:41:01,482 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Alistipes_shahii_62199/survival_curve.log
+
+2024-07-15 11:41:01,482 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Alistipes_shahii_62199/
+	species = Alistipes_shahii_62199
+
+2024-07-15 11:41:02,210 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 10:24:25,673 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 10:24:25,673 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Alistipes_shahii_62199/survival_curve.log
+
+2024-07-16 10:24:25,673 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Alistipes_shahii_62199/
+	species = Alistipes_shahii_62199
+
+2024-07-16 10:24:26,936 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 18:54:20,488 - INFO - The 25th percentile of recombination is: 0.0001
+2024-07-16 18:54:20,539 - INFO - The 50th percentile of recombination is: 0.000333333333333
+2024-07-16 18:54:20,582 - INFO - The 75th percentile of recombination is: 0.000633333333333
+2024-07-16 18:54:20,582 - INFO - Pipeline executed succesfully.

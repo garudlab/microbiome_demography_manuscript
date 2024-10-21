@@ -1,0 +1,19 @@
+2024-08-04 12:15:17,046 - INFO - Beginning execution of constant_s_dfe_HR.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-08-04 12:15:17,047 - INFO - Progress is being logged to ../HighRecombinationAnalysis/cross_species_dfe/Bacteroides_caccae_53434_log.log
+
+2024-08-04 12:15:17,047 - INFO - Parsed the following arguments:
+	input_demography = ../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_two_epoch_demography.txt
+	input_syn_sfs = ../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_empirical_syn_14_downsampled_sfs.txt
+	input_nonsyn_sfs = ../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_empirical_nonsyn_14_downsampled_sfs.txt
+	outprefix = ../HighRecombinationAnalysis/cross_species_dfe/
+
+2024-08-04 12:15:17,100 - INFO - Input demographic parameters are: [1.967181, 0.0664874].
+2024-08-04 12:15:17,100 - INFO - Input theta_syn is: 3376.04157182.
+2024-08-04 12:15:25,018 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-08-04 13:07:49,102 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-08-05 02:31:11,119 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-08-05 11:59:50,332 - INFO - Pipeline executed succesfully.

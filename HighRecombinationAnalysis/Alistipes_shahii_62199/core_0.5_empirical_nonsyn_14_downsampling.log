@@ -1,0 +1,13 @@
+2024-05-30 17:13:58,603 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-05-30 17:13:58,603 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_empirical_nonsyn_14_downsampling.log
+
+2024-05-30 17:13:58,603 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_empirical_nonsyn_sfs.txt
+	outprefix = ../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_empirical_nonsyn_14
+
+2024-05-30 17:13:58,603 - INFO - Parsing input SFS.
+2024-05-30 17:13:58,613 - INFO - Formatting output SFS.
+2024-05-30 17:13:58,621 - INFO - Finished downsampling.
+2024-05-30 17:13:58,621 - INFO - Pipeline executed succesfully.

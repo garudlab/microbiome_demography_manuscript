@@ -1,0 +1,185 @@
+2024-06-05 07:36:36,899 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:36:36,900 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:36:36,900 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:36:36,900 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:36:37,914 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 07:37:21,968 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:37:21,969 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:37:21,969 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:37:21,969 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:37:22,785 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 07:38:21,935 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:38:21,935 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:38:21,936 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:38:21,936 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:38:22,707 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 07:39:00,782 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:39:00,782 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:39:00,782 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:39:00,782 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:39:01,522 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 07:40:49,260 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:40:49,260 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:40:49,260 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:40:49,260 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:40:49,989 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 07:41:51,531 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:41:51,531 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:41:51,531 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:41:51,531 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:41:52,291 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 07:41:59,300 - INFO - Pipeline executed succesfully.
+2024-06-05 07:43:35,945 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:43:35,946 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:43:35,946 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:43:35,946 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:43:36,697 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 07:43:43,567 - INFO - Pipeline executed succesfully.
+2024-06-05 07:44:52,298 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:44:52,298 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:44:52,298 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:44:52,298 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:44:53,065 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 07:45:00,223 - INFO - Pipeline executed succesfully.
+2024-06-05 07:46:19,593 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:46:19,593 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:46:19,593 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:46:19,593 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:46:20,363 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 07:46:27,908 - INFO - Pipeline executed succesfully.
+2024-06-05 07:47:39,731 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:39,731 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 07:47:39,731 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 07:47:39,731 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 07:47:40,380 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:49:42,915 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:42,915 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 08:49:42,915 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 08:49:42,915 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 08:49:43,402 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 13:01:29,394 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,395 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-06-05 13:01:29,395 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-06-05 13:01:29,395 - INFO - Computing SFS of Akkermansia_muciniphila_55290.
+2024-06-05 13:01:30,128 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 19:02:01,630 - INFO - Pipeline executed succesfully.
+2024-07-12 12:51:07,743 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:51:07,744 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-07-12 12:51:07,744 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-07-12 12:51:08,840 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-12 12:51:58,114 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:51:58,114 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-07-12 12:51:58,114 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-07-12 12:51:58,800 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:40:56,079 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:40:56,079 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-07-15 11:40:56,079 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-07-15 11:40:56,821 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 20:33:02,536 - INFO - The 25th percentile of recombination is: 0.0002
+2024-07-15 20:33:02,582 - INFO - The 50th percentile of recombination is: 0.000333333333333
+2024-07-15 20:33:02,617 - INFO - The 75th percentile of recombination is: 0.0005
+2024-07-15 20:33:02,617 - INFO - Pipeline executed succesfully.
+2024-07-16 10:24:33,084 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 10:24:33,084 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/survival_curve.log
+
+2024-07-16 10:24:33,084 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/
+	species = Akkermansia_muciniphila_55290
+
+2024-07-16 10:24:34,126 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 16:38:45,887 - INFO - The 25th percentile of recombination is: 0.0002
+2024-07-16 16:38:45,926 - INFO - The 50th percentile of recombination is: 0.000333333333333
+2024-07-16 16:38:45,958 - INFO - The 75th percentile of recombination is: 0.0005
+2024-07-16 16:38:45,958 - INFO - Pipeline executed succesfully.

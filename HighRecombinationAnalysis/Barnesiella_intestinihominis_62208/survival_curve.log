@@ -1,0 +1,72 @@
+2024-06-05 07:47:39,739 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:39,740 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/survival_curve.log
+
+2024-06-05 07:47:39,740 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/
+	species = Barnesiella_intestinihominis_62208
+
+2024-06-05 07:47:39,740 - INFO - Computing SFS of Barnesiella_intestinihominis_62208.
+2024-06-05 07:47:40,573 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:49:45,064 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:45,064 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/survival_curve.log
+
+2024-06-05 08:49:45,065 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/
+	species = Barnesiella_intestinihominis_62208
+
+2024-06-05 08:49:45,065 - INFO - Computing SFS of Barnesiella_intestinihominis_62208.
+2024-06-05 08:49:45,593 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 13:01:29,511 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,512 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/survival_curve.log
+
+2024-06-05 13:01:29,513 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/
+	species = Barnesiella_intestinihominis_62208
+
+2024-06-05 13:01:29,513 - INFO - Computing SFS of Barnesiella_intestinihominis_62208.
+2024-06-05 13:01:30,154 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 15:09:40,604 - INFO - Pipeline executed succesfully.
+2024-07-12 12:51:58,484 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:51:58,484 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/survival_curve.log
+
+2024-07-12 12:51:58,484 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/
+	species = Barnesiella_intestinihominis_62208
+
+2024-07-12 12:51:59,197 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:41:01,484 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:41:01,485 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/survival_curve.log
+
+2024-07-15 11:41:01,485 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/
+	species = Barnesiella_intestinihominis_62208
+
+2024-07-15 11:41:02,257 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 14:34:05,748 - INFO - The 25th percentile of recombination is: 0.00123333333333
+2024-07-15 14:34:05,762 - INFO - The 50th percentile of recombination is: 0.00233333333333
+2024-07-15 14:34:05,776 - INFO - The 75th percentile of recombination is: 0.00426666666667
+2024-07-15 14:34:05,776 - INFO - Pipeline executed succesfully.
+2024-07-16 10:24:25,598 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 10:24:25,598 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/survival_curve.log
+
+2024-07-16 10:24:25,598 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/
+	species = Barnesiella_intestinihominis_62208
+
+2024-07-16 10:24:26,857 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 12:24:10,948 - INFO - The 25th percentile of recombination is: 0.00123333333333
+2024-07-16 12:24:10,964 - INFO - The 50th percentile of recombination is: 0.00233333333333
+2024-07-16 12:24:10,977 - INFO - The 75th percentile of recombination is: 0.00426666666667
+2024-07-16 12:24:10,977 - INFO - Pipeline executed succesfully.

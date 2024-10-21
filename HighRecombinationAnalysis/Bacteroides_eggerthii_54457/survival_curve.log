@@ -1,0 +1,72 @@
+2024-06-05 07:47:38,732 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 07:47:38,733 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/survival_curve.log
+
+2024-06-05 07:47:38,733 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/
+	species = Bacteroides_eggerthii_54457
+
+2024-06-05 07:47:38,733 - INFO - Computing SFS of Bacteroides_eggerthii_54457.
+2024-06-05 07:47:39,481 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 08:49:53,035 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 08:49:53,035 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/survival_curve.log
+
+2024-06-05 08:49:53,035 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/
+	species = Bacteroides_eggerthii_54457
+
+2024-06-05 08:49:53,036 - INFO - Computing SFS of Bacteroides_eggerthii_54457.
+2024-06-05 08:49:53,779 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 13:01:29,390 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-05 13:01:29,391 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/survival_curve.log
+
+2024-06-05 13:01:29,392 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/
+	species = Bacteroides_eggerthii_54457
+
+2024-06-05 13:01:29,392 - INFO - Computing SFS of Bacteroides_eggerthii_54457.
+2024-06-05 13:01:30,210 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-06-05 15:19:13,569 - INFO - Pipeline executed succesfully.
+2024-07-12 12:52:01,424 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-12 12:52:01,425 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/survival_curve.log
+
+2024-07-12 12:52:01,425 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/
+	species = Bacteroides_eggerthii_54457
+
+2024-07-12 12:52:02,156 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 11:41:01,485 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-15 11:41:01,485 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/survival_curve.log
+
+2024-07-15 11:41:01,486 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/
+	species = Bacteroides_eggerthii_54457
+
+2024-07-15 11:41:02,179 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-15 13:21:47,671 - INFO - The 25th percentile of recombination is: 0.0001
+2024-07-15 13:21:47,693 - INFO - The 50th percentile of recombination is: 0.0002
+2024-07-15 13:21:47,702 - INFO - The 75th percentile of recombination is: 0.000433333333333
+2024-07-15 13:21:47,702 - INFO - Pipeline executed succesfully.
+2024-07-16 10:24:26,927 - INFO - Beginning execution of survival_curve.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-16 10:24:26,927 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/survival_curve.log
+
+2024-07-16 10:24:26,927 - INFO - Parsed the following arguments:
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/
+	species = Bacteroides_eggerthii_54457
+
+2024-07-16 10:24:27,665 - WARNING - sys:1: DtypeWarning: Columns (2,6) have mixed types. Specify dtype option on import or set low_memory=False.
+
+2024-07-16 12:42:35,966 - INFO - The 25th percentile of recombination is: 0.0001
+2024-07-16 12:42:35,977 - INFO - The 50th percentile of recombination is: 0.0002
+2024-07-16 12:42:35,985 - INFO - The 75th percentile of recombination is: 0.000433333333333
+2024-07-16 12:42:35,985 - INFO - Pipeline executed succesfully.

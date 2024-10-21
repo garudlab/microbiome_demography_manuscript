@@ -1,0 +1,23 @@
+2024-06-03 16:25:57,378 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-03 16:25:57,378 - INFO - Progress is being logged to ../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_evaluate_demography.log
+
+2024-06-03 16:25:57,378 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_empirical_syn_14_downsampled_sfs.txt
+	mask_singletons = False
+	mask_doubletons = False
+	model_type = three_epoch
+	outprefix = ../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5
+	params_list = [2.44931382, 3.10021672, 0.00831919, 0.18658381]
+
+2024-06-03 16:25:57,380 - INFO - Beginning demographic evaluation for three-epoch demographic model.
+2024-06-03 16:25:57,383 - INFO - Beginning optimization with guess, [2.44931382, 3.10021672, 0.00831919, 0.18658381].
+2024-06-03 16:25:57,383 - INFO - Finished optimization with guess, [2.44931382, 3.10021672, 0.00831919, 0.18658381].
+2024-06-03 16:25:57,383 - INFO - Best fit parameters: [2.44931382, 3.10021672, 0.00831919, 0.18658381].
+2024-06-03 16:25:57,414 - INFO - Maximum log composite likelihood: -32.788311782.
+2024-06-03 16:25:57,415 - INFO - Optimal value of theta: 3418.07125082.
+2024-06-03 16:25:57,415 - INFO - Synonymous input SFS: [-- 5868.379848865362 2321.328744503681 1548.5258850135374 1230.4273223908406 1064.8562353968086 978.1766935849109 475.2876472942042 -- -- -- -- -- -- --].
+2024-06-03 16:25:57,416 - INFO - Scaled spectrum: [-- 5881.125035172936 2326.51636763351 1515.9238257073034 1210.6367622468765 1066.6258737187136 997.6978880600624 488.45662450994143 -- -- -- -- -- -- --].
+2024-06-03 16:25:57,417 - INFO - Converting and interpreting Tau estimates.
+2024-06-03 16:25:57,418 - INFO - Finished demographic evaluation.
+2024-06-03 16:25:57,418 - INFO - Pipeline executed succesfully.
