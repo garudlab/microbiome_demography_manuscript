@@ -1,0 +1,19 @@
+2024-08-01 18:45:15,317 - INFO - Beginning execution of constant_s_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-08-01 18:45:15,317 - INFO - Progress is being logged to ../SupplementaryAnalysis/accessory_constant_s/Bacteroidales_bacterium_58650_log.log
+
+2024-08-01 18:45:15,318 - INFO - Parsed the following arguments:
+	input_demography = ../SupplementaryAnalysis/Bacteroidales_bacterium_58650/accessory_two_epoch_demography.txt
+	input_syn_sfs = ../SupplementaryAnalysis/Bacteroidales_bacterium_58650/accessory_empirical_syn_downsampled_sfs.txt
+	input_nonsyn_sfs = ../SupplementaryAnalysis/Bacteroidales_bacterium_58650/accessory_empirical_nonsyn_downsampled_sfs.txt
+	outprefix = ../SupplementaryAnalysis/accessory_constant_s/
+
+2024-08-01 18:45:15,354 - INFO - Input demographic parameters are: [0.0181685, 0.07411318].
+2024-08-01 18:45:15,355 - INFO - Input theta_syn is: 12079.0962233.
+2024-08-01 18:45:39,621 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-08-01 18:48:46,604 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-08-02 19:14:24,042 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-08-03 10:13:39,111 - INFO - Pipeline executed succesfully.

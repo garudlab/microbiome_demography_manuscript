@@ -1,0 +1,19 @@
+2024-08-03 08:42:38,618 - INFO - Beginning execution of constant_s_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-08-03 08:42:38,619 - INFO - Progress is being logged to ../SupplementaryAnalysis/accessory_constant_s/Roseburia_intestinalis_56239_log.log
+
+2024-08-03 08:42:38,619 - INFO - Parsed the following arguments:
+	input_demography = ../SupplementaryAnalysis/Roseburia_intestinalis_56239/accessory_two_epoch_demography.txt
+	input_syn_sfs = ../SupplementaryAnalysis/Roseburia_intestinalis_56239/accessory_empirical_syn_downsampled_sfs.txt
+	input_nonsyn_sfs = ../SupplementaryAnalysis/Roseburia_intestinalis_56239/accessory_empirical_nonsyn_downsampled_sfs.txt
+	outprefix = ../SupplementaryAnalysis/accessory_constant_s/
+
+2024-08-03 08:42:38,640 - INFO - Input demographic parameters are: [0.008096757, 0.001005801].
+2024-08-03 08:42:38,641 - INFO - Input theta_syn is: 699.91512942.
+2024-08-03 08:42:41,287 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-08-03 09:29:24,180 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-08-03 22:12:46,969 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-08-04 07:50:52,826 - INFO - Pipeline executed succesfully.
