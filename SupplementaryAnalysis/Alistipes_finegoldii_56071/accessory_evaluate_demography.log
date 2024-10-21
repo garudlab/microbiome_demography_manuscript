@@ -1,0 +1,23 @@
+2024-06-25 13:43:21,358 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-25 13:43:21,358 - INFO - Progress is being logged to ../SupplementaryAnalysis/Alistipes_finegoldii_56071/accessory_evaluate_demography.log
+
+2024-06-25 13:43:21,358 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Alistipes_finegoldii_56071/accessory_empirical_syn_downsampled_sfs.txt
+	mask_singletons = False
+	mask_doubletons = False
+	model_type = two_epoch
+	outprefix = ../SupplementaryAnalysis/Alistipes_finegoldii_56071/accessory
+	params_list = [0.21072289, 0.02936081]
+
+2024-06-25 13:43:21,363 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2024-06-25 13:43:21,366 - INFO - Beginning optimization with guess, [0.21072289, 0.02936081].
+2024-06-25 13:43:21,366 - INFO - Finished optimization with guess, [0.21072289, 0.02936081].
+2024-06-25 13:43:21,366 - INFO - Best fit parameters: [0.21072289, 0.02936081].
+2024-06-25 13:43:21,426 - INFO - Maximum log composite likelihood: -24.827176274.
+2024-06-25 13:43:21,427 - INFO - Optimal value of theta: 553.648942487.
+2024-06-25 13:43:21,427 - INFO - Synonymous input SFS: [-- 375.58163275775127 269.09489084938696 215.36660534541744 188.7961373997237 171.97359726547452 159.88077238517607 77.58020612005754 -- -- -- -- -- -- --].
+2024-06-25 13:43:21,428 - INFO - Scaled spectrum: [-- 375.50172432793636 268.43345917880856 217.36373554546543 187.61638144241147 169.98420050113742 160.57097802387227 78.80336310335578 -- -- -- -- -- -- --].
+2024-06-25 13:43:21,430 - INFO - Converting and interpreting Tau estimates.
+2024-06-25 13:43:21,431 - INFO - Finished demographic evaluation.
+2024-06-25 13:43:21,431 - INFO - Pipeline executed succesfully.

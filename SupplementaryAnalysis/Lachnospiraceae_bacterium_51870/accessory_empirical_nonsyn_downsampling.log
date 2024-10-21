@@ -1,0 +1,13 @@
+2024-06-24 15:14:48,047 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-24 15:14:48,048 - INFO - Progress is being logged to ../SupplementaryAnalysis/Lachnospiraceae_bacterium_51870/accessory_empirical_nonsyn_downsampling.log
+
+2024-06-24 15:14:48,048 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../SupplementaryAnalysis/Lachnospiraceae_bacterium_51870/accessory_empirical_nonsyn_sfs.txt
+	outprefix = ../SupplementaryAnalysis/Lachnospiraceae_bacterium_51870/accessory_empirical_nonsyn
+
+2024-06-24 15:14:48,048 - INFO - Parsing input SFS.
+2024-06-24 15:14:48,058 - INFO - Formatting output SFS.
+2024-06-24 15:14:48,063 - INFO - Finished downsampling.
+2024-06-24 15:14:48,063 - INFO - Pipeline executed succesfully.

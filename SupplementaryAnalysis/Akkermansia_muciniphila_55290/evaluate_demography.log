@@ -1,0 +1,23 @@
+2024-06-12 16:57:49,561 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-12 16:57:49,561 - INFO - Progress is being logged to ../SupplementaryAnalysis/Akkermansia_muciniphila_55290/evaluate_demography.log
+
+2024-06-12 16:57:49,561 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_syn_downsampled_sfs.txt
+	model_type = two_epoch
+	params_list = [0.1638349, 0.3616908]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../SupplementaryAnalysis/Akkermansia_muciniphila_55290/
+
+2024-06-12 16:57:49,589 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2024-06-12 16:57:49,597 - INFO - Beginning optimization with guess, [0.1638349, 0.3616908].
+2024-06-12 16:57:49,597 - INFO - Finished optimization with guess, [0.1638349, 0.3616908].
+2024-06-12 16:57:49,597 - INFO - Best fit parameters: [0.1638349, 0.3616908].
+2024-06-12 16:57:49,728 - INFO - Maximum log composite likelihood: -35.20829738165776.
+2024-06-12 16:57:49,729 - INFO - Optimal value of theta: 34203.38137094901.
+2024-06-12 16:57:49,729 - INFO - Synonymous input SFS: [-- 7319.5819712705725 4521.082116523505 3614.13702651736 3204.300240079359 3008.766824106485 2918.8880646435937 1446.293373715875 -- -- -- -- -- -- --].
+2024-06-12 16:57:49,730 - INFO - Scaled spectrum: [-- 7298.245987768029 4532.303618669493 3640.7957885845 3224.7559602485317 3006.8289835114447 2897.8649880298326 1432.2542900449153 -- -- -- -- -- -- --].
+2024-06-12 16:57:49,731 - INFO - Converting and interpreting Tau estimates.
+2024-06-12 16:57:49,732 - INFO - Finished demographic evaluation.
+2024-06-12 16:57:49,732 - INFO - Pipeline executed succesfully.

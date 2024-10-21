@@ -1,0 +1,27 @@
+2024-06-13 13:46:47,788 - INFO - Beginning execution of fit_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-13 13:46:47,788 - INFO - Progress is being logged to ../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/core_log.log
+
+2024-06-13 13:46:47,788 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/core_empirical_syn_downsampled_sfs.txt
+	nonsyn_input_sfs = ../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/core_empirical_nonsyn_downsampled_sfs.txt
+	input_demography = ../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/two_epoch_demography.txt
+	input_model = two_epoch
+	initial_alpha = 0.2
+	initial_beta = 0.1
+	outprefix = ../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/core
+
+2024-06-13 13:46:47,792 - INFO - Loading input demography.
+2024-06-13 13:46:47,793 - INFO - Input demographic parameters are: [7.377577, 4.6574].
+2024-06-13 13:46:47,793 - INFO - Input theta_syn is: 3051.757922597246.
+2024-06-13 13:46:47,793 - INFO - Generating spectrum from input demography.
+2024-06-13 13:57:41,464 - INFO - Fitting DFE.
+2024-06-13 13:57:43,497 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-06-13 13:58:50,046 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-06-13 13:59:50,334 - INFO - Fitting Neutral + Gamma DFE
+2024-06-13 14:00:53,066 - INFO - Computing intermediate summary statistics.
+2024-06-13 14:00:53,091 - INFO - Outputting results.
+2024-06-13 14:00:53,095 - INFO - Pipeline executed succesfully.

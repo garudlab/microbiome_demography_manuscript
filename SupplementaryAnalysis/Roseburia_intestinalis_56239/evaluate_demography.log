@@ -1,0 +1,23 @@
+2024-06-12 16:59:01,449 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-12 16:59:01,449 - INFO - Progress is being logged to ../SupplementaryAnalysis/Roseburia_intestinalis_56239/evaluate_demography.log
+
+2024-06-12 16:59:01,449 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Roseburia_intestinalis_56239/core_empirical_syn_downsampled_sfs.txt
+	model_type = two_epoch
+	params_list = [2.903973, 5.336551]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../SupplementaryAnalysis/Roseburia_intestinalis_56239/
+
+2024-06-12 16:59:01,474 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2024-06-12 16:59:01,477 - INFO - Beginning optimization with guess, [2.903973, 5.336551].
+2024-06-12 16:59:01,477 - INFO - Finished optimization with guess, [2.903973, 5.336551].
+2024-06-12 16:59:01,477 - INFO - Best fit parameters: [2.903973, 5.336551].
+2024-06-12 16:59:01,536 - INFO - Maximum log composite likelihood: -44.54037115247729.
+2024-06-12 16:59:01,537 - INFO - Optimal value of theta: 1786.778458712773.
+2024-06-12 16:59:01,537 - INFO - Synonymous input SFS: [-- 5203.079319215265 2994.9213084827074 2058.1278822218214 1611.2965200477518 1370.2132966694842 1246.256394572868 603.806373860968 -- -- -- -- -- -- --].
+2024-06-12 16:59:01,538 - INFO - Scaled spectrum: [-- 5370.4451382770585 2809.3413629066777 1983.8673378036542 1598.6491539289568 1396.8696427332454 1295.9804280076626 632.5480314136122 -- -- -- -- -- -- --].
+2024-06-12 16:59:01,538 - INFO - Converting and interpreting Tau estimates.
+2024-06-12 16:59:01,540 - INFO - Finished demographic evaluation.
+2024-06-12 16:59:01,540 - INFO - Pipeline executed succesfully.

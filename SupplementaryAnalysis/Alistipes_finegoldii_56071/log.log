@@ -1,0 +1,16 @@
+2024-06-12 09:52:20,198 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-12 09:52:20,199 - INFO - Progress is being logged to ../SupplementaryAnalysis/Alistipes_finegoldii_56071/log.log
+
+2024-06-12 09:52:20,199 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Alistipes_finegoldii_56071/core_empirical_syn_downsampled_sfs.txt
+	input_demography = ../SupplementaryAnalysis/Alistipes_finegoldii_56071/two_epoch_demography.txt
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../SupplementaryAnalysis/Alistipes_finegoldii_56071/
+
+2024-06-12 09:52:20,228 - INFO - Beginning demographic inference for two-epoch demographic model.
+2024-06-12 12:36:29,530 - INFO - Maximum likelihood computed to be: -37.70043533059561.
+2024-06-12 12:36:29,532 - INFO - Maximum likelihood found at ([0.0685145646004016, 0.23077104505301207]).
+2024-06-12 12:36:29,532 - INFO - Finished plotting likelihood surface.
+2024-06-12 12:36:29,532 - INFO - Pipeline executed succesfully.

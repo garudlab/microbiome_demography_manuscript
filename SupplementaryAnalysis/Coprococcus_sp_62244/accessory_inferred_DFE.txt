@@ -1,0 +1,14 @@
+Assuming a gamma-distributed DFE...
+The maximum likelihood is: -47.051151062972906.
+The maximum likelihood scaled gamma-distributed DFE is parameterized as: [1.18963697e-05 9.65060332e-01].
+The maximum likelihood parameters have a high estimate of: [1.18963697e-05 7.56770923e-08].
+The maximum likelihood parameters have a low estimate of: [1.18963697e-05 4.45544786e-08].
+The empirical nonsynonymous SFS is: [-- 203.51998112725929 133.53592857918352 89.63437113770308 74.8953623567734 70.51392969549501 68.0495108091126 33.52573789006878 -- -- -- -- -- -- --].
+The best fit model SFS is: [-- 280.3230425724632 131.61766176624425 83.91343700369379 61.76798850541221 50.22343288274065 44.47193045358236 21.357328411459115 -- -- -- -- -- -- --].
+Assuming a neu-gamma-distributed DFE...
+The maximum likelihood is: -47.05472635802683.
+The maximum likelihood scaled neu-gamma-distributed DFE is parameterized as: [1.10906498e-01 5.50352329e+00 2.01758006e+04].
+The maximum likelihood parameters have a high estimate of: [1.10906498e-01 5.50352329e+00 1.58212484e-03].
+The maximum likelihood parameters have a low estimate of: [1.10906498e-01 5.50352329e+00 9.31467441e-04].
+The empirical nonsynonymous SFS is: [-- 203.51998112725929 133.53592857918352 89.63437113770308 74.8953623567734 70.51392969549501 68.0495108091126 33.52573789006878 -- -- -- -- -- -- --].
+The best fit model SFS is: [-- 280.327843122748 131.6182793939418 83.91276681926205 61.766753705659696 50.22192116080714 44.470287664547975 21.35648757360343 -- -- -- -- -- -- --].

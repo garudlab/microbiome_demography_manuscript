@@ -1,0 +1,13 @@
+2024-06-11 15:11:53,364 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-11 15:11:53,364 - INFO - Progress is being logged to ../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_syn_downsampling.log
+
+2024-06-11 15:11:53,364 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_syn_sfs.txt
+	outprefix = ../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_syn
+
+2024-06-11 15:11:53,364 - INFO - Parsing input SFS.
+2024-06-11 15:11:53,366 - INFO - Formatting output SFS.
+2024-06-11 15:11:53,372 - INFO - Finished downsampling.
+2024-06-11 15:11:53,373 - INFO - Pipeline executed succesfully.

@@ -1,0 +1,23 @@
+2024-06-12 16:58:26,393 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-12 16:58:26,393 - INFO - Progress is being logged to ../SupplementaryAnalysis/Bacteroides_vulgatus_57955/evaluate_demography.log
+
+2024-06-12 16:58:26,393 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Bacteroides_vulgatus_57955/core_empirical_syn_downsampled_sfs.txt
+	model_type = two_epoch
+	params_list = [5933.157, 0.01950551]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../SupplementaryAnalysis/Bacteroides_vulgatus_57955/
+
+2024-06-12 16:58:26,395 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2024-06-12 16:58:26,401 - INFO - Beginning optimization with guess, [5933.157, 0.01950551].
+2024-06-12 16:58:26,401 - INFO - Finished optimization with guess, [5933.157, 0.01950551].
+2024-06-12 16:58:26,401 - INFO - Best fit parameters: [5933.157, 0.01950551].
+2024-06-12 16:58:26,428 - INFO - Maximum log composite likelihood: -37.82528229447553.
+2024-06-12 16:58:26,429 - INFO - Optimal value of theta: 2904.0401964819944.
+2024-06-12 16:58:26,429 - INFO - Synonymous input SFS: [-- 3542.6217599627857 1614.4808767660702 1182.6678297884696 1018.4836390542429 942.5359144647038 904.0259485895456 445.7575057465223 -- -- -- -- -- -- --].
+2024-06-12 16:58:26,429 - INFO - Scaled spectrum: [-- 3542.7575918846915 1694.0314314927105 1232.0168893500359 1016.413959266581 903.4790912174419 847.0116571737356 414.86285398714443 -- -- -- -- -- -- --].
+2024-06-12 16:58:26,430 - INFO - Converting and interpreting Tau estimates.
+2024-06-12 16:58:26,440 - INFO - Finished demographic evaluation.
+2024-06-12 16:58:26,440 - INFO - Pipeline executed succesfully.

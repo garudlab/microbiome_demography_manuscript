@@ -1,0 +1,35 @@
+2024-06-26 12:14:15,721 - INFO - Beginning execution of fit_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-26 12:14:15,721 - INFO - Progress is being logged to ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/accessory_log.log
+
+2024-06-26 12:14:15,721 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/accessory_empirical_syn_downsampled_sfs.txt
+	nonsyn_input_sfs = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/accessory_empirical_nonsyn_downsampled_sfs.txt
+	input_demography = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/accessory_two_epoch_demography.txt
+	input_model = two_epoch
+	initial_alpha = 0.2
+	initial_beta = 0.1
+	outprefix = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/accessory
+
+2024-06-26 12:14:15,731 - INFO - Loading input demography.
+2024-06-26 12:14:15,742 - INFO - Input demographic parameters are: [3.551455, 2.446789].
+2024-06-26 12:14:15,742 - INFO - Input theta_syn is: 532.95261775.
+2024-06-26 12:14:15,742 - INFO - Generating spectrum from input demography.
+2024-06-26 12:15:48,521 - INFO - Fitting DFE.
+2024-06-26 12:15:57,327 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-06-26 12:15:57,805 - WARNING - The maximum number of subdivisions (50) has been achieved.
+  If increasing the limit yields no improvement it is advised to analyze 
+  the integrand in order to determine the difficulties.  If the position of a 
+  local difficulty can be determined (singularity, discontinuity) one will 
+  probably gain from splitting up the interval and calling the integrator 
+  on the subranges.  Perhaps a special-purpose integrator should be used.
+2024-06-26 12:16:13,321 - WARNING - Warning: converting a masked element to nan.
+2024-06-26 12:16:55,547 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-06-26 12:16:55,794 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-06-26 12:20:15,671 - INFO - Fitting Neutral + Gamma DFE
+2024-06-26 12:22:57,074 - INFO - Computing intermediate summary statistics.
+2024-06-26 12:22:57,098 - INFO - Outputting results.
+2024-06-26 12:22:57,104 - INFO - Pipeline executed succesfully.

@@ -1,0 +1,16 @@
+2024-06-12 09:52:20,200 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-12 09:52:20,201 - INFO - Progress is being logged to ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/log.log
+
+2024-06-12 09:52:20,201 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/core_empirical_syn_downsampled_sfs.txt
+	input_demography = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/two_epoch_demography.txt
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/
+
+2024-06-12 09:52:20,208 - INFO - Beginning demographic inference for two-epoch demographic model.
+2024-06-12 14:56:11,248 - INFO - Maximum likelihood computed to be: -31.09681163506366.
+2024-06-12 14:56:11,250 - INFO - Maximum likelihood found at ([0.82009533, 1.10500706]).
+2024-06-12 14:56:11,250 - INFO - Finished plotting likelihood surface.
+2024-06-12 14:56:11,250 - INFO - Pipeline executed succesfully.

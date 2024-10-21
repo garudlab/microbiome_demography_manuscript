@@ -1,0 +1,13 @@
+2024-06-11 15:11:54,817 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-11 15:11:54,817 - INFO - Progress is being logged to ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/core_empirical_nonsyn_downsampling.log
+
+2024-06-11 15:11:54,818 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/core_empirical_nonsyn_sfs.txt
+	outprefix = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/core_empirical_nonsyn
+
+2024-06-11 15:11:54,818 - INFO - Parsing input SFS.
+2024-06-11 15:11:54,818 - INFO - Formatting output SFS.
+2024-06-11 15:11:54,822 - INFO - Finished downsampling.
+2024-06-11 15:11:54,822 - INFO - Pipeline executed succesfully.

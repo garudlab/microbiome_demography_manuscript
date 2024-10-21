@@ -1,0 +1,16 @@
+2024-06-12 09:52:20,204 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-12 09:52:20,205 - INFO - Progress is being logged to ../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/log.log
+
+2024-06-12 09:52:20,205 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/core_empirical_syn_downsampled_sfs.txt
+	input_demography = ../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/two_epoch_demography.txt
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/
+
+2024-06-12 09:52:20,231 - INFO - Beginning demographic inference for two-epoch demographic model.
+2024-06-12 10:40:24,824 - INFO - Maximum likelihood computed to be: -41.847641403666785.
+2024-06-12 10:40:24,825 - INFO - Maximum likelihood found at ([0.40483471, 0.01664111]).
+2024-06-12 10:40:24,825 - INFO - Finished plotting likelihood surface.
+2024-06-12 10:40:24,825 - INFO - Pipeline executed succesfully.

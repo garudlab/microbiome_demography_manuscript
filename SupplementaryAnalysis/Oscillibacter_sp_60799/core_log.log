@@ -1,0 +1,27 @@
+2024-06-13 13:43:26,388 - INFO - Beginning execution of fit_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-13 13:43:26,388 - INFO - Progress is being logged to ../SupplementaryAnalysis/Oscillibacter_sp_60799/core_log.log
+
+2024-06-13 13:43:26,388 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Oscillibacter_sp_60799/core_empirical_syn_downsampled_sfs.txt
+	nonsyn_input_sfs = ../SupplementaryAnalysis/Oscillibacter_sp_60799/core_empirical_nonsyn_downsampled_sfs.txt
+	input_demography = ../SupplementaryAnalysis/Oscillibacter_sp_60799/two_epoch_demography.txt
+	input_model = two_epoch
+	initial_alpha = 0.2
+	initial_beta = 0.1
+	outprefix = ../SupplementaryAnalysis/Oscillibacter_sp_60799/core
+
+2024-06-13 13:43:26,405 - INFO - Loading input demography.
+2024-06-13 13:43:26,408 - INFO - Input demographic parameters are: [1.8624275, 0.2927173].
+2024-06-13 13:43:26,408 - INFO - Input theta_syn is: 5596.999628090701.
+2024-06-13 13:43:26,408 - INFO - Generating spectrum from input demography.
+2024-06-13 13:43:55,748 - INFO - Fitting DFE.
+2024-06-13 13:43:58,055 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-06-13 13:45:00,993 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-06-13 13:45:57,034 - INFO - Fitting Neutral + Gamma DFE
+2024-06-13 13:47:00,977 - INFO - Computing intermediate summary statistics.
+2024-06-13 13:47:00,981 - INFO - Outputting results.
+2024-06-13 13:47:00,989 - INFO - Pipeline executed succesfully.

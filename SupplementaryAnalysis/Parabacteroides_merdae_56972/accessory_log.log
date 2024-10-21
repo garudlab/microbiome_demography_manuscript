@@ -1,0 +1,28 @@
+2024-06-26 12:16:19,828 - INFO - Beginning execution of fit_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-26 12:16:19,829 - INFO - Progress is being logged to ../SupplementaryAnalysis/Parabacteroides_merdae_56972/accessory_log.log
+
+2024-06-26 12:16:19,829 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Parabacteroides_merdae_56972/accessory_empirical_syn_downsampled_sfs.txt
+	nonsyn_input_sfs = ../SupplementaryAnalysis/Parabacteroides_merdae_56972/accessory_empirical_nonsyn_downsampled_sfs.txt
+	input_demography = ../SupplementaryAnalysis/Parabacteroides_merdae_56972/accessory_two_epoch_demography.txt
+	input_model = two_epoch
+	initial_alpha = 0.2
+	initial_beta = 0.1
+	outprefix = ../SupplementaryAnalysis/Parabacteroides_merdae_56972/accessory
+
+2024-06-26 12:16:19,857 - INFO - Loading input demography.
+2024-06-26 12:16:19,858 - INFO - Input demographic parameters are: [1.917623, 3.246064].
+2024-06-26 12:16:19,859 - INFO - Input theta_syn is: 270.661216476.
+2024-06-26 12:16:19,859 - INFO - Generating spectrum from input demography.
+2024-06-26 12:18:26,229 - INFO - Fitting DFE.
+2024-06-26 12:19:21,381 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-06-26 12:19:21,635 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-06-26 12:19:51,644 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-06-26 12:20:45,240 - INFO - Fitting Neutral + Gamma DFE
+2024-06-26 12:23:29,208 - INFO - Computing intermediate summary statistics.
+2024-06-26 12:23:29,234 - INFO - Outputting results.
+2024-06-26 12:23:29,241 - INFO - Pipeline executed succesfully.

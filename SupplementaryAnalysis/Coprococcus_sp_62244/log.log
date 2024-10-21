@@ -1,0 +1,16 @@
+2024-06-12 09:52:20,203 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-12 09:52:20,204 - INFO - Progress is being logged to ../SupplementaryAnalysis/Coprococcus_sp_62244/log.log
+
+2024-06-12 09:52:20,204 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Coprococcus_sp_62244/core_empirical_syn_downsampled_sfs.txt
+	input_demography = ../SupplementaryAnalysis/Coprococcus_sp_62244/two_epoch_demography.txt
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../SupplementaryAnalysis/Coprococcus_sp_62244/
+
+2024-06-12 09:52:20,213 - INFO - Beginning demographic inference for two-epoch demographic model.
+2024-06-12 11:05:53,307 - INFO - Maximum likelihood computed to be: -33.39354713639659.
+2024-06-12 11:05:53,308 - INFO - Maximum likelihood found at ([1.60649695, 0.21835606]).
+2024-06-12 11:05:53,308 - INFO - Finished plotting likelihood surface.
+2024-06-12 11:05:53,308 - INFO - Pipeline executed succesfully.

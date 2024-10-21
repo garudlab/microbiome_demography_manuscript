@@ -1,0 +1,13 @@
+2024-06-24 15:14:45,275 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-24 15:14:45,276 - INFO - Progress is being logged to ../SupplementaryAnalysis/Bacteroides_xylanisolvens_57185/accessory_empirical_syn_downsampling.log
+
+2024-06-24 15:14:45,276 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../SupplementaryAnalysis/Bacteroides_xylanisolvens_57185/accessory_empirical_syn_sfs.txt
+	outprefix = ../SupplementaryAnalysis/Bacteroides_xylanisolvens_57185/accessory_empirical_syn
+
+2024-06-24 15:14:45,276 - INFO - Parsing input SFS.
+2024-06-24 15:14:45,293 - INFO - Formatting output SFS.
+2024-06-24 15:14:45,305 - INFO - Finished downsampling.
+2024-06-24 15:14:45,306 - INFO - Pipeline executed succesfully.

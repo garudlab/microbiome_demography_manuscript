@@ -1,0 +1,23 @@
+2024-06-25 13:44:32,969 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-25 13:44:32,969 - INFO - Progress is being logged to ../SupplementaryAnalysis/Prevotella_copri_61740/accessory_evaluate_demography.log
+
+2024-06-25 13:44:32,969 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Prevotella_copri_61740/accessory_empirical_syn_downsampled_sfs.txt
+	mask_singletons = False
+	mask_doubletons = False
+	model_type = two_epoch
+	outprefix = ../SupplementaryAnalysis/Prevotella_copri_61740/accessory
+	params_list = [7.5922e-05, 5.639054e-07]
+
+2024-06-25 13:44:32,971 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2024-06-25 13:44:32,973 - INFO - Beginning optimization with guess, [7.5922e-05, 5.639054e-07].
+2024-06-25 13:44:32,973 - INFO - Finished optimization with guess, [7.5922e-05, 5.639054e-07].
+2024-06-25 13:44:32,973 - INFO - Best fit parameters: [7.5922e-05, 5.639054e-07].
+2024-06-25 13:44:33,028 - INFO - Maximum log composite likelihood: -31.8551041777.
+2024-06-25 13:44:33,029 - INFO - Optimal value of theta: 1504.28180489.
+2024-06-25 13:44:33,029 - INFO - Synonymous input SFS: [-- 1539.4214872598657 928.4949736165272 649.2388267087207 524.6349803107221 453.5759225409372 413.0561761554723 199.8581991177542 -- -- -- -- -- -- --].
+2024-06-25 13:44:33,030 - INFO - Scaled spectrum: [-- 1546.9839362384832 875.1073270349256 638.0547842069831 526.4902592979925 467.9981069300843 438.748772050753 214.89737995077877 -- -- -- -- -- -- --].
+2024-06-25 13:44:33,032 - INFO - Converting and interpreting Tau estimates.
+2024-06-25 13:44:33,033 - INFO - Finished demographic evaluation.
+2024-06-25 13:44:33,033 - INFO - Pipeline executed succesfully.

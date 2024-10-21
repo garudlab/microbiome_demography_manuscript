@@ -1,0 +1,16 @@
+2024-06-12 09:52:20,194 - INFO - Beginning execution of plot_likelihood.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-12 09:52:20,194 - INFO - Progress is being logged to ../SupplementaryAnalysis/Bacteroides_caccae_53434/log.log
+
+2024-06-12 09:52:20,195 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Bacteroides_caccae_53434/core_empirical_syn_downsampled_sfs.txt
+	input_demography = ../SupplementaryAnalysis/Bacteroides_caccae_53434/two_epoch_demography.txt
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../SupplementaryAnalysis/Bacteroides_caccae_53434/
+
+2024-06-12 09:52:20,201 - INFO - Beginning demographic inference for two-epoch demographic model.
+2024-06-12 10:40:48,703 - INFO - Maximum likelihood computed to be: -32.31458185162046.
+2024-06-12 10:40:48,704 - INFO - Maximum likelihood found at ([2.33399111, 0.05552083]).
+2024-06-12 10:40:48,704 - INFO - Finished plotting likelihood surface.
+2024-06-12 10:40:48,704 - INFO - Pipeline executed succesfully.

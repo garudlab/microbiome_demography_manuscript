@@ -1,0 +1,13 @@
+2024-06-24 15:14:48,082 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-24 15:14:48,083 - INFO - Progress is being logged to ../SupplementaryAnalysis/Prevotella_copri_61740/accessory_empirical_nonsyn_downsampling.log
+
+2024-06-24 15:14:48,083 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../SupplementaryAnalysis/Prevotella_copri_61740/accessory_empirical_nonsyn_sfs.txt
+	outprefix = ../SupplementaryAnalysis/Prevotella_copri_61740/accessory_empirical_nonsyn
+
+2024-06-24 15:14:48,083 - INFO - Parsing input SFS.
+2024-06-24 15:14:48,102 - INFO - Formatting output SFS.
+2024-06-24 15:14:48,111 - INFO - Finished downsampling.
+2024-06-24 15:14:48,111 - INFO - Pipeline executed succesfully.

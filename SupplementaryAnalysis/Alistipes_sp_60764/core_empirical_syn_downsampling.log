@@ -1,0 +1,13 @@
+2024-06-11 15:11:53,088 - INFO - Beginning execution of downsample_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-11 15:11:53,088 - INFO - Progress is being logged to ../SupplementaryAnalysis/Alistipes_sp_60764/core_empirical_syn_downsampling.log
+
+2024-06-11 15:11:53,088 - INFO - Parsed the following arguments:
+	sample_size = 14
+	input_sfs = ../SupplementaryAnalysis/Alistipes_sp_60764/core_empirical_syn_sfs.txt
+	outprefix = ../SupplementaryAnalysis/Alistipes_sp_60764/core_empirical_syn
+
+2024-06-11 15:11:53,088 - INFO - Parsing input SFS.
+2024-06-11 15:11:53,089 - INFO - Formatting output SFS.
+2024-06-11 15:11:53,094 - INFO - Finished downsampling.
+2024-06-11 15:11:53,094 - INFO - Pipeline executed succesfully.

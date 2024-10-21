@@ -1,0 +1,23 @@
+2024-06-25 13:44:36,484 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-25 13:44:36,485 - INFO - Progress is being logged to ../SupplementaryAnalysis/Roseburia_inulinivorans_61943/accessory_evaluate_demography.log
+
+2024-06-25 13:44:36,485 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Roseburia_inulinivorans_61943/accessory_empirical_syn_downsampled_sfs.txt
+	mask_singletons = False
+	mask_doubletons = False
+	model_type = two_epoch
+	outprefix = ../SupplementaryAnalysis/Roseburia_inulinivorans_61943/accessory
+	params_list = [2.14015e-06, 1.757902e-07]
+
+2024-06-25 13:44:36,499 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2024-06-25 13:44:36,501 - INFO - Beginning optimization with guess, [2.14015e-06, 1.757902e-07].
+2024-06-25 13:44:36,501 - INFO - Finished optimization with guess, [2.14015e-06, 1.757902e-07].
+2024-06-25 13:44:36,501 - INFO - Best fit parameters: [2.14015e-06, 1.757902e-07].
+2024-06-25 13:44:36,559 - INFO - Maximum log composite likelihood: -32.1343731118.
+2024-06-25 13:44:36,559 - INFO - Optimal value of theta: 1488.83708612.
+2024-06-25 13:44:36,560 - INFO - Synonymous input SFS: [-- 1037.70734654177 814.4982042043415 582.8956519491903 486.70467758055986 451.9312876894857 451.0607526612994 228.2233993755795 -- -- -- -- -- -- --].
+2024-06-25 13:44:36,560 - INFO - Scaled spectrum: [-- 1053.097971935764 768.8195997842294 608.1267243239466 515.0328028890847 461.5766519929071 433.7880497353086 212.57951934098617 -- -- -- -- -- -- --].
+2024-06-25 13:44:36,563 - INFO - Converting and interpreting Tau estimates.
+2024-06-25 13:44:36,564 - INFO - Finished demographic evaluation.
+2024-06-25 13:44:36,564 - INFO - Pipeline executed succesfully.

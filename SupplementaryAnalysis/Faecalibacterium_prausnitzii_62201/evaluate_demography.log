@@ -1,0 +1,23 @@
+2024-06-12 16:58:46,216 - INFO - Beginning execution of evaluate_demography.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-06-12 16:58:46,216 - INFO - Progress is being logged to ../SupplementaryAnalysis/Faecalibacterium_prausnitzii_62201/evaluate_demography.log
+
+2024-06-12 16:58:46,216 - INFO - Parsed the following arguments:
+	syn_input_sfs = ../SupplementaryAnalysis/Faecalibacterium_prausnitzii_62201/core_empirical_syn_downsampled_sfs.txt
+	model_type = two_epoch
+	params_list = [3.0271403, 0.3213124]
+	mask_singletons = False
+	mask_doubletons = False
+	outprefix = ../SupplementaryAnalysis/Faecalibacterium_prausnitzii_62201/
+
+2024-06-12 16:58:46,230 - INFO - Beginning demographic evaluation for two-epoch demographic model.
+2024-06-12 16:58:46,231 - INFO - Beginning optimization with guess, [3.0271403, 0.3213124].
+2024-06-12 16:58:46,231 - INFO - Finished optimization with guess, [3.0271403, 0.3213124].
+2024-06-12 16:58:46,232 - INFO - Best fit parameters: [3.0271403, 0.3213124].
+2024-06-12 16:58:46,260 - INFO - Maximum log composite likelihood: -38.4250906756979.
+2024-06-12 16:58:46,260 - INFO - Optimal value of theta: 8003.800484038242.
+2024-06-12 16:58:46,261 - INFO - Synonymous input SFS: [-- 15617.017543222317 6258.363003669448 3738.2511442002615 2858.3828181544777 2520.843638228544 2397.944251636352 1184.33646389044 -- -- -- -- -- -- --].
+2024-06-12 16:58:46,261 - INFO - Scaled spectrum: [-- 15657.813622811213 6161.759298003547 3807.057483752211 2925.2724375632456 2528.787157349295 2347.423975257571 1147.0248882647588 -- -- -- -- -- -- --].
+2024-06-12 16:58:46,262 - INFO - Converting and interpreting Tau estimates.
+2024-06-12 16:58:46,263 - INFO - Finished demographic evaluation.
+2024-06-12 16:58:46,263 - INFO - Pipeline executed succesfully.
