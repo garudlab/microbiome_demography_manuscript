@@ -977,7 +977,7 @@ r_inulinivorans_FD_neugamma_accessory = neugamma_sfs_from_dfe('../SupplementaryA
 r_bicirculans_FD_neugamma_accessory = neugamma_sfs_from_dfe('../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/accessory_inferred_DFE.txt')
 r_bromii_FD_neugamma_accessory = neugamma_sfs_from_dfe('../SupplementaryAnalysis/Ruminococcus_bromii_62047/accessory_inferred_DFE.txt')
 
-### Supplemental Table 3
+### Supplemental Table 2
 
 one_epoch_likelihood = numeric(39)
 one_epoch_AIC = numeric(39)
@@ -1027,7 +1027,7 @@ for (i in 1:length(core_one_epoch_file_list)) {
   three_epoch_ncurr[i] = three_epoch_nu_contemporary[i] * three_epoch_nanc[i]
 }
 
-table_s3 = data.frame(
+table_s2 = data.frame(
   species=supplementary_species_list,
   one_epoch_likelihood,
   one_epoch_AIC,
@@ -1053,7 +1053,7 @@ table_s3 = data.frame(
   three_epoch_ncurr
 )
 
-names(table_s3) = c(
+names(table_s2) = c(
   'Species',
   'One epoch, log likelihood',
   'One epoch, AIC',
@@ -1079,15 +1079,15 @@ names(table_s3) = c(
   'Three epoch, Current effective population size'
 )
 
-table_s3$Species = factor(table_s3$Species, levels=FD_phylogenetic_levels)
+table_s2$Species = factor(table_s2$Species, levels=FD_phylogenetic_levels)
 
-table_s3 <- table_s3[order(table_s3$Species), ]
+table_s2 <- table_s2[order(table_s2$Species), ]
 
-table_s3
+table_s2
 
-# write.csv(table_s3, '../Supplement/Supplemental_Table_3.csv', row.names = F)
+# write.csv(table_s2, '../Supplement/Supplemental_Table_2.csv', row.names = F)
 
-### Supplemental Table 4
+### Supplemental Table 3
 nu_tau_distribution = data.frame(species=supplementary_species_list, 
   nu_mle = numeric(39),
   time_mle = numeric(39),
@@ -1133,9 +1133,9 @@ names(nu_tau_distribution) = c(
   'High estimate of time in years'
 )
 
-# write.csv(nu_tau_distribution, '../Supplement/Supplemental_Table_4.csv', row.names = F)
+# write.csv(nu_tau_distribution, '../Supplement/Supplemental_Table_3.csv', row.names = F)
 
-### Supplemental Table 5
+### Supplemental Table 4
 
 dfe_nanc = numeric(39)
 gamma_likelihood = numeric(39)
@@ -1161,7 +1161,7 @@ for (i in 1:length(core_DFE_file_list)) {
   neugamma_beta[i] = return_DFE_params(core_DFE_file_list[i])[5]
 }
 
-table_s5 = data.frame(
+table_s4 = data.frame(
   species=supplementary_species_list,
   dfe_nanc,
   gamma_likelihood,
@@ -1175,7 +1175,7 @@ table_s5 = data.frame(
   neugamma_beta
 )
 
-names(table_s5) = c(
+names(table_s4) = c(
   'Species',
   'Ancestral effective population size',
   'Gamma DFE, Log likelihood',
@@ -1189,17 +1189,17 @@ names(table_s5) = c(
   'Neu-Gamma DFE, Scale'
 )
 
-table_s5
+table_s4
 
-table_s5$Species = factor(table_s5$Species, levels=FD_phylogenetic_levels)
+table_s4$Species = factor(table_s4$Species, levels=FD_phylogenetic_levels)
 
-table_s5 <- table_s5[order(table_s5$Species), ]
+table_s4 <- table_s4[order(table_s4$Species), ]
 
-table_s5
+table_s4
 
-# write.csv(table_s5, '../Supplement/Supplemental_Table_5.csv', row.names = F)
+# write.csv(table_s4, '../Supplement/Supplemental_Table_4.csv', row.names = F)
 
-### Supplemental Table 6
+### Supplemental Table 5
 
 FD_accessory_phylogenetic_levels = c(
   'Alistipes putredinis',
@@ -1375,13 +1375,13 @@ for (i in 1:length(accessory_core_one_epoch_file_list)) {
   accessory_three_epoch_ncurr[i] = accessory_three_epoch_nu_contemporary[i] * accessory_three_epoch_nanc[i]
 }
 
-# core_ancestral = table_s3[c(7, 13, 14, 17, 18, 23, 27), ]
-core_ancestral = table_s3[c(5, 2, 3, 4, 6, 8, 9, 12, 14, 16, 18, 19, 20, 25, 27, 28, 36, 34), ]
-# table_s3$Species
+# core_ancestral = table_s2[c(7, 13, 14, 17, 18, 23, 27), ]
+core_ancestral = table_s2[c(5, 2, 3, 4, 6, 8, 9, 12, 14, 16, 18, 19, 20, 25, 27, 28, 36, 34), ]
+# table_s2$Species
 FD_accessory_phylogenetic_levels
 
 
-table_s6 = data.frame(
+table_s5 = data.frame(
   species=FD_accessory_phylogenetic_levels,
   accessory_one_epoch_likelihood,
   accessory_one_epoch_AIC,
@@ -1410,7 +1410,7 @@ table_s6 = data.frame(
   core_ancestral$`Three epoch, Ancestral effective population size`
 )
 
-names(table_s6) = c(
+names(table_s5) = c(
   'Species',
   'One epoch, log likelihood (Accessory)',
   'One epoch, AIC (Accessory)',
@@ -1439,10 +1439,10 @@ names(table_s6) = c(
   'Three epoch, Ancestral effective population size (Core)'
 )
 
-table_s6
-write.csv(table_s6, '../Supplement/Supplemental_Table_6.csv', row.names = F)
+table_s5
+# write.csv(table_s5, '../Supplement/Supplemental_Table_5.csv', row.names = F)
 
-### Supplemental Table 7
+### Supplemental Table 6
 
 accessory_dfe_nanc = numeric(18)
 accessory_gamma_likelihood = numeric(18)
@@ -1468,7 +1468,7 @@ for (i in 1:length(accessory_core_DFE_file_list)) {
   accessory_neugamma_beta[i] = return_DFE_params(accessory_core_DFE_file_list[i])[5]
 }
 
-table_s7 = data.frame(
+table_s6 = data.frame(
   species=FD_accessory_phylogenetic_levels,
   accessory_dfe_nanc,
   accessory_gamma_likelihood,
@@ -1482,7 +1482,7 @@ table_s7 = data.frame(
   accessory_neugamma_beta
 )
 
-names(table_s7) = c(
+names(table_s6) = c(
   'Species',
   'Ancestral effective population size',
   'Gamma DFE, Log likelihood',
@@ -1496,11 +1496,11 @@ names(table_s7) = c(
   'Neu-Gamma DFE, Scale'
 )
 
-table_s7
+table_s6
 
-#write.csv(table_s7, '../Supplement/Supplemental_Table_7.csv', row.names = F)
+# write.csv(table_s6, '../Supplement/Supplemental_Table_6.csv', row.names = F)
 
-### Supplemental Table 8
+### Supplemental Table 7
 DFE_core_file_list = c(
   '../SupplementaryAnalysis/cross_species_dfe/Alistipes_putredinis_61533_likelihood_surface.csv',
   '../SupplementaryAnalysis/cross_species_dfe/Alistipes_finegoldii_56071_likelihood_surface.csv',
@@ -1706,15 +1706,297 @@ acc_core_dfe_LRT_table = data.frame(species=core_acc_species_list, constant_2NAs
 
 acc_core_dfe_LRT_table
 
-write.csv(acc_core_dfe_LRT_table, '../Supplement/Supplemental_Table_8.csv', row.names=FALSE)
+# write.csv(acc_core_dfe_LRT_table, '../Supplement/Supplemental_Table_7.csv', row.names=FALSE)
+
+### Supplemental Table 8
+# Demography for filtered SFS
+
+HR_phylogenetic_levels = c(
+  'Alistipes finegoldii',
+  'Alistipes onderdonkii',
+  'Alistipes shahii',
+  'Parabacteroides distasonis',
+  'Parabacteroides merdae',
+  'Bacteroides fragilis',
+  'Bacteroides cellulosilyticus',
+  'Bacteroides stercoris',
+  'Bacteroides thetaiotaomicron',
+  'Bacteroides caccae',
+  'Bacteroides vulgatus',
+  'Barnesiella intestinihominis',
+  'Akkermansia muciniphila',
+  'Dialister invisus',
+  'Eubacterium rectale',
+  'Oscillibacter sp.',
+  'Ruminococcus bromii',
+  'Ruminococcus bicirculans'
+)
+
+HR_phylogenetic_levels_MIDAS = c(
+  'Alistipes_finegoldii_56071',
+  'Alistipes_onderdonkii_55464',
+  'Alistipes_shahii_62199',
+  'Parabacteroides_distasonis_56985',
+  'Parabacteroides_merdae_56972',
+  'Bacteroides_fragilis_54507',
+  'Bacteroides_cellulosilyticus_58046',
+  'Bacteroides_stercoris_56735',
+  'Bacteroides_thetaiotaomicron_56941',
+  'Bacteroides_caccae_53434',
+  'Bacteroides_vulgatus_57955',
+  'Barnesiella_intestinihominis_62208',
+  'Akkermansia_muciniphila_55290',
+  'Dialister_invisus_61905',
+  'Eubacterium_rectale_56927',
+  'Oscillibacter_sp_60799',
+  'Ruminococcus_bromii_62047',
+  'Ruminococcus_bicirculans_59300'
+)
+
+HR_one_epoch_file_list = c(
+  '../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_one_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_one_epoch_demography.txt'
+)
+
+HR_two_epoch_file_list = c(
+  '../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_two_epoch_demography.txt'
+)
+
+HR_three_epoch_file_list = c(
+  '../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_three_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_three_epoch_demography.txt'
+)
+
+### Supplemental Table 8
+
+one_epoch_likelihood = numeric(18)
+one_epoch_AIC = numeric(18)
+one_epoch_theta = numeric(18)
+one_epoch_nanc = numeric(18)
+two_epoch_likelihood = numeric(18)
+two_epoch_AIC = numeric(18)
+two_epoch_nu = numeric(18)
+two_epoch_tau = numeric(18)
+two_epoch_time = numeric(18)
+two_epoch_theta = numeric(18)
+two_epoch_nanc = numeric(18)
+two_epoch_ncurr = numeric(18)
+three_epoch_likelihood = numeric(18)
+three_epoch_AIC = numeric(18)
+three_epoch_nu_bottleneck = numeric(18)
+three_epoch_nu_contemporary = numeric(18)
+three_epoch_tau_bottleneck = numeric(18)
+three_epoch_tau_contemporary = numeric(18)
+three_epoch_time_total = numeric(18)
+three_epoch_theta = numeric(18)
+three_epoch_nanc = numeric(18)
+three_epoch_ncurr = numeric(18)
+
+for (i in 1:length(HR_one_epoch_file_list)) {
+  one_epoch_likelihood[i] = return_demography_likelihood(HR_one_epoch_file_list[i])
+  one_epoch_AIC[i] = AIC_from_demography(HR_one_epoch_file_list[i])
+  one_epoch_theta[i] = theta_from_demography(HR_one_epoch_file_list[i])
+  one_epoch_nanc[i] = nanc_from_demography(HR_one_epoch_file_list[i])
+  two_epoch_likelihood[i] = return_demography_likelihood(HR_two_epoch_file_list[i])
+  two_epoch_AIC[i] = AIC_from_demography(HR_two_epoch_file_list[i])
+  two_epoch_nu[i] = return_demography_params(HR_two_epoch_file_list[i])[1]
+  two_epoch_tau[i] = return_demography_params(HR_two_epoch_file_list[i])[2]
+  two_epoch_time[i] = time_from_demography(HR_two_epoch_file_list[i])
+  two_epoch_theta[i] = theta_from_demography(HR_two_epoch_file_list[i])
+  two_epoch_nanc[i] = nanc_from_demography(HR_two_epoch_file_list[i])
+  two_epoch_ncurr[i] = two_epoch_nu[i] * two_epoch_nanc[i]
+  three_epoch_likelihood[i] = return_demography_likelihood(HR_three_epoch_file_list[i])
+  three_epoch_AIC[i] = AIC_from_demography(HR_three_epoch_file_list[i])
+  three_epoch_nu_bottleneck[i] = return_demography_params(HR_three_epoch_file_list[i])[1]
+  three_epoch_nu_contemporary[i] = return_demography_params(HR_three_epoch_file_list[i])[2]
+  three_epoch_tau_bottleneck[i] = return_demography_params(HR_three_epoch_file_list[i])[3]
+  three_epoch_tau_contemporary[i] = return_demography_params(HR_three_epoch_file_list[i])[4]
+  three_epoch_time_total[i] = time_from_demography(HR_three_epoch_file_list[i])
+  three_epoch_theta[i] = theta_from_demography(HR_three_epoch_file_list[i])
+  three_epoch_nanc[i] = nanc_from_demography(HR_three_epoch_file_list[i])
+  three_epoch_ncurr[i] = three_epoch_nu_contemporary[i] * three_epoch_nanc[i]
+}
+
+table_s8 = data.frame(
+  species=HR_phylogenetic_levels_MIDAS,
+  one_epoch_likelihood,
+  one_epoch_AIC,
+  one_epoch_theta,
+  one_epoch_nanc,
+  two_epoch_likelihood,
+  two_epoch_AIC,
+  two_epoch_nu,
+  two_epoch_tau,
+  two_epoch_time,
+  two_epoch_theta,
+  two_epoch_nanc,
+  two_epoch_ncurr,
+  three_epoch_likelihood,
+  three_epoch_AIC,
+  three_epoch_nu_bottleneck,
+  three_epoch_nu_contemporary,
+  three_epoch_tau_bottleneck,
+  three_epoch_tau_contemporary,
+  three_epoch_time_total,
+  three_epoch_theta,
+  three_epoch_nanc,
+  three_epoch_ncurr
+)
+
+names(table_s8) = c(
+  'Species',
+  'One epoch, log likelihood',
+  'One epoch, AIC',
+  'One epoch, theta',
+  'One epoch, Ancestral effective population size',
+  'Two epoch, log likelihood',
+  'Two epoch, AIC',
+  'Two epoch, nu',
+  'Two epoch, tau',
+  'Two epoch, time in years',
+  'Two epoch, theta',
+  'Two epoch, Ancestral effective population size',
+  'Two epoch, Current effective population size',
+  'Three epoch, log likelihood',
+  'Three epoch, AIC',
+  'Three epoch, nu (bottleneck)',
+  'Three epoch, nu (contemporary)',
+  'Three epoch, tau (bottleneck)',
+  'Three epoch, tau (contemporary)',
+  'Three epoch, time in years',
+  'Three epoch, theta',
+  'Three epoch, Ancestral effective population size',
+  'Three epoch, Current effective population size'
+)
+
+table_s8
+
+# write.csv(table_s8, '../Supplement/Supplemental_Table_8.csv', row.names = F)
+
 
 ### Supplemental Table 9
+# DFE for filtered SFS
 
+## HR nonsynonoymous
+a_muciniphila_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_inferred_DFE.txt')
+a_finegoldii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_inferred_DFE.txt')
+a_onderdonkii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_inferred_DFE.txt')
+a_shahii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_inferred_DFE.txt')
+b_caccae_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_inferred_DFE.txt')
+b_cellulosilyticus_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_inferred_DFE.txt')
+b_coprocola_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_coprocola_61586/core_0.5_inferred_DFE.txt')
+b_eggerthii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/core_0.5_inferred_DFE.txt')
+b_fragilis_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_inferred_DFE.txt')
+b_ovatus_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_ovatus_58035/core_0.5_inferred_DFE.txt')
+b_stercoris_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_inferred_DFE.txt')
+b_thetaiotaomicron_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_inferred_DFE.txt')
+b_vulgatus_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_inferred_DFE.txt')
+d_invisus_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_inferred_DFE.txt')
+b_intestinihominis_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_inferred_DFE.txt')
+e_rectale_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_inferred_DFE.txt')
+e_siraeum_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_inferred_DFE.txt')
+oscillibacter_sp_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_inferred_DFE.txt')
+p_distasonis_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_inferred_DFE.txt')
+p_merdae_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_inferred_DFE.txt')
+r_bicirculans_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_inferred_DFE.txt')
+r_bromii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_inferred_DFE.txt')
 
+# HR gamma
+a_muciniphila_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_inferred_DFE.txt')
+a_finegoldii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_inferred_DFE.txt')
+a_onderdonkii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_inferred_DFE.txt')
+a_shahii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_inferred_DFE.txt')
+b_caccae_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_inferred_DFE.txt')
+b_cellulosilyticus_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_inferred_DFE.txt')
+b_coprocola_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_coprocola_61586/core_0.5_inferred_DFE.txt')
+b_eggerthii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/core_0.5_inferred_DFE.txt')
+b_fragilis_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_inferred_DFE.txt')
+b_ovatus_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_ovatus_58035/core_0.5_inferred_DFE.txt')
+b_stercoris_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_inferred_DFE.txt')
+b_thetaiotaomicron_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_inferred_DFE.txt')
+b_vulgatus_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_inferred_DFE.txt')
+d_invisus_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_inferred_DFE.txt')
+b_intestinihominis_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_inferred_DFE.txt')
+e_rectale_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_inferred_DFE.txt')
+e_siraeum_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_inferred_DFE.txt')
+oscillibacter_sp_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_inferred_DFE.txt')
+p_distasonis_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_inferred_DFE.txt')
+p_merdae_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_inferred_DFE.txt')
+r_bicirculans_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_inferred_DFE.txt')
+r_bromii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_inferred_DFE.txt')
 
-### Supplemental Table 10
-
-
+# HR neugamma
+a_muciniphila_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_inferred_DFE.txt')
+a_finegoldii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_inferred_DFE.txt')
+a_onderdonkii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_inferred_DFE.txt')
+a_shahii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_inferred_DFE.txt')
+b_caccae_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_inferred_DFE.txt')
+b_cellulosilyticus_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_inferred_DFE.txt')
+b_coprocola_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_coprocola_61586/core_0.5_inferred_DFE.txt')
+b_eggerthii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/core_0.5_inferred_DFE.txt')
+b_fragilis_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_inferred_DFE.txt')
+b_ovatus_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_ovatus_58035/core_0.5_inferred_DFE.txt')
+b_stercoris_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_inferred_DFE.txt')
+b_thetaiotaomicron_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_inferred_DFE.txt')
+b_vulgatus_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_inferred_DFE.txt')
+d_invisus_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_inferred_DFE.txt')
+b_intestinihominis_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_inferred_DFE.txt')
+e_rectale_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_inferred_DFE.txt')
+e_siraeum_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_inferred_DFE.txt')
+oscillibacter_sp_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_inferred_DFE.txt')
+p_distasonis_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_inferred_DFE.txt')
+p_merdae_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_inferred_DFE.txt')
+r_bicirculans_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_inferred_DFE.txt')
+r_bromii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_inferred_DFE.txt')
 
 
 
@@ -1805,13 +2087,13 @@ write.csv(acc_core_dfe_LRT_table, '../Supplement/Supplemental_Table_8.csv', row.
 
 # Supplemental Figure 1
 
-table_s3 = read.csv('../Supplement/Supplemental_Table_3.csv')
+table_s2 = read.csv('../Supplement/Supplemental_Table_3.csv')
 
-table_s3$Species = factor(table_s3$Species, levels=FD_phylogenetic_levels)
-table_s3 = table_s3[order(table_s3$Species), ]
-table_s3
+table_s2$Species = factor(table_s2$Species, levels=FD_phylogenetic_levels)
+table_s2 = table_s2[order(table_s2$Species), ]
+table_s2
 
-plot_AIC_table = data.frame(table_s3$Species, table_s3$`Three.epoch..AIC`, table_s3$`Two.epoch..AIC`, table_s3$`One.epoch..AIC`)
+plot_AIC_table = data.frame(table_s2$Species, table_s2$`Three.epoch..AIC`, table_s2$`Two.epoch..AIC`, table_s2$`One.epoch..AIC`)
 names(plot_AIC_table) = c('Species', 'Three-epoch', 'Two-epoch', 'One-epoch')
 plot_AIC_table = melt(plot_AIC_table)
 names(plot_AIC_table) = c('Species', 'Model', 'AIC')
@@ -3982,7 +4264,7 @@ ggsave(filename='../Supplement/Supplemental_Figure_10.jpg',
   width=20, height=40, units="in", limitsize=FALSE, dpi=300)
 
 # Supplemental Figure 11
-N_anc = table_s3$`Two.epoch..Ancestral.effective.population.size`
+N_anc = table_s2$`Two.epoch..Ancestral.effective.population.size`
 
 N_curr_low = nu_tau_distribution$`nu_low` * N_anc
 N_curr_high = nu_tau_distribution$`nu_high` * N_anc
