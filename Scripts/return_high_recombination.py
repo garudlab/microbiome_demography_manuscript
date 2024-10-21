@@ -23,6 +23,9 @@ from utils import parse_midas_data, diversity_utils
 from utils import clade_utils, parse_HMP_data
 from utils import gene_diversity_utils
 import numpy as np
+import matplotlib
+matplotlib.use('agg')
+import matplotlib.pyplot as plt
 import gzip
 import dadi
 import scipy.stats.distributions
@@ -40,7 +43,7 @@ class ArgumentParserNoArgHelp(argparse.ArgumentParser):
         sys.exit(2)
 
 
-class ComputeSFS():
+class HighRecombination():
     """Wrapper class to allow functions to reference each other."""
 
     def ExistingFile(self, fname):
@@ -59,6 +62,11 @@ class ComputeSFS():
         parser.add_argument(
             'species', type=str,
             help=('String describing the species being analyzed.'))
+        parser.add_argument(
+            'percentile', type=float,
+            help=
+                ('Float describing the minimum percentile of recombination '
+                 'rate for inclusion'))
         parser.add_argument('--min_depth',
             help=("Minimum depth to use to call a variant at a site in "
                   "a sample"), type=int, default=20)
@@ -140,7 +148,7 @@ class ComputeSFS():
 
         substitution_rate_map = {}
 
-        print(intermediate_filename)
+        # print(intermediate_filename)
 
         if not os.path.isfile(intermediate_filename):
             print('empty map')
@@ -272,7 +280,7 @@ class ComputeSFS():
 
         reference_gene_idxs = numpy.array([gene_name in reference_genes for gene_name in gene_names])
 
-        print(len(gene_names))
+        # print(len(gene_names))
 
         if unique_individuals:
             sample_idxs = (self.calculate_unique_samples(subject_sample_map, gene_samples))*(marker_coverages>=min_marker_coverage)
@@ -303,7 +311,7 @@ class ComputeSFS():
 
         reference_gene_idxs = numpy.array([gene_name in reference_genes for gene_name in gene_names])
 
-        print(len(gene_names))
+        # print(len(gene_names))
 
         if unique_individuals:
             sample_idxs = (self.calculate_unique_samples(subject_sample_map, gene_samples))*(marker_coverages>=min_marker_coverage)
@@ -336,6 +344,7 @@ class ComputeSFS():
         f_star = args['f_star']
         core_bool = args['core']
         accessory_bool = args['accessory']
+        percentile = args['percentile']
         random.seed(1)
 
         # Numpy options
@@ -359,21 +368,21 @@ class ComputeSFS():
         else:
            file_tag = ''
         sfs_dataframe = \
-           '{0}{1}{2}sfs_dataframe.csv'.format(
-                args['outprefix'], underscore, file_tag)
+           '{0}{1}{2}{3}_sfs_dataframe.csv'.format(
+                args['outprefix'], underscore, file_tag, percentile)
         empirical_syn_sfs = \
-            '{0}{1}{2}empirical_syn_sfs.txt'.format(
-                args['outprefix'], underscore, file_tag)
+            '{0}{1}{2}{3}_empirical_syn_sfs.txt'.format(
+                args['outprefix'], underscore, file_tag, percentile)
         empirical_nonsyn_sfs = \
-            '{0}{1}{2}empirical_nonsyn_sfs.txt'.format(
-                args['outprefix'], underscore, file_tag)
-        logfile = '{0}{1}{2}compute_sfs.log'.format(
-            args['outprefix'], underscore, file_tag)
+            '{0}{1}{2}{3}_empirical_nonsyn_sfs.txt'.format(
+                args['outprefix'], underscore, file_tag, percentile)
+        logfile = '{0}{1}{2}{3}_high_recombination.log'.format(
+            args['outprefix'], underscore, file_tag, percentile)
         to_remove = [logfile, sfs_dataframe,
                      empirical_syn_sfs, empirical_nonsyn_sfs]
-        for f in to_remove:
-            if os.path.isfile(f):
-                os.remove(f)
+        # for f in to_remove:
+        #     if os.path.isfile(f):
+        #         os.remove(f)
 
         # Set up to log everything to logfile.
         logging.shutdown()
@@ -400,6 +409,105 @@ class ComputeSFS():
 
         logger.info('Computing SFS of ' + str(species) + '.')
 
+        LG = pd.read_csv("../HighRecombinationData/LiuGood2024TableS3.csv", index_col=1)
+        iLDS = pd.read_csv("../HighRecombinationData/RW_TableS4.csv", index_col=1)
+
+        # Remove potential duplicates
+        LG = LG.loc[LG["Potential duplicate of other events?"] == False]
+        # print(LG)
+
+        LG = LG.loc[species]
+        # print(species)
+
+        iLDS = iLDS.loc[iLDS['Species'] == species]
+        iLDS_site_pos = iLDS.get('SNV position (genome)')
+
+        LG = LG.loc[(LG["between clade?"] == "N") | (LG["between clade?"].isna())]
+
+        # set window size
+        ws = 30000
+
+        # sp = LG.index.get_level_values("Reference genome end loc")
+        ref_sp_max = LG["Reference genome end loc"].max()
+        ref_sp_min = LG["Reference genome start loc"].min()
+        # print(ref_sp_max)
+        # print(ref_sp_min)
+        ref_sp = np.arange(ref_sp_min, ref_sp_max, 1)
+
+        num_transfers = {}
+        for i in range(len(ref_sp)):
+            if i + ws < len(ref_sp):
+                n = ((LG["Reference genome start loc"] >= ref_sp[i])&(LG["Reference genome start loc"] < ref_sp[int(i+ws)])).sum()
+                num_transfers[(ref_sp[int(i)],ref_sp[int(i+ws)])] = n
+            else:
+                n = ((LG["Reference genome start loc"] >= ref_sp[i])&(LG["Reference genome start loc"] < ref_sp[-1])).sum()
+                num_transfers[(ref_sp[int(i)], ref_sp[-1])] = n
+
+        num_transfers = pd.Series(num_transfers)
+        num_transfers.index.names = ["ref_start", "ref_end"]
+        # print(num_transfers)
+
+        midpoints = num_transfers.index.get_level_values("ref_start") + (num_transfers.index.get_level_values("ref_end") - num_transfers.index.get_level_values("ref_start"))/2
+
+        # Initialize pass_positions with False
+        pass_positions = np.full(len(midpoints), False, dtype=bool)
+
+        # Check each midpoint against all iLDS_site_pos values
+        for i, midpoint in enumerate(midpoints):
+            for pos in iLDS_site_pos:
+                if abs(midpoint - pos) <= 1000:
+                    pass_positions[i] = True
+                    break  # No need to check further if we found a iLDS_site_pos within 1000 units
+
+        # Output the pass_positions vector
+
+
+        fig, ax = plt.subplots(figsize=(16, 8))
+        transfer_rate = num_transfers.values / (num_transfers.index.get_level_values("ref_end") - num_transfers.index.get_level_values("ref_start"))
+        transfer_rate = pd.Series(transfer_rate, index=num_transfers.index)
+
+        high_recombination_sites = transfer_rate[transfer_rate > transfer_rate.quantile(percentile)]
+        high_recombination_midpoints = high_recombination_sites.index.get_level_values("ref_start") + \
+            (high_recombination_sites.index.get_level_values("ref_end") - high_recombination_sites.index.get_level_values("ref_start"))/2
+        high_recombination_sites_set = set()
+        for site_index in high_recombination_midpoints:
+            lower_bound = site_index - 1000
+            upper_bound = site_index + 1000
+            sites_to_add = range(lower_bound, upper_bound, 1)
+            for site in sites_to_add:
+                high_recombination_sites_set.add(site)
+        # print(high_recombination_sites_set)
+        # print(midpoints[pass_positions])
+
+        high_selection_sites_set = set()
+        for site_index in midpoints[pass_positions]:
+            lower_bound = site_index - 1000
+            upper_bound = site_index + 1000
+            sites_to_remove = range(lower_bound, upper_bound, 1)
+            for site in sites_to_remove:
+                 high_selection_sites_set.add(site)
+        # print(high_selection_sites_set)
+
+        sites_for_sfs = high_recombination_sites_set - high_selection_sites_set
+        print('This is the number of high recombination sites in {0}'.format(species))
+        print(len(high_recombination_sites_set))
+        print('This is the number of high selection sites in {0}'.format(species))
+        print(len(high_selection_sites_set))
+        print('This is the number of included sites in {0} when given a percentile of {1}'.format(species, percentile))
+        print(len(sites_for_sfs))
+
+        ax.plot(midpoints, transfer_rate.values)
+        ax.set_ylabel("Recombinations / bp", size=25)
+        ax.set_xlabel("Reference genome position (bp)", size=25)
+        ax.axhline(transfer_rate.quantile(percentile), color="k")
+        ax.fill_between(midpoints, transfer_rate.quantile(percentile), transfer_rate,
+                        where=transfer_rate > transfer_rate.quantile(percentile), alpha=.5)
+
+        ax.scatter(midpoints[pass_positions], transfer_rate.values[pass_positions], color="red")
+        plt.title(str(species), fontsize=35)
+        # plt.savefig('../HighRecombinationAnalysis/' + species + '/' + \
+        #X     str(percentile) + '_recombination_map.png')
+        # sys.exit()
         # Load core genes
         subject_sample_map = parse_HMP_data.parse_subject_sample_map()
         core_genes = self.load_core_genes(species)
@@ -471,6 +579,8 @@ class ComputeSFS():
         ## as well as information about sites (contig/gene, S/NS etc)
         df_sites,gene_lengths,unq_genes,unq_cont = self.read_sites(species)
 
+        df_sites = df_sites[df_sites.index.get_level_values('site_pos').astype(float).isin(sites_for_sfs)]
+
         ## frequency of each nucleotide at each site
         atcg = df_sites["allele_props"].dropna().str.split("|")
         atcg = pd.DataFrame([[elem[2:] for elem in e] for e in atcg],index=atcg.index,columns=["a","c","t","g"])
@@ -488,9 +598,8 @@ class ComputeSFS():
 
         sfs = []
 
-        # max_gene_count = 25 # Uncomment for testing
-
-
+        # print('Test run with 500 max genes')
+        # max_gene_count = 500 # Uncomment for testing
 
         for i,chunk_size in enumerate(gene_lengths):
 
@@ -610,4 +719,4 @@ class ComputeSFS():
 
 
 if __name__ == '__main__':
-    ComputeSFS().main()
+    HighRecombination().main()

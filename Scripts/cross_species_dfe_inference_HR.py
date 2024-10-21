@@ -75,9 +75,6 @@ class CrossSpeciesDFEInferece():
             'input_demography', type=self.ExistingFile,
             help=('Best-fit demographic parameters for given species.'))
         parser.add_argument(
-            'input_syn_sfs', type=self.ExistingFile,
-            help=('Synonymous SFS for given species.'))
-        parser.add_argument(
             'input_nonsyn_sfs', type=self.ExistingFile,
             help=('Nonsynonymous SFS for given species.'))
         parser.add_argument(
@@ -209,10 +206,14 @@ class CrossSpeciesDFEInferece():
             current_t = next_t
         return phi
 
-    def likelihood(self, spectra, theta, N_anc, alpha, s, nonsyn_data, pts_l):
+    def likelihood(self, spectra, theta, alpha, beta, nonsyn_data, pts_l):
         theta_nonsyn = theta * 2.21
-        beta = s * 2 * N_anc
         p0 = [alpha, beta]
+        #popt = dadi.Inference.optimize_log_fmin(p0, nonsyn_data,
+        #    spectra.integrate, pts=None,
+        #    func_args=[DFE.PDFs.gamma, theta_nonsyn],
+        #    verbose=len(sel_params), maxiter=0,
+        #    multinom=False)
         model_sfs = spectra.integrate(
             p0, None, DFE.PDFs.gamma, theta_nonsyn, None)
         loglik = dadi.Inference.ll_multinom(
@@ -240,10 +241,11 @@ class CrossSpeciesDFEInferece():
                     theta_syn = theta_syn[0:-2]
                     theta_syn = float(theta_syn)
         start_idx = input_demography.find("Analysis") + 9
+        # end_idx = input_demography.find("/two_epoch")
         # end_idx = input_demography.find("/accessory_two_epoch")
-        end_idx = input_demography.find("/two_epoch")
+        end_idx = input_demography.find("/core_0.5_two_epoch")
         species = input_demography[start_idx:end_idx]
-        syn_sfs = args['input_syn_sfs']
+        print(species)
         nonsyn_sfs = args['input_nonsyn_sfs']
 
         # Numpy options
@@ -259,9 +261,10 @@ class CrossSpeciesDFEInferece():
 
         # Output files: logfile
         # Remove output files if they already exist
+        print(species)
         underscore = '' if args['outprefix'][-1] == '/' else '_'
         likelihood_surface = \
-            '{0}{1}{2}_constant_s_likelihood_surface.csv'.format(
+            '{0}{1}{2}_likelihood_surface.csv'.format(
                 args['outprefix'], underscore, species)
         logfile = '{0}{1}{2}_log.log'.format(
             args['outprefix'], underscore, species)
@@ -294,7 +297,6 @@ class CrossSpeciesDFEInferece():
             '\n'.join(['\t{0} = {1}'.format(*tup) for tup in args.items()])))
 
         # Construct initial Spectrum object from input synonymous sfs.
-        syn_data = dadi.Spectrum.from_file(syn_sfs).fold()
         nonsyn_data = dadi.Spectrum.from_file(nonsyn_sfs).fold()
         nonsyn_ns = nonsyn_data.sample_sizes  # Number of samples.
         pts_l = [1200, 1400, 1600]
@@ -307,14 +309,10 @@ class CrossSpeciesDFEInferece():
         spectra = DFE.Cache1D(demog_params, nonsyn_ns, DFE.DemogSelModels.two_epoch,
                               pts=pts_l, gamma_bounds=(1e-5, 500), gamma_pts=100,
                               verbose=True, cpus=1)
-        x_min = 1E-4
+        x_min = 1E-2
         x_max = 1
-        y_min = 1E-6
-        y_max = 1
-
-        mu_low = 4.08E-10
-        allele_sum = numpy.sum(syn_data)
-        N_anc = theta_syn / (4 * allele_sum * mu_low)
+        y_min = 1E-2
+        y_max = 1E13
 
         npts = 1000
         x_range = numpy.linspace(x_min, x_max, npts)
@@ -329,7 +327,7 @@ class CrossSpeciesDFEInferece():
         z_val = []
         for i in range(0, npts):
             for j in range(0, npts):
-                Z[i, j] = self.likelihood(spectra, theta_syn, N_anc, x_range[i], y_range[j], nonsyn_data, pts_l)
+                Z[i, j] = self.likelihood(spectra, theta_syn, x_range[i], y_range[j], nonsyn_data, pts_l)
                 x_val.append(x_range[i])
                 y_val.append(y_range[j])
                 z_val.append(Z[i, j])

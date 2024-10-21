@@ -177,7 +177,7 @@ class DFEInference():
         logger.info('Input theta_syn is: ' + str(theta_syn) + '.')
         theta_nonsyn = theta_syn * 2.21
 
-        pts_l = [1200, 1400, 1600]
+        pts_l = [20, 40, 60]
         logger.info('Generating spectrum from input demography.')
         # input_model = 'two_epoch'
         if input_model == 'two_epoch':

@@ -6,9 +6,10 @@ from math import log10
 # ==========================================================================
 
 main_dir = '/u/home/j/jonmah/project-ngarud/'
-data_directory = '/u/project/ngarud/Garud_lab/metagenomic_fastq_files/HMP1-2/data'
+# data_directory = '/u/project/ngarud/Garud_lab/metagenomic_fastq_files/HMP1-2/data'
+# data_directory = os.path.expanduser("/u/project/ngarud/Garud_lab/metagenomic_fastq_files/HMP1-2/data")
 
-data_directory = os.path.expanduser("/u/project/ngarud/Garud_lab/metagenomic_fastq_files/HMP1-2/data")
+data_directory = os.path.expanduser("/u/project/ngarud/Garud_lab/metagenomic_fastq_files/HMP1_2_Kuleshov_Qin_Twins_Korpela/")
 #data_directory = os.path.expanduser("~/ben_nandita_hmp_data_071518/")
 #data_directory = os.path.expanduser("~/ben_nandita_hmp_data/")
 analysis_directory = os.path.expanduser("~/project-ngarud/demo_for_ccgb/Analysis/")

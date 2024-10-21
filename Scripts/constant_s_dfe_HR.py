@@ -241,7 +241,8 @@ class CrossSpeciesDFEInferece():
                     theta_syn = float(theta_syn)
         start_idx = input_demography.find("Analysis") + 9
         # end_idx = input_demography.find("/accessory_two_epoch")
-        end_idx = input_demography.find("/two_epoch")
+        # end_idx = input_demography.find("/two_epoch")
+        end_idx = input_demography.find("/core_0.5_two_epoch")
         species = input_demography[start_idx:end_idx]
         syn_sfs = args['input_syn_sfs']
         nonsyn_sfs = args['input_nonsyn_sfs']

@@ -16,11 +16,6 @@ import dadi
 import scipy.stats.distributions
 import scipy.integrate
 import scipy.optimize
-import matplotlib
-matplotlib.use('Agg') # Must be before importing matplotlib.pyplot or pylab!
-import matplotlib.pyplot as plt
-from matplotlib import ticker, cm
-import pylab
 import pandas as pd
 
 class ArgumentParserNoArgHelp(argparse.ArgumentParser):
@@ -32,23 +27,6 @@ class ArgumentParserNoArgHelp(argparse.ArgumentParser):
         self.print_help()
         sys.exit(2)
 
-
-class MidpointNormalize(matplotlib.colors.Normalize):
-    def __init__(self, vmin=None, vmax=None, vcenter=None, clip=False):
-        self.vcenter = vcenter
-        super().__init__(vmin, vmax, clip)
-
-    def __call__(self, value, clip=None):
-        # I'm ignoring masked values and all kinds of edge cases to make a
-        # simple example...
-        # Note also that we must extrapolate beyond vmin/vmax
-        x, y = [self.vmin, self.vcenter, self.vmax], [0, 0.5, 1.]
-        return numpy.ma.masked_array(numpy.interp(value, x, y,
-                                            left=-numpy.inf, right=numpy.inf))
-
-    def inverse(self, value):
-        y, x = [self.vmin, self.vcenter, self.vmax], [0, 0.5, 1]
-        return numpy.interp(value, x, y, left=-numpy.inf, right=numpy.inf)
 
 class EvaluateDemography():
     """Wrapper class to allow functions to reference each other."""
@@ -408,9 +386,6 @@ class EvaluateDemography():
         output_file = \
             '{0}{1}{2}_demography.txt'.format(
                 args['outprefix'], underscore, model_type)
-        residual = \
-            '{0}{1}{2}_sfs_residual.png'.format(
-                args['outprefix'], underscore, model_type)
         to_remove = [logfile, output_file]
         for f in to_remove:
             if os.path.isfile(f):
@@ -502,12 +477,6 @@ class EvaluateDemography():
             logger.info(
                 'Maximum log composite likelihood: {0}.'.format(
                     multinomial_ll_non_scaled_spectrum))
-
-            logger.info('Outputting residual between model and data.')
-            pylab.figure(figsize=(8, 6))
-            dadi.Plotting.plot_1d_comp_multinom(
-                model=non_scaled_spectrum, data=syn_data)
-            pylab.savefig(residual, dpi=250)
 
             theta = dadi.Inference.optimal_sfs_scaling(
                 non_scaled_spectrum, syn_data)
