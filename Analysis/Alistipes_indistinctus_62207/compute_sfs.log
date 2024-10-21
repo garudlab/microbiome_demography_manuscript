@@ -1,0 +1,14 @@
+2024-05-02 18:03:05,047 - INFO - Beginning execution of compute_sfs.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-05-02 18:03:05,048 - INFO - Progress is being logged to ../Analysis/Alistipes_indistinctus_62207/compute_sfs.log
+
+2024-05-02 18:03:05,048 - INFO - Parsed the following arguments:
+	core = False
+	accessory = False
+	min_depth = 20
+	min_MAF = 0.0
+	outprefix = ../Analysis/Alistipes_indistinctus_62207/
+	species = Alistipes_indistinctus_62207
+	f_star = 0.2
+
+2024-05-02 18:03:05,048 - INFO - Computing SFS of Alistipes_indistinctus_62207.
