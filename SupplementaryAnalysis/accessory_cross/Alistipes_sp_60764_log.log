@@ -1,0 +1,17 @@
+2024-07-30 17:45:23,528 - INFO - Beginning execution of cross_species_dfe_inference.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-30 17:45:23,531 - INFO - Progress is being logged to ../SupplementaryAnalysis/accessory_cross/Alistipes_sp_60764_log.log
+
+2024-07-30 17:45:23,531 - INFO - Parsed the following arguments:
+	input_demography = ../SupplementaryAnalysis/Alistipes_sp_60764/accessory_two_epoch_demography.txt
+	input_nonsyn_sfs = ../SupplementaryAnalysis/Alistipes_sp_60764/accessory_empirical_nonsyn_downsampled_sfs.txt
+	outprefix = ../SupplementaryAnalysis/accessory_cross/
+
+2024-07-30 17:45:23,552 - INFO - Input demographic parameters are: [1.169528, 8.083159].
+2024-07-30 17:45:23,552 - INFO - Input theta_syn is: 129.830755078.
+2024-07-30 18:00:31,883 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-07-31 05:39:58,931 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-07-31 05:50:25,612 - INFO - Pipeline executed succesfully.

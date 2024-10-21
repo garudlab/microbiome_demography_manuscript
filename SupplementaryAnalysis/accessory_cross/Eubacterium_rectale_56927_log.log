@@ -1,0 +1,17 @@
+2024-07-31 23:00:15,907 - INFO - Beginning execution of cross_species_dfe_inference.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-31 23:00:15,907 - INFO - Progress is being logged to ../SupplementaryAnalysis/accessory_cross/Eubacterium_rectale_56927_log.log
+
+2024-07-31 23:00:15,907 - INFO - Parsed the following arguments:
+	input_demography = ../SupplementaryAnalysis/Eubacterium_rectale_56927/accessory_two_epoch_demography.txt
+	input_nonsyn_sfs = ../SupplementaryAnalysis/Eubacterium_rectale_56927/accessory_empirical_nonsyn_downsampled_sfs.txt
+	outprefix = ../SupplementaryAnalysis/accessory_cross/
+
+2024-07-31 23:00:15,929 - INFO - Input demographic parameters are: [0.47742966, 0.01483912].
+2024-07-31 23:00:15,929 - INFO - Input theta_syn is: 1881.80713434.
+2024-07-31 23:00:21,895 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-08-02 00:50:30,360 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-08-02 01:14:13,992 - INFO - Pipeline executed succesfully.
