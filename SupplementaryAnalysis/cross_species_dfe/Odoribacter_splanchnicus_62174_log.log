@@ -1,0 +1,19 @@
+2024-08-15 09:43:26,588 - INFO - Beginning execution of constant_s_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-08-15 09:43:26,589 - INFO - Progress is being logged to ../SupplementaryAnalysis/cross_species_dfe/Odoribacter_splanchnicus_62174_log.log
+
+2024-08-15 09:43:26,589 - INFO - Parsed the following arguments:
+	input_demography = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/two_epoch_demography.txt
+	input_syn_sfs = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/core_empirical_syn_downsampled_sfs.txt
+	input_nonsyn_sfs = ../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/core_empirical_nonsyn_downsampled_sfs.txt
+	outprefix = ../SupplementaryAnalysis/cross_species_dfe/
+
+2024-08-15 09:43:26,648 - INFO - Input demographic parameters are: [0.2401775, 0.9648176].
+2024-08-15 09:43:26,649 - INFO - Input theta_syn is: 10121.984577761077.
+2024-08-15 09:45:29,102 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-08-15 10:28:55,324 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-08-16 18:27:04,313 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-08-17 12:21:07,864 - INFO - Pipeline executed succesfully.

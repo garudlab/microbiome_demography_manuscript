@@ -1,0 +1,19 @@
+2024-07-29 16:27:22,270 - INFO - Beginning execution of constant_s_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-29 16:27:22,270 - INFO - Progress is being logged to ../SupplementaryAnalysis/cross_species_dfe/Alistipes_onderdonkii_55464_log.log
+
+2024-07-29 16:27:22,270 - INFO - Parsed the following arguments:
+	input_demography = ../SupplementaryAnalysis/Alistipes_onderdonkii_55464/two_epoch_demography.txt
+	input_syn_sfs = ../SupplementaryAnalysis/Alistipes_onderdonkii_55464/core_empirical_syn_downsampled_sfs.txt
+	input_nonsyn_sfs = ../SupplementaryAnalysis/Alistipes_onderdonkii_55464/core_empirical_nonsyn_downsampled_sfs.txt
+	outprefix = ../SupplementaryAnalysis/cross_species_dfe/
+
+2024-07-29 16:27:22,309 - INFO - Input demographic parameters are: [0.5421293, 0.1530254].
+2024-07-29 16:27:22,309 - INFO - Input theta_syn is: 9046.301633792515.
+2024-07-29 16:27:44,795 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-07-29 18:11:14,655 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-07-30 21:05:18,519 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-07-31 17:11:14,113 - INFO - Pipeline executed succesfully.

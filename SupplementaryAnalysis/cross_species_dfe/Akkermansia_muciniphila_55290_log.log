@@ -1,0 +1,19 @@
+2024-07-29 16:27:21,558 - INFO - Beginning execution of constant_s_dfe.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2024-07-29 16:27:21,560 - INFO - Progress is being logged to ../SupplementaryAnalysis/cross_species_dfe/Akkermansia_muciniphila_55290_log.log
+
+2024-07-29 16:27:21,561 - INFO - Parsed the following arguments:
+	input_demography = ../SupplementaryAnalysis/Akkermansia_muciniphila_55290/two_epoch_demography.txt
+	input_syn_sfs = ../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_syn_downsampled_sfs.txt
+	input_nonsyn_sfs = ../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_nonsyn_downsampled_sfs.txt
+	outprefix = ../SupplementaryAnalysis/cross_species_dfe/
+
+2024-07-29 16:27:21,569 - INFO - Input demographic parameters are: [0.1638349, 0.3616908].
+2024-07-29 16:27:21,569 - INFO - Input theta_syn is: 34203.38137094901.
+2024-07-29 16:28:11,677 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-07-29 17:11:12,109 - WARNING - The integral is probably divergent, or slowly convergent.
+2024-07-30 20:27:50,158 - WARNING - The algorithm does not converge.  Roundoff error is detected
+  in the extrapolation table.  It is assumed that the requested tolerance
+  cannot be achieved, and that the returned result (if full_output = 1) is 
+  the best which can be obtained.
+2024-07-31 14:09:18,267 - INFO - Pipeline executed succesfully.
