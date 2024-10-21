@@ -1,28 +1,37 @@
-Species (Ianiro et al),Species (MIDAS),Aggregate engraftment rate,Mean s,% weakly deleterious,%  moderately deleterious,%  highly deleterious,% lethal
-Prevotella copri clade A (SGB1626),Prevotella_copri_61740,0.65,4.31E-01,0.110,0.248,0.229,0.412
-Bacteroides stercoris (SGB1830_group),Bacteroides_stercoris_56735,0.578947368,2.93E-07,0.927,0.072,0.000,0.000
-Odoribacter splanchnicus (SGB1790),Odoribacter_splanchnicus_62174,0.571428571,4.52E-01,0.148,0.232,0.187,0.439
-Phascolarctobacterium faecium (SGB5792),Phascolarctobacterium_sp_59817,0.547619048,7.81E-06,0.367,0.632,0.000,0.000
-Alistipes putredinis (SGB2318),Alistipes_putredinis_61533,0.541666667,7.74E-02,0.801,0.085,0.039,0.074
-Alistipes finegoldii (SGB2301),Alistipes_finegoldii_56071,0.526315789,2.30E-01,0.360,0.262,0.163,0.218
-Parabacteroides distasonis (SGB1934),Parabacteroides_distasonis_56985,0.511363636,2.38E-02,0.093,0.549,0.360,0.001
-Barnesiella intestinihominis (SGB1965),Barnesiella_intestinihominis_62208,0.484375,1.62E-07,0.985,0.015,0.000,0.000
-Alistipes onderdonkii (SGB2303),Alistipes_onderdonkii_55464,0.455882353,8.24E-02,0.718,0.140,0.065,0.077
-Bacteroides fragilis (SGB1855_group),Bacteroides_fragilis_54507,0.448275862,3.43E-04,0.112,0.887,0.000,0.000
-Bacteroides uniformis (SGB1836_group),Bacteroides_uniformis_57318,0.426356589,6.57E-01,0.047,0.146,0.161,0.645
-Bacteroides cellulosilyticus (SGB1844),Bacteroides_cellulosilyticus_58046,0.423076923,5.59E-07,0.819,0.181,0.000,0.000
-Parabacteroides merdae (SGB1949),Parabacteroides_merdae_56972,0.403225806,1.72E-04,0.298,0.703,0.000,0.000
-Alistipes shahii (SGB2295),Alistipes_shahii_62199,0.380952381,5.02E-01,0.103,0.215,0.198,0.487
-Ruminococcus bromii (SGB4285_group),Ruminococcus_bromii_62047,0.377777778,3.77E-02,0.162,0.495,0.336,0.009
-Akkermansia muciniphila (SGB9226),Akkermansia_muciniphila_55290,0.35,2.23E-07,0.939,0.062,0.000,0.000
-Faecalibacterium prausnitzii (SGB15317),Faecalibacterium_prausnitzii_57453,0.344827586,1.73E-05,0.410,0.586,0.000,0.000
-Bacteroides caccae (SGB1877),Bacteroides_caccae_53434,0.333333333,7.65E-06,0.386,0.611,0.000,0.000
-Eubacterium rectale (SGB4933_group),Eubacterium_rectale_56927,0.325581395,4.80E-01,0.078,0.224,0.235,0.461
-Bacteroides thetaiotaomicron (SGB1861),Bacteroides_thetaiotaomicron_56941,0.31372549,3.37E-01,0.154,0.283,0.242,0.316
-Phocaeicola dorei (SGB1815),Bacteroides_vulgatus_57955,0.309090909,1.94E-03,0.166,0.787,0.048,0.000
-Lachnospira eligens (SGB5082_group),Eubacterium_eligens_61678,0.296296296,5.40E-01,0.064,0.199,0.212,0.524
-Faecalibacterium prausnitzii (mean),Faecalibacterium_prausnitzii_57453,0.236758,1.73E-05,0.410,0.586,0.000,0.000
-Oscillibacter sp ER4 (SGB15254),Oscillibacter_sp_60799,0.231707317,3.86E-01,0.173,0.253,0.201,0.369
-Ruminococcus bicirculans (SGB4262),Ruminococcus_bicirculans_59300,0.214285714,6.81E-01,0.027,0.129,0.176,0.668
-Dialister invisus (SGB5825_group),Dialister_invisus_61905,0.160714286,3.67E-02,0.126,0.502,0.364,0.007
-Faecalibacterium prausnitzii (SGB15323),Faecalibacterium_prausnitzii_57453,0.09375,1.73E-05,0.410,0.586,0.000,0.000
+Species (Ianiro et al),Species (MIDAS),Engraftment rate,Proportion of neutrality,Mean selection coefficient,Estimated ancestral population size,Mean population scaled-selection coefficient,Shape
+Akkermansia muciniphila (SGB9226),Akkermansia_muciniphila_55290,0.35,0.97677,1.25E-07,60706518.68,15.16482734,0.192272035
+Alistipes communis (SGB2290),Alistipes_sp_60764,0.333333333,0.30239,0.001857783,6039059.474,22438.5199,0.13038706
+Alistipes finegoldii (SGB2301),Alistipes_finegoldii_56071,0.526315789,0.55737,0.110953843,93247386.08,20692311.6,0.03626693
+Alistipes onderdonkii (SGB2303),Alistipes_onderdonkii_55464,0.455882353,0.83815,0.051465468,14049111.6,1446088.21,0.009488104
+Alistipes putredinis (SGB2318),Alistipes_putredinis_61533,0.541666667,1,1.00E-12,168120.8235,3.36E-07,0.958978409
+Alistipes shahii (SGB2295),Alistipes_shahii_62199,0.380952381,0.12301,0.192781921,6254029.005,2411327.453,0.14893914
+Bacteroides caccae (SGB1877),Bacteroides_caccae_53434,0.333333333,0.2644,2.85E-05,5309030.062,302.120007,0.325417215
+Bacteroides cellulosilyticus (SGB1844),Bacteroides_cellulosilyticus_58046,0.423076923,0.94539,2.74E-07,3875335.95,2.124174667,0.511339376
+Bacteroides eggerthii (SGB1829),Bacteroides_eggerthii_54457,0.52,0.69108,1.04E-06,7667303.487,15.93538094,0.402856717
+Bacteroides fragilis (SGB1855_group),Bacteroides_fragilis_54507,0.448275862,0.18237,7.85E-05,6514030.187,1023.170421,0.33008569
+Bacteroides stercoris (SGB1830_group),Bacteroides_stercoris_56735,0.578947368,1,8.90E-08,17074326.38,3.039771231,1.33449897
+Bacteroides thetaiotaomicron (SGB1861),Bacteroides_thetaiotaomicron_56941,0.31372549,0.30519,0.177249598,172326162.1,61089485.99,0.07777606
+Bacteroides uniformis (SGB1836_group),Bacteroides_uniformis_57318,0.426356589,0.09941,0.50684914,4249496.009,4307706.797,0.124705587
+Barnesiella intestinihominis (SGB1965),Barnesiella_intestinihominis_62208,0.484375,0.9608,2.24E-07,19146482.03,8.585930971,0.43242765
+Coprococcus comes (SGB4577_group),Coprococcus_sp_62244,0.352272727,0.19954,0.000863249,11134229.28,19223.2253,0.20383561
+Dialister invisus (SGB5825_group),Dialister_invisus_61905,0.160714286,0.07973,0.350791945,21779195.54,15279932.73,0.16271618
+Eubacterium rectale (SGB4933_group),Eubacterium_rectale_56927,0.325581395,0.06412,0.478633279,21228865.24,20321682.75,0.16247054
+Eubacterium siraeum (SGB4198_group),Eubacterium_siraeum_57634,0.257142857,0.12788,0.022759378,27928764.59,1271282.645,0.18277258
+Faecalibacterium prausnitzii (SGB15317),Faecalibacterium_prausnitzii_57453,0.344827586,0.67749,1.65E-06,16793969.07,55.26065841,0.238210698
+Faecalibacterium prausnitzii (SGB15318_group),Faecalibacterium_prausnitzii_62201,0.305970149,1,5.61E-09,18501377,0.207493806,222.174947
+Faecalibacterium prausnitzii (SGB15322),Faecalibacterium_prausnitzii_61481,0.333333333,0.92882,2.57E-07,16461411.47,8.453202873,0.245530646
+Lachnospira eligens (SGB5082_group),Eubacterium_eligens_61678,0.296296296,0.0523,0.584796464,6856174.853,8018933.623,0.159533555
+Lachnospiraceae bacterium (SGB4750),Lachnospiraceae_bacterium_51870,0.285714286,0.08251,0.610883934,760619.8825,929300.9317,0.121745091
+Odoribacter splanchnicus (SGB1790),Odoribacter_splanchnicus_62174,0.571428571,0.3502,0.003241683,16556939.53,107344.7007,0.10693043
+Oscillibacter sp ER4 (SGB15254),Oscillibacter_sp_60799,0.231707317,0.13584,0.386408728,13597930.64,10508718.17,0.11733922
+Parabacteroides distasonis (SGB1934),Parabacteroides_distasonis_56985,0.511363636,0.28723,0.00085774,167476115.9,287301.8949,0.15091082
+Parabacteroides merdae (SGB1949),Parabacteroides_merdae_56972,0.403225806,0.40696,2.07E-05,82811693.07,3422.257564,0.217527933
+Phascolarctobacterium faecium (SGB5792),Phascolarctobacterium_sp_59817,0.547619048,0.11608,0.000459016,8070900.999,7409.33986,0.30977083
+Phocaeicola coprocola (SGB1891_group),Bacteroides_coprocola_61586,0.357142857,0.5147,2.46E-06,13094005.73,64.29844308,0.41564927
+Phocaeicola dorei (SGB1815),Bacteroides_vulgatus_57955,0.309090909,0.03522,0.59806701,5742803.553,6869162.695,0.18858411
+Phocaeicola massiliensis (SGB1812),Bacteroides_massiliensis_44749,0.615384615,0.05479,0.007506828,3980915.142,59768.09074,0.29650624
+Prevotella copri clade A (SGB1626),Prevotella_copri_61740,0.65,0.0635,0.490298564,25103189.8,24616115.81,0.16076656
+Roseburia intestinalis (SGB4951),Roseburia_intestinalis_56239,0.295081967,1,4.66E-08,3311935.427,0.308533193,205.713221
+Roseburia inulinivorans (SGB4940),Roseburia_inulinivorans_61943,0.252873563,0.5499,4.22E-06,13373278.96,112.7402127,0.236655077
+Ruminococcus bicirculans (SGB4262),Ruminococcus_bicirculans_59300,0.214285714,0.03321,0.613909995,6950865.75,8534411.911,0.1906184
+Ruminococcus bromii (SGB4285_group),Ruminococcus_bromii_62047,0.377777778,0.06978,0.508519404,15636820.19,15903252.97,0.15149783

@@ -1,0 +1,25 @@
+Species (Browne et. al),Species (MIDAS),Average Sporulation Signature Score,Mean selection coefficient,Ancestral effective population size,Population-scaled mean selectino coefficient,Proportion of neutrality,Gamma-DFE shape parameter
+Akkermansia muciniphila,Akkermansia_muciniphila_55290,0.25,1.26E-07,60706518.68,15.32531296,0.97644,0.192272035
+Alistipes finegoldii,Alistipes_finegoldii_56071,0.17,0.110547599,93247386.08,20616549.2,0.55952,0.03626693
+Bacteroides caccae,Bacteroides_caccae_53434,0.18,2.84E-05,5309030.062,301.9039467,0.26343,0.325417215
+Bacteroides coprocola_94%,Bacteroides_coprocola_61586,0.17,2.46E-06,13094005.73,64.41684026,0.51329,0.41564927
+Bacteroides fragilis,Bacteroides_fragilis_54507,0.17,7.84E-05,6514030.187,1021.7206,0.18387,0.33008569
+Bacteroides ovatus,Bacteroides_ovatus_58035,0.17,1.59E-08,13163463.63,0.418680407,1,356.414426
+Bacteroides plebius_95%,Bacteroides_plebeius_61623,0.16,0.031956357,36404411.2,2326704.745,0.0457,0.27643734
+Bacteroides thetaiotaomicron,Bacteroides_thetaiotaomicron_56941,0.19,0.175769811,172326162.1,60579473.86,0.30462,0.07777606
+Bacteroides uniformis,Bacteroides_uniformis_57318,0.18,0.504377683,4249496.009,4286701.897,0.09957,0.124705587
+Bacteroides vulgatus,Bacteroides_vulgatus_57955,0.17,0.595876655,5742803.553,6844005.146,0.03486,0.18858411
+Bacteroides xylanisolvens,Bacteroides_xylanisolvens_57185,0.19,0.000559499,15939387.65,17836.14065,0.19628,0.21767974
+Coprococcus comes; Coprococcus eutactus,Coprococcus_sp_62244,0.51,0.000858741,11134229.28,19122.83139,0.19904,0.20383561
+Eubacterium eligens,Eubacterium_eligens_61678,0.54,0.583999573,6856174.853,8008006.367,0.05367,0.159533555
+Eubacterium rectale,Eubacterium_rectale_56927,0.49,0.477745413,21228865.24,20283986,0.0634,0.16247054
+Eubacterium siraeum,Eubacterium_siraeum_57634,0.47,0.02229234,27928764.59,1245195.055,0.12748,0.18277258
+Faecalibacterium prausnitzii,Faecalibacterium_prausnitzii_57453,0.45,1.63E-06,16793969.07,54.87190857,0.67663,0.238210698
+Faecalibacterium prausnitzii,Faecalibacterium_prausnitzii_62201,0.45,5.61E-09,18501377,0.207512925,1,222.174947
+Faecalibacterium prausnitzii,Faecalibacterium_prausnitzii_61481,0.45,2.58E-07,16461411.47,8.490630273,0.92958,0.245530646
+Parabacteroides distasonis,Parabacteroides_distasonis_56985,0.19,0.000865857,167476115.9,290020.722,0.28936,0.15091082
+Parabacteroides merdae,Parabacteroides_merdae_56972,0.2,2.10E-05,82811693.07,3478.001229,0.40646,0.217527933
+Prevotella copri,Prevotella_copri_61740,0.03,0.488400973,25103189.8,24520844.62,0.06391,0.16076656
+Roseburia intestinalis,Roseburia_intestinalis_56239,0.61,4.66E-08,3311935.427,0.308498347,1,205.713221
+Roseburia inulinivorans,Roseburia_inulinivorans_61943,0.64,4.23E-06,13373278.96,113.1984597,0.55018,0.236655077
+Ruminococcus bromii,Ruminococcus_bromii_62047,0.56,0.509847075,15636820.19,15944774.07,0.07001,0.15149783
