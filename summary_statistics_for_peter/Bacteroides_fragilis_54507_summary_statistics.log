@@ -1,0 +1,14 @@
+2024-05-29 14:18:44,245 - INFO - Beginning execution of return_theta_and_pi_per_bp.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/summary_statistics_for_peter
+
+2024-05-29 14:18:44,245 - INFO - Progress is being logged to ./Bacteroides_fragilis_54507_summary_statistics.log
+
+2024-05-29 14:18:44,245 - INFO - Parsed the following arguments:
+	outprefix = ./Bacteroides_fragilis_54507
+	syn_input_sfs = ../Analysis/Bacteroides_fragilis_54507_downsampled_14/core_empirical_syn_downsampled_sfs.txt
+
+2024-05-29 14:18:44,245 - INFO - Loading in given input file.
+2024-05-29 14:18:44,271 - INFO - Computing Watterson's Theta for input file.
+2024-05-29 14:18:44,271 - INFO - Watterson's Theta for input file is 0.013464555036358425.
+2024-05-29 14:18:44,271 - INFO - Computing pi per base-pair
+2024-05-29 14:18:44,272 - INFO - Pi per base pair for input file is 0.012162219177255571.
+2024-05-29 14:18:44,272 - INFO - Pipeline executed succesfully.
