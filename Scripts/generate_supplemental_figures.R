@@ -1926,168 +1926,71 @@ table_s8
 ### Supplemental Table 9
 # DFE for filtered SFS
 
-## HR nonsynonoymous
-a_muciniphila_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_inferred_DFE.txt')
-a_finegoldii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_inferred_DFE.txt')
-a_onderdonkii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_inferred_DFE.txt')
-a_shahii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_inferred_DFE.txt')
-b_caccae_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_inferred_DFE.txt')
-b_cellulosilyticus_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_inferred_DFE.txt')
-b_coprocola_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_coprocola_61586/core_0.5_inferred_DFE.txt')
-b_eggerthii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/core_0.5_inferred_DFE.txt')
-b_fragilis_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_inferred_DFE.txt')
-b_ovatus_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_ovatus_58035/core_0.5_inferred_DFE.txt')
-b_stercoris_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_inferred_DFE.txt')
-b_thetaiotaomicron_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_inferred_DFE.txt')
-b_vulgatus_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_inferred_DFE.txt')
-d_invisus_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_inferred_DFE.txt')
-b_intestinihominis_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_inferred_DFE.txt')
-e_rectale_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_inferred_DFE.txt')
-e_siraeum_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_inferred_DFE.txt')
-oscillibacter_sp_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_inferred_DFE.txt')
-p_distasonis_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_inferred_DFE.txt')
-p_merdae_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_inferred_DFE.txt')
-r_bicirculans_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_inferred_DFE.txt')
-r_bromii_HR_nonsyn = empirical_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_inferred_DFE.txt')
-
-# HR gamma
-a_muciniphila_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_inferred_DFE.txt')
-a_finegoldii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_inferred_DFE.txt')
-a_onderdonkii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_inferred_DFE.txt')
-a_shahii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_inferred_DFE.txt')
-b_caccae_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_inferred_DFE.txt')
-b_cellulosilyticus_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_inferred_DFE.txt')
-b_coprocola_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_coprocola_61586/core_0.5_inferred_DFE.txt')
-b_eggerthii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/core_0.5_inferred_DFE.txt')
-b_fragilis_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_inferred_DFE.txt')
-b_ovatus_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_ovatus_58035/core_0.5_inferred_DFE.txt')
-b_stercoris_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_inferred_DFE.txt')
-b_thetaiotaomicron_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_inferred_DFE.txt')
-b_vulgatus_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_inferred_DFE.txt')
-d_invisus_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_inferred_DFE.txt')
-b_intestinihominis_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_inferred_DFE.txt')
-e_rectale_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_inferred_DFE.txt')
-e_siraeum_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_inferred_DFE.txt')
-oscillibacter_sp_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_inferred_DFE.txt')
-p_distasonis_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_inferred_DFE.txt')
-p_merdae_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_inferred_DFE.txt')
-r_bicirculans_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_inferred_DFE.txt')
-r_bromii_HR_gamma = gamma_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_inferred_DFE.txt')
-
-# HR neugamma
-a_muciniphila_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_inferred_DFE.txt')
-a_finegoldii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_inferred_DFE.txt')
-a_onderdonkii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_inferred_DFE.txt')
-a_shahii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_inferred_DFE.txt')
-b_caccae_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_inferred_DFE.txt')
-b_cellulosilyticus_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_inferred_DFE.txt')
-b_coprocola_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_coprocola_61586/core_0.5_inferred_DFE.txt')
-b_eggerthii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_eggerthii_54457/core_0.5_inferred_DFE.txt')
-b_fragilis_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_inferred_DFE.txt')
-b_ovatus_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_ovatus_58035/core_0.5_inferred_DFE.txt')
-b_stercoris_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_inferred_DFE.txt')
-b_thetaiotaomicron_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_inferred_DFE.txt')
-b_vulgatus_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_inferred_DFE.txt')
-d_invisus_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_inferred_DFE.txt')
-b_intestinihominis_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_inferred_DFE.txt')
-e_rectale_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_inferred_DFE.txt')
-e_siraeum_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Eubacterium_siraeum_57634/core_0.5_inferred_DFE.txt')
-oscillibacter_sp_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_inferred_DFE.txt')
-p_distasonis_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_inferred_DFE.txt')
-p_merdae_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_inferred_DFE.txt')
-r_bicirculans_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_inferred_DFE.txt')
-r_bromii_HR_neugamma = neugamma_sfs_from_dfe('../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_inferred_DFE.txt')
+HR_DFE_file_list = c(
+  '../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_inferred_DFE.txt'
+)
 
 
+HR_dfe_nanc = numeric(18)
+HR_gamma_likelihood = numeric(18)
+HR_gamma_AIC = numeric(18)
+HR_gamma_alpha = numeric(18)
+HR_gamma_beta = numeric(18)
+HR_neugamma_likelihood = numeric(18)
+HR_neugamma_AIC = numeric(18)
+HR_neugamma_pneu = numeric(18)
+HR_neugamma_alpha = numeric(18)
+HR_neugamma_beta = numeric(18)
 
-# 
-# FD_phylogenetic_levels = c(
-#   'Alistipes sp.',
-#   'Alistipes finegoldii',
-#   'Alistipes onderdonkii',
-#   'Alistipes shahii',
-#   'Alistipes putredinis',
-#   'Bacteroidales bacterium',
-#   'Odoribacter splanchnicus',
-#   'Parabacteroides distasonis',
-#   'Parabacteroides merdae',
-#   'Prevotella copri',
-#   'Bacteroides fragilis',
-#   'Bacteroides cellulosilyticus',
-#   'Bacteroides eggerthii',
-#   'Bacteroides stercoris',
-#   'Bacteroides uniformis',
-#   'Bacteroides thetaiotaomicron',
-#   'Bacteroides xylanisolvens',
-#   'Bacteroides caccae',
-#   'Bacteroides massiliensis',
-#   'Bacteroides vulgatus',
-#   'Bacteroides plebeius',
-#   'Bacteroides coprocola',
-#   'Barnesiella intestinihominis',
-#   'Akkermansia muciniphila',
-#   'Dialister invisus',
-#   'Phascolarctobacterium sp.',
-#   'Eubacterium eligens',
-#   'Eubacterium rectale',
-#   'Roseburia inulinivorans',
-#   'Roseburia intestinalis',
-#   'Lachnospiraceae bacterium',
-#   'Coprococcus sp.',
-#   'Oscillibacter sp.',
-#   'Ruminococcus bromii',
-#   'Ruminococcus bicirculans',
-#   'Eubacterium siraeum',
-#   'Faecalibacterium prausnitzii (57453)',
-#   'Faecalibacterium prausnitzii (62201)',
-#   'Faecalibacterium prausnitzii (61481)'
-# )
-# 
-# FD_phylogenetic_levels_MIDAS = c(
-#   'Alistipes_sp_60764',
-#   'Alistipes_finegoldii_56071',
-#   'Alistipes_onderdonkii_55464',
-#   'Alistipes_shahii_62199',
-#   'Alistipes_putredinis_61533',
-#   'Bacteroidales_bacterium_58650',
-#   'Odoribacter_splanchnicus_62174',
-#   'Parabacteroides_distasonis_56985',
-#   'Parabacteroides_merdae_56972',
-#   'Prevotella_copri_61740',
-#   'Bacteroides_fragilis_54507',
-#   'Bacteroides_cellulosilyticus_58046',
-#   'Bacteroides_eggerthii_54457',
-#   'Bacteroides_stercoris_56735',
-#   'Bacteroides_uniformis_57318',
-#   'Bacteroides_thetaiotaomicron_56941',
-#   'Bacteroides_xylanisolvens_57185',
-#   'Bacteroides_caccae_53434',
-#   'Bacteroides_massiliensis_44749',
-#   'Bacteroides_vulgatus_57955',
-#   'Bacteroides_plebeius_61623',
-#   'Bacteroides_coprocola_61586',
-#   'Barnesiella_intestinihominis_62208',
-#   'Akkermansia_muciniphila_55290',
-#   'Dialister_invisus_61905',
-#   'Phascolarctobacterium_sp_59817',
-#   'Eubacterium_eligens_61678',
-#   'Eubacterium_rectale_56927',
-#   'Roseburia_inulinivorans_61943',
-#   'Roseburia_intestinalis_56239',
-#   'Lachnospiraceae_bacterium_51870',
-#   'Coprococcus_sp_62244',
-#   'Oscillibacter_sp_60799',
-#   'Ruminococcus_bromii_62047',
-#   'Ruminococcus_bicirculans_59300',
-#   'Eubacterium_siraeum_57634',
-#   'Faecalibacterium_prausnitzii_57453',
-#   'Faecalibacterium_prasunitzii_62201',
-#   'Faecaelibacterium_prausnitzii_61481'
-# )
+for (i in 1:length(HR_DFE_file_list)) {
+  HR_dfe_nanc[i] = nanc_from_demography(HR_two_epoch_file_list[i])
+  HR_gamma_likelihood[i] = return_DFE_likelihood(HR_DFE_file_list[i])[1]
+  HR_gamma_AIC[i] = 4 - 2 * HR_gamma_likelihood[i]
+  HR_gamma_alpha[i] = return_DFE_params(HR_DFE_file_list[i])[1]
+  HR_gamma_beta[i] = return_DFE_params(HR_DFE_file_list[i])[2]
+  HR_neugamma_likelihood[i] = return_DFE_likelihood(HR_DFE_file_list[i])[2]
+  HR_neugamma_AIC[i] = 6 - 2 * HR_neugamma_likelihood[i]
+  HR_neugamma_pneu[i] = return_DFE_params(HR_DFE_file_list[i])[3]
+  HR_neugamma_alpha[i] = return_DFE_params(HR_DFE_file_list[i])[4]
+  HR_neugamma_beta[i] = return_DFE_params(HR_DFE_file_list[i])[5]
+}
+
+table_s9 = data.frame(
+  species=HR_phylogenetic_levels_MIDAS,
+  HR_dfe_nanc,
+  HR_gamma_likelihood,
+  HR_gamma_AIC,
+  HR_gamma_alpha,
+  HR_gamma_beta,
+  HR_neugamma_likelihood,
+  HR_neugamma_AIC,
+  HR_neugamma_pneu,
+  HR_neugamma_alpha,
+  HR_neugamma_beta
+)
+
+# write.csv(table_s9, '../Supplement/Supplemental_Table_9.csv', row.names = F)
 
 # Supplemental Figure 1
 
-table_s2 = read.csv('../Supplement/Supplemental_Table_3.csv')
+table_s2 = read.csv('../Supplement/Supplemental_Table_2.csv')
 
 table_s2$Species = factor(table_s2$Species, levels=FD_phylogenetic_levels)
 table_s2 = table_s2[order(table_s2$Species), ]
