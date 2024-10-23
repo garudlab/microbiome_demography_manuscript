@@ -1,0 +1,12 @@
+2022-08-05 10:47:45,171 - INFO - Beginning execution of compute_pi.py in directory /u/project/ngarud/jonmah/demo_for_ccgb/Scripts
+
+2022-08-05 10:47:45,172 - INFO - Progress is being logged to ../Analysis/Bacteroides_vulgatus_57955/African/compute_pi.log
+
+2022-08-05 10:47:45,172 - INFO - Parsed the following arguments:
+	input_depth = /u/project/ngarud/Garud_lab/BIG_2021_microbiome_evolution/data/snps_just_africa/Bacteroides_vulgatus_57955/snps_depth.txt.bz2
+	input_ref_freq = /u/project/ngarud/Garud_lab/BIG_2021_microbiome_evolution/data/snps_just_africa/Bacteroides_vulgatus_57955/snps_ref_freq.txt.bz2
+	outprefix = ../Analysis/Bacteroides_vulgatus_57955/African/
+
+2022-08-05 10:47:45,252 - INFO - Computing average nucleotide diversity across sites.
+2022-08-05 10:50:39,919 - INFO - Computing pairwise nucleotide diversity across sites.
+2022-08-05 10:51:00,690 - INFO - Computing average pairwise nucleotide diversity aggregated across hosts.

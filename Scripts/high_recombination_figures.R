@@ -1725,7 +1725,6 @@ fd_accessory_sfs_list = c(
   '../SupplementaryAnalysis/Ruminococcus_bromii_62047/accessory_empirical_syn_downsampled_sfs.txt'
 )
 
-
 fd_accessory_likelihood_surface_list = c(
   '../SupplementaryAnalysis/Akkermansia_muciniphila_55290/accessory_likelihood_surface.csv',
   '../SupplementaryAnalysis/Alistipes_finegoldii_56071/accessory_likelihood_surface.csv',
@@ -6237,7 +6236,6 @@ FD_accessory_core_mean_s_scatter = ggscatter(core_accessory_df, x="FD_core_mean_
 FD_accessory_core_mean_s_scatter
 
 summary(lm(core_accessory_df$FD_core_mean_s ~ core_accessory_df$FD_accessory_mean_s))$r.squared
-
 
 FD_accessory_core_param_scatter = FD_accessory_core_nu_mle_scatter + FD_accessory_core_time_mle_scatter + FD_accessory_core_nanc_scatter +
   FD_accessory_core_mean_s_scatter + FD_accessory_core_shape_scatter + FD_accessory_core_scale_scatter +
