@@ -1,325 +1,529 @@
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 source('useful_functions.R')
 
-# DFE Comparison
-
-FD_phylogenetic_levels = c(
-  'Alistipes sp.',
+HR_phylogenetic_levels = c(
   'Alistipes finegoldii',
   'Alistipes onderdonkii',
   'Alistipes shahii',
-  'Alistipes putredinis',
-  'Bacteroidales bacterium',
-  'Odoribacter splanchnicus',
   'Parabacteroides distasonis',
   'Parabacteroides merdae',
-  'Prevotella copri',
   'Bacteroides fragilis',
   'Bacteroides cellulosilyticus',
-  'Bacteroides eggerthii',
   'Bacteroides stercoris',
-  'Bacteroides uniformis',
   'Bacteroides thetaiotaomicron',
-  'Bacteroides xylanisolvens',
   'Bacteroides caccae',
-  'Bacteroides massiliensis',
   'Bacteroides vulgatus',
-  'Bacteroides plebeius',
-  'Bacteroides coprocola',
   'Barnesiella intestinihominis',
   'Akkermansia muciniphila',
   'Dialister invisus',
-  'Phascolarctobacterium sp.',
-  'Eubacterium eligens',
   'Eubacterium rectale',
-  'Roseburia inulinivorans',
-  'Roseburia intestinalis',
-  'Lachnospiraceae bacterium',
-  'Coprococcus sp.',
   'Oscillibacter sp.',
   'Ruminococcus bromii',
-  'Ruminococcus bicirculans',
-  'Eubacterium siraeum',
-  'Faecalibacterium prausnitzii (57453)',
-  'Faecalibacterium prausnitzii (62201)',
-  'Faecalibacterium prausnitzii (61481)'
+  'Ruminococcus bicirculans'
 )
 
-FD_phylogenetic_levels_MIDAS = c(
-  'Alistipes_sp_60764',
+HR_phylogenetic_levels_MIDAS = c(
   'Alistipes_finegoldii_56071',
   'Alistipes_onderdonkii_55464',
   'Alistipes_shahii_62199',
-  'Alistipes_putredinis_61533',
-  'Bacteroidales_bacterium_58650',
-  'Odoribacter_splanchnicus_62174',
   'Parabacteroides_distasonis_56985',
   'Parabacteroides_merdae_56972',
-  'Prevotella_copri_61740',
   'Bacteroides_fragilis_54507',
   'Bacteroides_cellulosilyticus_58046',
-  'Bacteroides_eggerthii_54457',
   'Bacteroides_stercoris_56735',
-  'Bacteroides_uniformis_57318',
   'Bacteroides_thetaiotaomicron_56941',
-  'Bacteroides_xylanisolvens_57185',
   'Bacteroides_caccae_53434',
-  'Bacteroides_massiliensis_44749',
   'Bacteroides_vulgatus_57955',
-  'Bacteroides_plebeius_61623',
-  'Bacteroides_coprocola_61586',
   'Barnesiella_intestinihominis_62208',
   'Akkermansia_muciniphila_55290',
   'Dialister_invisus_61905',
-  'Phascolarctobacterium_sp_59817',
-  'Eubacterium_eligens_61678',
   'Eubacterium_rectale_56927',
-  'Roseburia_inulinivorans_61943',
-  'Roseburia_intestinalis_56239',
-  'Lachnospiraceae_bacterium_51870',
-  'Coprococcus_sp_62244',
   'Oscillibacter_sp_60799',
   'Ruminococcus_bromii_62047',
-  'Ruminococcus_bicirculans_59300',
-  'Eubacterium_siraeum_57634',
-  'Faecalibacterium_prausnitzii_57453',
-  'Faecalibacterium_prasunitzii_62201',
-  'Faecaelibacterium_prausnitzii_61481'
+  'Ruminococcus_bicirculans_59300'
 )
 
-supplementary_species_list = c(
+shared_species_list = c(
   'Akkermansia muciniphila',
   'Alistipes finegoldii',
   'Alistipes onderdonkii',
-  'Alistipes putredinis',
   'Alistipes shahii',
-  'Alistipes sp.',
-  'Bacteroidales bacterium',
   'Bacteroides caccae',
   'Bacteroides cellulosilyticus',
-  'Bacteroides coprocola',
-  'Bacteroides eggerthii',
   'Bacteroides fragilis',
-  'Bacteroides massiliensis',
-  'Bacteroides plebeius',
   'Bacteroides stercoris',
   'Bacteroides thetaiotaomicron',
-  'Bacteroides uniformis',
   'Bacteroides vulgatus',
-  'Bacteroides xylanisolvens',
   'Barnesiella intestinihominis',
-  'Coprococcus sp.',
   'Dialister invisus',
-  'Eubacterium eligens',
   'Eubacterium rectale',
-  'Eubacterium siraeum',
-  'Faecalibacterium prausnitzii (57453)',
-  'Faecalibacterium prausnitzii (61481)',
-  'Faecalibacterium prausnitzii (62201)',
-  'Lachnospiraceae bacterium',
-  'Odoribacter splanchnicus',
   'Oscillibacter sp.',
   'Parabacteroides distasonis',
   'Parabacteroides merdae',
-  'Phascolarctobacterium sp.',
-  'Prevotella copri',
-  'Roseburia intestinalis',
-  'Roseburia inulinivorans',
   'Ruminococcus bicirculans',
   'Ruminococcus bromii'
 )
 
-# FD DFE comparison (core)
-
-a_muciniphila_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_inferred_DFE.txt')
-a_muciniphila_fd_core_dfe_params$species = 'Akkermansia muciniphila'
-
-a_finegoldii_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Alistipes_finegoldii_56071/core_inferred_DFE.txt')
-a_finegoldii_fd_core_dfe_params$species = 'Alistipes finegoldii'
-
-a_onderdonkii_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Alistipes_onderdonkii_55464/core_inferred_DFE.txt')
-a_onderdonkii_fd_core_dfe_params$species = 'Alistipes onderdonkii'
-
-a_putredinis_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Alistipes_putredinis_61533/core_inferred_DFE.txt')
-a_putredinis_fd_core_dfe_params$species = 'Alistipes putredinis'
-
-a_shahii_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Alistipes_shahii_62199/core_inferred_DFE.txt')
-a_shahii_fd_core_dfe_params$species = 'Alistipes shahii'
-
-alistipes_sp_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Alistipes_sp_60764/core_inferred_DFE.txt')
-alistipes_sp_fd_core_dfe_params$species = 'Alistipes sp.'
-
-b_bacterium_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroidales_bacterium_58650/core_inferred_DFE.txt')
-b_bacterium_fd_core_dfe_params$species = 'Bacteroidales bacterium'
-
-b_caccae_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_caccae_53434/core_inferred_DFE.txt')
-b_caccae_fd_core_dfe_params$species = 'Bacteroides caccae'
-
-b_cellulosilyticus_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_cellulosilyticus_58046/core_inferred_DFE.txt')
-b_cellulosilyticus_fd_core_dfe_params$species = 'Bacteroides cellulosilyticus'
-
-b_coprocola_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_coprocola_61586/core_inferred_DFE.txt')
-b_coprocola_fd_core_dfe_params$species = 'Bacteroides coprocola'
-
-b_eggerthii_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_eggerthii_54457/core_inferred_DFE.txt')
-b_eggerthii_fd_core_dfe_params$species = 'Bacteroides eggerthii'
-
-b_fragilis_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_fragilis_54507/core_inferred_DFE.txt')
-b_fragilis_fd_core_dfe_params$species = 'Bacteroides fragilis'
-
-b_massiliensis_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_massiliensis_44749/core_inferred_DFE.txt')
-b_massiliensis_fd_core_dfe_params$species = 'Bacteroides massiliensis'
-
-b_plebeius_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_plebeius_61623/core_inferred_DFE.txt')
-b_plebeius_fd_core_dfe_params$species = 'Bacteroides plebeius'
-
-b_stercoris_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_stercoris_56735/core_inferred_DFE.txt')
-b_stercoris_fd_core_dfe_params$species = 'Bacteroides stercoris'
-
-b_thetaiotaomicron_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_thetaiotaomicron_56941/core_inferred_DFE.txt')
-b_thetaiotaomicron_fd_core_dfe_params$species = 'Bacteroides thetaiotaomicron'
-
-b_uniformis_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_uniformis_57318/core_inferred_DFE.txt')
-b_uniformis_fd_core_dfe_params$species = 'Bacteroides uniformis'
-
-b_vulgatus_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_vulgatus_57955/core_inferred_DFE.txt')
-b_vulgatus_fd_core_dfe_params$species = 'Bacteroides vulgatus'
-
-b_xylanisolvens_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Bacteroides_xylanisolvens_57185/core_inferred_DFE.txt')
-b_xylanisolvens_fd_core_dfe_params$species = 'Bacteroides xylanisolvens'
-
-b_intestinihominis_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/core_inferred_DFE.txt')
-b_intestinihominis_fd_core_dfe_params$species = 'Barnesiella intestinihominis'
-
-coprococcus_sp_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Coprococcus_sp_62244/core_inferred_DFE.txt')
-coprococcus_sp_fd_core_dfe_params$species = 'Coprococcus sp.'
-
-d_invisus_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Dialister_invisus_61905/core_inferred_DFE.txt')
-d_invisus_fd_core_dfe_params$species = 'Dialister invisus'
-
-e_eligens_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Eubacterium_eligens_61678/core_inferred_DFE.txt')
-e_eligens_fd_core_dfe_params$species = 'Eubacterium eligens'
-
-e_rectale_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Eubacterium_rectale_56927/core_inferred_DFE.txt')
-e_rectale_fd_core_dfe_params$species = 'Eubacterium rectale'
-
-e_siraeum_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Eubacterium_siraeum_57634/core_inferred_DFE.txt')
-e_siraeum_fd_core_dfe_params$species = 'Eubacterium siraeum'
-
-f_prausnitzii_57453_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Faecalibacterium_prausnitzii_57453/core_inferred_DFE.txt')
-f_prausnitzii_57453_fd_core_dfe_params$species = 'Faecalibacterium prausnitzii (57453)'
-
-f_prausnitzii_61481_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Faecalibacterium_prausnitzii_61481/core_inferred_DFE.txt')
-f_prausnitzii_61481_fd_core_dfe_params$species = 'Faecalibacterium prausnitzii (61481)'
-
-f_prausnitzii_62201_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Faecalibacterium_prausnitzii_62201/core_inferred_DFE.txt')
-f_prausnitzii_62201_fd_core_dfe_params$species = 'Faecalibacterium prausnitzii (62201)'
-
-l_bacterium_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Lachnospiraceae_bacterium_51870/core_inferred_DFE.txt')
-l_bacterium_fd_core_dfe_params$species = 'Lachnospiraceae bacterium'
-
-o_splanchnicus_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/core_inferred_DFE.txt')
-o_splanchnicus_fd_core_dfe_params$species = 'Odoribacter splanchnicus'
-
-oscillibacter_sp_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Oscillibacter_sp_60799/core_inferred_DFE.txt')
-oscillibacter_sp_fd_core_dfe_params$species = 'Oscillibacter sp.'
-
-p_distasonis_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Parabacteroides_distasonis_56985/core_inferred_DFE.txt')
-p_distasonis_fd_core_dfe_params$species = 'Parabacteroides distasonis'
-
-p_merdae_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Parabacteroides_merdae_56972/core_inferred_DFE.txt')
-p_merdae_fd_core_dfe_params$species = 'Parabacteroides merdae'
-
-phascolarctobacterium_sp_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Phascolarctobacterium_sp_59817/core_inferred_DFE.txt')
-phascolarctobacterium_sp_fd_core_dfe_params$species = 'Phascolarctobacterium sp.'
-
-p_copri_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Prevotella_copri_61740/core_inferred_DFE.txt')
-p_copri_fd_core_dfe_params$species = 'Prevotella copri'
-
-r_intestinalis_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Roseburia_intestinalis_56239/core_inferred_DFE.txt')
-r_intestinalis_fd_core_dfe_params$species = 'Roseburia intestinalis'
-
-r_inulinivorans_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Roseburia_inulinivorans_61943/core_inferred_DFE.txt')
-r_inulinivorans_fd_core_dfe_params$species = 'Roseburia inulinivorans'
-
-r_bicirculans_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/core_inferred_DFE.txt')
-r_bicirculans_fd_core_dfe_params$species = 'Ruminococcus bicirculans'
-
-r_bromii_fd_core_dfe_params = read_dfe_params('../SupplementaryAnalysis/Ruminococcus_bromii_62047/core_inferred_DFE.txt')
-r_bromii_fd_core_dfe_params$species = 'Ruminococcus bromii'
-
-fd_core_dfe_df = rbind(
-  melt(a_muciniphila_fd_core_dfe_params),
-  melt(a_finegoldii_fd_core_dfe_params),
-  melt(a_onderdonkii_fd_core_dfe_params),
-  melt(a_putredinis_fd_core_dfe_params),
-  melt(a_shahii_fd_core_dfe_params),
-  melt(alistipes_sp_fd_core_dfe_params),
-  melt(b_bacterium_fd_core_dfe_params),
-  melt(b_caccae_fd_core_dfe_params),
-  melt(b_cellulosilyticus_fd_core_dfe_params),
-  melt(b_coprocola_fd_core_dfe_params),
-  melt(b_eggerthii_fd_core_dfe_params),
-  melt(b_fragilis_fd_core_dfe_params),
-  melt(b_massiliensis_fd_core_dfe_params),
-  melt(b_plebeius_fd_core_dfe_params),
-  melt(b_stercoris_fd_core_dfe_params),
-  melt(b_thetaiotaomicron_fd_core_dfe_params),
-  melt(b_uniformis_fd_core_dfe_params),
-  melt(b_vulgatus_fd_core_dfe_params),
-  melt(b_xylanisolvens_fd_core_dfe_params),
-  melt(b_intestinihominis_fd_core_dfe_params),
-  melt(coprococcus_sp_fd_core_dfe_params),
-  melt(d_invisus_fd_core_dfe_params),
-  melt(e_eligens_fd_core_dfe_params),
-  melt(e_rectale_fd_core_dfe_params),
-  melt(e_siraeum_fd_core_dfe_params),
-  melt(f_prausnitzii_57453_fd_core_dfe_params),
-  melt(f_prausnitzii_61481_fd_core_dfe_params),
-  melt(f_prausnitzii_62201_fd_core_dfe_params),
-  melt(l_bacterium_fd_core_dfe_params),
-  melt(o_splanchnicus_fd_core_dfe_params),
-  melt(oscillibacter_sp_fd_core_dfe_params),
-  melt(p_distasonis_fd_core_dfe_params),
-  melt(p_merdae_fd_core_dfe_params),
-  melt(phascolarctobacterium_sp_fd_core_dfe_params),
-  melt(p_copri_fd_core_dfe_params),
-  melt(r_intestinalis_fd_core_dfe_params),
-  melt(r_inulinivorans_fd_core_dfe_params),
-  melt(r_bicirculans_fd_core_dfe_params),
-  melt(r_bromii_fd_core_dfe_params)
+hr_demography_file_list = c(
+  '../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_two_epoch_demography.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_two_epoch_demography.txt'
 )
 
-# dfe_df
+hr_sfs_list = c(
+  '../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_empirical_syn_sfs.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_empirical_syn_sfs.txt'
+)
 
-fd_core_dfe_df$species = factor(fd_core_dfe_df$species, levels=FD_phylogenetic_levels)
+hr_downsampled_sfs_list = c(
+  '../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_empirical_syn_14_downsampled_sfs.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_empirical_syn_14_downsampled_sfs.txt'
+)
 
-fd_core_dfe_df <- fd_core_dfe_df[order(fd_core_dfe_df$species), ]
+hr_likelihood_surface_list = c(
+  '../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Alistipes_finegoldii_56071/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Alistipes_shahii_62199/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Bacteroides_caccae_53434/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Bacteroides_fragilis_54507/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Bacteroides_stercoris_56735/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Dialister_invisus_61905/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Eubacterium_rectale_56927/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Oscillibacter_sp_60799/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Parabacteroides_merdae_56972/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/likelihood_surface.csv',
+  '../HighRecombinationAnalysis/Ruminococcus_bromii_62047/likelihood_surface.csv'
+)
 
-fd_core_dfe_df
+hr_dfe_file_list = c(
+  '../HighRecombinationAnalysis/Akkermansia_muciniphila_55290/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Alistipes_finegoldii_56071/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Alistipes_onderdonkii_55464/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Alistipes_shahii_62199/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_caccae_53434/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_cellulosilyticus_58046/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_fragilis_54507/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_stercoris_56735/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_thetaiotaomicron_56941/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Bacteroides_vulgatus_57955/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Barnesiella_intestinihominis_62208/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Dialister_invisus_61905/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Eubacterium_rectale_56927/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Oscillibacter_sp_60799/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_distasonis_56985/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Parabacteroides_merdae_56972/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bicirculans_59300/core_0.5_inferred_DFE.txt',
+  '../HighRecombinationAnalysis/Ruminococcus_bromii_62047/core_0.5_inferred_DFE.txt'
+)
 
-fd_core_dfe_df$value[fd_core_dfe_df$value <= 1e-11] = 1e-11
-fd_core_dfe_df$value[fd_core_dfe_df$value >= 0.5] = 0.5
+fd_shared_demography_file_list = c(
+  '../SupplementaryAnalysis/Akkermansia_muciniphila_55290/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Alistipes_finegoldii_56071/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Alistipes_onderdonkii_55464/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Alistipes_shahii_62199/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_caccae_53434/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_cellulosilyticus_58046/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_fragilis_54507/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_stercoris_56735/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_thetaiotaomicron_56941/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_vulgatus_57955/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Dialister_invisus_61905/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Eubacterium_rectale_56927/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Oscillibacter_sp_60799/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Parabacteroides_distasonis_56985/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Parabacteroides_merdae_56972/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bromii_62047/two_epoch_demography.txt'
+)
 
-### Figure 4
-# 600 x 1000
+fd_shared_sfs_list = c(
+  '../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_finegoldii_56071/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_onderdonkii_55464/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_shahii_62199/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_caccae_53434/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_cellulosilyticus_58046/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_fragilis_54507/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_stercoris_56735/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_thetaiotaomicron_56941/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_vulgatus_57955/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Dialister_invisus_61905/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Eubacterium_rectale_56927/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Oscillibacter_sp_60799/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Parabacteroides_distasonis_56985/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Parabacteroides_merdae_56972/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bromii_62047/core_empirical_syn_downsampled_sfs.txt'
+)
 
-# png("../Summary/figure_4_output.png", width = 600, height = 1400)
-figure_4 = ggplot(fd_core_dfe_df[fd_core_dfe_df$variable == 'gamma_dfe_dist_low', ], aes(x=value, y=fct_rev(species), fill=species)) +
-  geom_density_ridges2(aes(fill = species), stat = "binline", binwidth = 1, scale = 1) +
-  #labs(
-  #  title = 'Gamma-Distributed DFE',
-  #  subtitle = 'Assuming a mutation rate of mu=4.08E-10'
-  #) +  
-  theme_ridges() +
-  scale_x_log10(limits=c(1e-12, 1e1)) +
-  ylab('Proportion of Sites') +
-  theme(axis.text.y = element_text(face='italic', hjust=0, size=18)) +
-  theme(axis.text.x = element_text(size=18)) + 
-  theme(legend.position = "none") + 
-  xlab('Selection Coefficient')
+fd_shared_likelihood_surface_list = c(
+  '../SupplementaryAnalysis/Akkermansia_muciniphila_55290/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Alistipes_finegoldii_56071/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Alistipes_onderdonkii_55464/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Alistipes_shahii_62199/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_caccae_53434/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_cellulosilyticus_58046/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_fragilis_54507/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_stercoris_56735/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_thetaiotaomicron_56941/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_vulgatus_57955/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Dialister_invisus_61905/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Eubacterium_rectale_56927/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Oscillibacter_sp_60799/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Parabacteroides_distasonis_56985/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Parabacteroides_merdae_56972/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Ruminococcus_bromii_62047/likelihood_surface.csv'
+)
 
-# dev.off()
+fd_shared_dfe_file_list = c(
+  '../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Alistipes_finegoldii_56071/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Alistipes_onderdonkii_55464/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Alistipes_shahii_62199/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Bacteroides_caccae_53434/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Bacteroides_cellulosilyticus_58046/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Bacteroides_fragilis_54507/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Bacteroides_stercoris_56735/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Bacteroides_thetaiotaomicron_56941/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Bacteroides_vulgatus_57955/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Dialister_invisus_61905/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Eubacterium_rectale_56927/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Oscillibacter_sp_60799/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Parabacteroides_distasonis_56985/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Parabacteroides_merdae_56972/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/core_inferred_DFE.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bromii_62047/core_inferred_DFE.txt'
+)
 
-ggsave('../Summary/figure_4_output.svg', figure_4, width=9, height=15, units='in', dpi=600)
+shared_species_df = data.frame(species=shared_species_list,
+  HR_nu_mle = numeric(18),
+  FD_nu_mle = numeric(18),
+  HR_time_mle = numeric(18),
+  FD_time_mle = numeric(18),
+  HR_tau_mle = numeric(18),
+  FD_tau_mle = numeric(18),
+  HR_nanc = numeric(18),
+  FD_nanc = numeric(18),
+  HR_shape = numeric(18),
+  FD_shape = numeric(18),
+  HR_scale = numeric(18),
+  FD_scale = numeric(18),
+  HR_mean_s = numeric(18),
+  FD_mean_s = numeric(18),
+  HR_allele_sum = numeric(18),
+  FD_allele_sum = numeric(18)
+)
+
+
+
+for (i in 1:length(shared_species_list)) {
+  # nu_mle
+  ## HR
+  shared_species_df[i, 2] = return_nu_mle(hr_likelihood_surface_list[i])
+  ## FD
+  shared_species_df[i, 3] = return_nu_mle(fd_shared_likelihood_surface_list[i])
+  # tau_mle
+  ## HR
+  shared_species_df[i, 4] = return_time_mle(hr_likelihood_surface_list[i],
+    hr_downsampled_sfs_list[i],
+    hr_demography_file_list[i])
+  ## FD
+  shared_species_df[i, 5] = return_time_mle(fd_shared_likelihood_surface_list[i],
+    fd_shared_sfs_list[i],
+    fd_shared_demography_file_list[i])
+  # Tau
+  shared_species_df[i, 6] = return_tau_mle(hr_likelihood_surface_list[i])
+  shared_species_df[i, 7] = return_tau_mle(fd_shared_likelihood_surface_list[i])
+  # Nanc
+  ## HR
+  shared_species_df[i, 8] = nanc_from_demography(hr_demography_file_list[i])
+  ## FD
+  shared_species_df[i, 9] = nanc_from_demography(fd_shared_demography_file_list[i])
+  # shape
+  ## HR
+  shared_species_df[i, 10] = return_shape_from_dfe(hr_dfe_file_list[i])
+  ## FD
+  shared_species_df[i, 11] = return_shape_from_dfe(fd_shared_dfe_file_list[i])
+  # scale
+  ## HR
+  shared_species_df[i, 12] = return_scale_from_dfe(hr_dfe_file_list[i])
+  ## FD
+  shared_species_df[i, 13] = return_scale_from_dfe(fd_shared_dfe_file_list[i])
+  # Mean s
+  ## HR
+  shared_species_df[i, 14] = mean(read_dfe_params(hr_dfe_file_list[i])$gamma_dfe_dist_high)
+  ## FD
+  shared_species_df[i, 15] = mean(read_dfe_params(fd_shared_dfe_file_list[i])$gamma_dfe_dist_high)
+  # Allele sum
+  ## HR
+  shared_species_df[i, 16] = return_allele_sum(hr_downsampled_sfs_list[i])
+  ## FD
+  shared_species_df[i, 17] = return_allele_sum(fd_shared_sfs_list[i])
+}
+
+shared_species_df
+
+shared_species_df$species = factor(shared_species_df$species, levels=HR_phylogenetic_levels)
+
+shared_species_df <- shared_species_df[order(shared_species_df$species), ]
+
+shared_species_df
+
+shared_species_df$HR_2ns = shared_species_df$HR_nanc * 2 * shared_species_df$HR_mean_s
+shared_species_df$FD_2ns = shared_species_df$FD_nanc * 2 * shared_species_df$FD_mean_s
+
+nu_comparison = c('FD_nu_mle', 'HR_nu_mle')
+
+t.test(shared_species_df$FD_nu_mle, shared_species_df$HR_nu_mle, paired=TRUE)
+
+HR_FD_nu_mle_scatter = ggscatter(shared_species_df, x="FD_nu_mle", y="HR_nu_mle", color='species', size=3) +
+  ylab('Low recombination sites and selective sweeps removed') +
+  xlab('Full data') +
+  geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=6) +
+  scale_x_log10(limits=c(1E-2, 1E4)) +
+  scale_y_log10(limits=c(1E-2, 1E4)) +
+  guides(color=guide_legend(title="species")) +
+  theme(legend.position = 'none') +
+  guides(color = 'none') +
+  guides(shape = 'none') +
+  geom_abline(slope=1, intercept=0) +
+  theme(axis.text=element_text(size=18),
+    axis.title=element_blank()) +
+  ggtitle('Maximum likelihood estimate of Nu') +
+  theme(plot.title=element_text(size=22))
+
+HR_FD_nu_mle_scatter
+
+HR_FD_time_mle_scatter = ggscatter(shared_species_df, x="FD_time_mle", y="HR_time_mle", color='species', size=3) +
+  ylab('Low recombination sites and selective sweeps removed') +
+  xlab('Full data') +
+  geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=6) +
+  scale_x_log10(limits=c(1E2, 1E6)) +
+  scale_y_log10(limits=c(1E2, 1E6)) +
+  guides(color=guide_legend(title="species")) +
+  theme(legend.position = 'none') +
+  guides(color = 'none') +
+  guides(shape = 'none') +
+  geom_abline(slope=1, intercept=0) +
+  theme(axis.text=element_text(size=18),
+    axis.title=element_blank()) +
+  ggtitle('Maximum likelihood estimate of Time (years)') +
+  theme(plot.title=element_text(size=22))
+
+HR_FD_time_mle_scatter
+
+HR_FD_tau_mle_scatter = ggscatter(shared_species_df, x="FD_tau_mle", y="HR_tau_mle", color='species', size=3) +
+  ylab('Low recombination sites and selective sweeps removed') +
+  xlab('Full data') +
+  geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=6) +
+  scale_x_log10(limits=c(1E-1, 1E4)) +
+  scale_y_log10(limits=c(1E-1, 1E4)) +
+  guides(color=guide_legend(title="species")) +
+  theme(legend.position = 'none') +
+  guides(color = 'none') +
+  guides(shape = 'none') +
+  geom_abline(slope=1, intercept=0) +
+  theme(axis.text=element_text(size=18),
+    axis.title=element_blank()) +
+  ggtitle('Maximum likelihood estimate of tau') +
+  theme(plot.title=element_text(size=22))
+
+HR_FD_tau_mle_scatter
+
+HR_FD_nanc_scatter = ggscatter(shared_species_df, x="FD_nanc", y="HR_nanc", color='species', size=3) +
+  ylab('Low recombination sites and selective sweeps removed') +
+  xlab('Full data') +
+  geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=6) +
+  scale_x_log10(limits=c(3E6, 3E8)) +
+  scale_y_log10(limits=c(3E6, 3E8)) +
+  guides(color=guide_legend(title="species")) +
+  theme(legend.position = 'none') +
+  guides(color = 'none') +
+  guides(shape = 'none') +
+  geom_abline(slope=1, intercept=0) +
+  theme(axis.text=element_text(size=18),
+    axis.title=element_blank()) +
+  ggtitle('Effective ancestral population size') +
+  theme(plot.title=element_text(size=22))
+
+HR_FD_nanc_scatter
+
+HR_FD_shape_scatter = ggscatter(shared_species_df, x="FD_shape", y="HR_shape", color='species', size=3) +
+  ylab('Low recombination sites and selective sweeps removed') +
+  xlab('Full data') +
+  geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=6) +
+  scale_x_log10(limits=c(0.003, 2.00)) +
+  scale_y_log10(limits=c(0.003, 2.00)) +
+  guides(color=guide_legend(title="species")) +
+  theme(legend.position = 'none') +
+  guides(color = 'none') +
+  guides(shape = 'none') +
+  geom_abline(slope=1, intercept=0) +
+  theme(axis.text=element_text(size=18),
+    axis.title=element_blank()) +
+  ggtitle('Gamma-distributed DFE shape parameter') +
+  theme(plot.title=element_text(size=22))
+
+HR_FD_shape_scatter
+
+HR_FD_scale_scatter = ggscatter(shared_species_df, x="FD_scale", y="HR_scale", color='species', size=3) +
+  ylab('Low recombination sites and selective sweeps removed') +
+  xlab('Full data') +
+  geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=6) +
+  scale_x_log10(limits=c(1E-14, 1E3)) +
+  scale_y_log10(limits=c(1E-14, 1E3)) +
+  guides(color=guide_legend(title="species")) +
+  theme(legend.position = 'none') +
+  guides(color = 'none') +
+  guides(shape = 'none') +
+  geom_abline(slope=1, intercept=0) +
+  theme(axis.text=element_text(size=18),
+    axis.title=element_blank()) +
+  ggtitle('Gamma-distributed DFE scale parameter') +
+  theme(plot.title=element_text(size=22))
+
+HR_FD_scale_scatter
+
+HR_FD_mean_s_scatter = ggscatter(shared_species_df, x="FD_mean_s", y="HR_mean_s", color='species', size=3) +
+  ylab('Low recombination sites and selective sweeps removed') +
+  xlab('Full data') +
+  geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=6) +
+  scale_x_log10(limits=c(1E-14, 1E3)) +
+  scale_y_log10(limits=c(1E-14, 1E3)) +
+  guides(color=guide_legend(title="species")) +
+  theme(legend.position = 'none') +
+  guides(color = 'none') +
+  guides(shape = 'none') +
+  geom_abline(slope=1, intercept=0) +
+  theme(axis.text=element_text(size=18),
+    axis.title=element_blank()) +
+  ggtitle('Gamma-distributed DFE mean selection coefficient') +
+  theme(plot.title=element_text(size=22))
+
+HR_FD_mean_s_scatter
+
+HR_FD_2ns_scatter = ggscatter(shared_species_df, x="FD_2ns", y="HR_2ns", color='species', size=3) +
+  ylab('Low recombination sites and selective sweeps removed') +
+  xlab('Full data') +
+  geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=6) +
+  scale_x_log10(limits=c(1E-8, 1E10)) +
+  scale_y_log10(limits=c(1E-8, 1E10)) +
+  guides(color=guide_legend(title="species")) +
+  theme(legend.position = 'none') +
+  guides(color = 'none') +
+  guides(shape = 'none') +
+  geom_abline(slope=1, intercept=0) +
+  theme(axis.text=element_text(size=18),
+    axis.title=element_blank()) +
+  ggtitle('Estimated 2ns of gamma-distributed DFE') +
+  theme(plot.title=element_text(size=22))
+
+HR_FD_2ns_scatter
+
+HR_FD_allele_count_scatter = ggscatter(shared_species_df, x="FD_allele_sum", y="HR_allele_sum", color='species', size=3) +
+  ylab('Low recombination sites and selective sweeps removed') +
+  xlab('Full data') +
+  geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=6) +
+  scale_x_log10(limits=c(9E4, 5E5)) +
+  scale_y_log10(limits=c(9E4, 5E5)) +
+  guides(color=guide_legend(title="species")) +
+  theme(legend.position = 'none') +
+  guides(color = 'none') +
+  guides(shape = 'none') +
+  geom_abline(slope=1, intercept=0) +
+  theme(axis.text=element_text(size=18),
+    axis.title=element_blank()) +
+  ggtitle('Number of sites included in SFS') +
+  theme(plot.title=element_text(size=22))
+
+HR_FD_allele_count_scatter
+
+# nu
+summary(lm(shared_species_df$FD_nu_mle ~ shared_species_df$HR_nu_mle))$r.squared
+cor(shared_species_df$FD_nu_mle, shared_species_df$HR_nu_mle)
+
+
+# tau
+summary(lm(shared_species_df$FD_tau_mle ~ shared_species_df$HR_tau_mle))$r.squared
+
+# mean s
+summary(lm(shared_species_df$FD_mean_s ~ shared_species_df$HR_mean_s))$r.squared
+
+# shape
+summary(lm(shared_species_df$FD_shape ~ shared_species_df$HR_shape))$r.squared
+
+# scale
+summary(lm(shared_species_df$FD_scale ~ shared_species_df$HR_scale))$r.squared
+
+# nanc
+summary(lm(shared_species_df$FD_nanc ~ shared_species_df$HR_nanc))$r.squared
+
+figure_4 = HR_FD_nu_mle_scatter + theme(axis.title=element_blank()) +
+  HR_FD_time_mle_scatter + theme(axis.title=element_blank()) +
+  HR_FD_nanc_scatter + theme(axis.title=element_blank()) +
+  HR_FD_mean_s_scatter + theme(axis.title=element_blank()) +
+  HR_FD_shape_scatter + theme(axis.title=element_blank()) +
+  HR_FD_scale_scatter + theme(axis.title=element_blank()) +
+  plot_layout(ncol=3)
+
+ggsave('../Summary/Figure_4_output.svg', figure_4, width=24, height=16, units='in', dpi=600)
+
 

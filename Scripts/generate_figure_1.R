@@ -1,217 +1,313 @@
 setwd(dirname(rstudioapi::getActiveDocumentContext()$path))
 source('useful_functions.R')
 
-# Nucleotide diversity
-
-pi_summary_df = data.frame(read.csv('../Analysis/summarized_pi.csv', header=TRUE))
-names(pi_summary_df) = c('species', 'Cohort', 'average_pi', 'num_sites', 
-                         'num_samples', 'aggregate_across_pi', 'pairwise_across_pi')
-
-list_iid = c('Bifidobacterium_longum_57796',
-             'Blautia_wexlerae_56130',
-             'Butyrivibrio_crossotus_61674',
-             'Escherichia_coli_58110',
-             'Eubacterium_eligens_61678',
-             'Faecalibacterium_cf_62236',
-             'Faecalibacterium_prausnitzii_57453',
-             'Faecalibacterium_prausnitzii_61481',
-             'Faecalibacterium_prausnitzii_62201',
-             'Oscillibacter_sp_60799',
-             'Prevotella_copri_61740',
-             'Roseburia_inulinivorans_61943',
-             'Ruminococcus_bromii_62047')
-
-over_iid_df = subset(pi_summary_df, species %in% list_iid)
-
-position_jitterdodge(
-  jitter.width = NULL,
-  jitter.height = 0,
-  dodge.width = 0.5,
-  seed = NA
+supplementary_demography_file_list = c(
+  '../SupplementaryAnalysis/Akkermansia_muciniphila_55290/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Alistipes_finegoldii_56071/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Alistipes_onderdonkii_55464/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Alistipes_putredinis_61533/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Alistipes_shahii_62199/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Alistipes_sp_60764/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroidales_bacterium_58650/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_caccae_53434/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_cellulosilyticus_58046/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_coprocola_61586/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_eggerthii_54457/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_fragilis_54507/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_massiliensis_44749/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_plebeius_61623/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_stercoris_56735/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_thetaiotaomicron_56941/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_uniformis_57318/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_vulgatus_57955/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Bacteroides_xylanisolvens_57185/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Coprococcus_sp_62244/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Dialister_invisus_61905/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Eubacterium_eligens_61678/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Eubacterium_rectale_56927/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Eubacterium_siraeum_57634/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_57453/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_61481/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_62201/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Lachnospiraceae_bacterium_51870/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Oscillibacter_sp_60799/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Parabacteroides_distasonis_56985/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Parabacteroides_merdae_56972/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Phascolarctobacterium_sp_59817/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Prevotella_copri_61740/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Roseburia_intestinalis_56239/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Roseburia_inulinivorans_61943/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/two_epoch_demography.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bromii_62047/two_epoch_demography.txt'
 )
 
-# pairwise_pi_comparison_10 + stat_compare_means(label = "p.signif", method = "t.test")
+supplementary_likelihood_surface_list = c(
+  '../SupplementaryAnalysis/Akkermansia_muciniphila_55290/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Alistipes_finegoldii_56071/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Alistipes_onderdonkii_55464/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Alistipes_putredinis_61533/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Alistipes_shahii_62199/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Alistipes_sp_60764/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroidales_bacterium_58650/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_caccae_53434/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_cellulosilyticus_58046/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_coprocola_61586/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_eggerthii_54457/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_fragilis_54507/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_massiliensis_44749/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_plebeius_61623/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_stercoris_56735/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_thetaiotaomicron_56941/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_uniformis_57318/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_vulgatus_57955/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Bacteroides_xylanisolvens_57185/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Coprococcus_sp_62244/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Dialister_invisus_61905/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Eubacterium_eligens_61678/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Eubacterium_rectale_56927/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Eubacterium_siraeum_57634/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_57453/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_61481/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_62201/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Lachnospiraceae_bacterium_51870/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Oscillibacter_sp_60799/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Parabacteroides_distasonis_56985/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Parabacteroides_merdae_56972/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Phascolarctobacterium_sp_59817/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Prevotella_copri_61740/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Roseburia_intestinalis_56239/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Roseburia_inulinivorans_61943/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/likelihood_surface.csv',
+  '../SupplementaryAnalysis/Ruminococcus_bromii_62047/likelihood_surface.csv'
+)
 
-over_iid_df$ordered_pi = 0
+supplementary_downsampled_sfs_file_list = c(
+  '../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_finegoldii_56071/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_onderdonkii_55464/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_putredinis_61533/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_shahii_62199/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_sp_60764/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroidales_bacterium_58650/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_caccae_53434/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_cellulosilyticus_58046/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_coprocola_61586/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_eggerthii_54457/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_fragilis_54507/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_massiliensis_44749/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_plebeius_61623/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_stercoris_56735/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_thetaiotaomicron_56941/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_uniformis_57318/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_vulgatus_57955/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_xylanisolvens_57185/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Coprococcus_sp_62244/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Dialister_invisus_61905/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Eubacterium_eligens_61678/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Eubacterium_rectale_56927/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Eubacterium_siraeum_57634/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_57453/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_61481/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_62201/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Lachnospiraceae_bacterium_51870/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Oscillibacter_sp_60799/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Parabacteroides_distasonis_56985/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Parabacteroides_merdae_56972/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Phascolarctobacterium_sp_59817/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Prevotella_copri_61740/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Roseburia_intestinalis_56239/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Roseburia_inulinivorans_61943/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/core_empirical_syn_downsampled_sfs.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bromii_62047/core_empirical_syn_downsampled_sfs.txt'
+)
 
-over_iid_df[over_iid_df$species=='Bifidobacterium_longum_57796' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Bifidobacterium_longum_57796' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Bifidobacterium_longum_57796' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Bifidobacterium_longum_57796' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+old_full_sfs_file_list = c(
+  '../Analysis/Akkermansia_muciniphila_55290/core_empirical_syn_sfs.txt',
+  '../Analysis/Alistipes_finegoldii_56071/core_empirical_syn_sfs.txt',
+  '../Analysis/Alistipes_onderdonkii_55464/core_empirical_syn_sfs.txt',
+  '../Analysis/Alistipes_putredinis_61533/core_empirical_syn_sfs.txt',
+  '../Analysis/Alistipes_shahii_62199/core_empirical_syn_sfs.txt',
+  '../Analysis/Alistipes_sp_60764/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroidales_bacterium_58650/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_caccae_53434/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_cellulosilyticus_58046/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_coprocola_61586/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_eggerthii_54457/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_fragilis_54507/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_massiliensis_44749/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_plebeius_61623/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_stercoris_56735/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_thetaiotaomicron_56941/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_uniformis_57318/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_vulgatus_57955/core_empirical_syn_sfs.txt',
+  '../Analysis/Bacteroides_xylanisolvens_57185/core_empirical_syn_sfs.txt',
+  '../Analysis/Barnesiella_intestinihominis_62208/core_empirical_syn_sfs.txt',
+  '../Analysis/Coprococcus_sp_62244/core_empirical_syn_sfs.txt',
+  '../Analysis/Dialister_invisus_61905/core_empirical_syn_sfs.txt',
+  '../Analysis/Eubacterium_eligens_61678/core_empirical_syn_sfs.txt',
+  '../Analysis/Eubacterium_rectale_56927/core_empirical_syn_sfs.txt',
+  '../Analysis/Eubacterium_siraeum_57634/core_empirical_syn_sfs.txt',
+  '../Analysis/Faecalibacterium_prausnitzii_57453/core_empirical_syn_sfs.txt',
+  '../Analysis/Faecalibacterium_prausnitzii_61481/core_empirical_syn_sfs.txt',
+  '../Analysis/Faecalibacterium_prausnitzii_62201/core_empirical_syn_sfs.txt',
+  '../Analysis/Lachnospiraceae_bacterium_51870/core_empirical_syn_sfs.txt',
+  '../Analysis/Odoribacter_splanchnicus_62174/core_empirical_syn_sfs.txt',
+  '../Analysis/Oscillibacter_sp_60799/core_empirical_syn_sfs.txt',
+  '../Analysis/Parabacteroides_distasonis_56985/core_empirical_syn_sfs.txt',
+  '../Analysis/Parabacteroides_merdae_56972/core_empirical_syn_sfs.txt',
+  '../Analysis/Phascolarctobacterium_sp_59817/core_empirical_syn_sfs.txt',
+  '../Analysis/Prevotella_copri_61740/core_empirical_syn_sfs.txt',
+  '../Analysis/Roseburia_intestinalis_56239/core_empirical_syn_sfs.txt',
+  '../Analysis/Roseburia_inulinivorans_61943/core_empirical_syn_sfs.txt',
+  '../Analysis/Ruminococcus_bicirculans_59300/core_empirical_syn_sfs.txt',
+  '../Analysis/Ruminococcus_bromii_62047/core_empirical_syn_sfs.txt'
+)
 
-over_iid_df[over_iid_df$species=='Blautia_wexlerae_56130' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Blautia_wexlerae_56130' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Blautia_wexlerae_56130' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Blautia_wexlerae_56130' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+supplementary_full_sfs_file_list = c(
+  '../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_finegoldii_56071/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_onderdonkii_55464/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_putredinis_61533/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_shahii_62199/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Alistipes_sp_60764/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroidales_bacterium_58650/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_caccae_53434/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_cellulosilyticus_58046/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_coprocola_61586/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_eggerthii_54457/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_fragilis_54507/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_massiliensis_44749/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_plebeius_61623/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_stercoris_56735/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_thetaiotaomicron_56941/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_uniformis_57318/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_vulgatus_57955/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Bacteroides_xylanisolvens_57185/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Barnesiella_intestinihominis_62208/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Coprococcus_sp_62244/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Dialister_invisus_61905/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Eubacterium_eligens_61678/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Eubacterium_rectale_56927/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Eubacterium_siraeum_57634/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_57453/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_61481/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Faecalibacterium_prausnitzii_62201/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Lachnospiraceae_bacterium_51870/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Odoribacter_splanchnicus_62174/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Oscillibacter_sp_60799/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Parabacteroides_distasonis_56985/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Parabacteroides_merdae_56972/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Phascolarctobacterium_sp_59817/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Prevotella_copri_61740/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Roseburia_intestinalis_56239/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Roseburia_inulinivorans_61943/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bicirculans_59300/core_empirical_syn_sfs.txt',
+  '../SupplementaryAnalysis/Ruminococcus_bromii_62047/core_empirical_syn_sfs.txt'
+)
 
-over_iid_df[over_iid_df$species=='Butyrivibrio_crossotus_61674' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Butyrivibrio_crossotus_61674' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Butyrivibrio_crossotus_61674' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Butyrivibrio_crossotus_61674' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+supplementary_species_list = c(
+  'Akkermansia muciniphila',
+  'Alistipes finegoldii',
+  'Alistipes onderdonkii',
+  'Alistipes putredinis',
+  'Alistipes shahii',
+  'Alistipes sp.',
+  'Bacteroidales bacterium',
+  'Bacteroides caccae',
+  'Bacteroides cellulosilyticus',
+  'Bacteroides coprocola',
+  'Bacteroides eggerthii',
+  'Bacteroides fragilis',
+  'Bacteroides massiliensis',
+  'Bacteroides plebeius',
+  'Bacteroides stercoris',
+  'Bacteroides thetaiotaomicron',
+  'Bacteroides uniformis',
+  'Bacteroides vulgatus',
+  'Bacteroides xylanisolvens',
+  'Barnesiella intestinihominis',
+  'Coprococcus sp.',
+  'Dialister invisus',
+  'Eubacterium eligens',
+  'Eubacterium rectale',
+  'Eubacterium siraeum',
+  'Faecalibacterium prausnitzii (57453)',
+  'Faecalibacterium prausnitzii (61481)',
+  'Faecalibacterium prausnitzii (62201)',
+  'Lachnospiraceae bacterium',
+  'Odoribacter splanchnicus',
+  'Oscillibacter sp.',
+  'Parabacteroides distasonis',
+  'Parabacteroides merdae',
+  'Phascolarctobacterium sp.',
+  'Prevotella copri',
+  'Roseburia intestinalis',
+  'Roseburia inulinivorans',
+  'Ruminococcus bicirculans',
+  'Ruminococcus bromii'
+)
 
-over_iid_df[over_iid_df$species=='Eubacterium_eligens_61678' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Eubacterium_eligens_61678' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Eubacterium_eligens_61678' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Eubacterium_eligens_61678' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+prevalence_df = read.csv('../Data/species_prevalence.csv')
+prevalence_df = prevalence_df[, c(1, 6)]
+prevalence_df = prevalence_df %>% arrange(species_id)
 
-over_iid_df[over_iid_df$species=='Escherichia_coli_58110' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Escherichia_coli_58110' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Escherichia_coli_58110' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Escherichia_coli_58110' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+supplementary_demography_df = data.frame(species=supplementary_species_list,
+  new_sample_size=numeric(39),
+  old_sample_size=numeric(39)
+)
 
-over_iid_df[over_iid_df$species=='Faecalibacterium_cf_62236' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Faecalibacterium_cf_62236' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Faecalibacterium_cf_62236' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Faecalibacterium_cf_62236' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+for (i in 1:length(supplementary_species_list)) {
+  supplementary_demography_df[i, 2] = get_species_prevalence(supplementary_full_sfs_file_list[i])
+  if (file.exists(old_full_sfs_file_list[i])) {
+    supplementary_demography_df[i, 3] = get_species_prevalence(old_full_sfs_file_list[i])
+  }
+}
 
-over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_61481' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_61481' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_61481' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_61481' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+supplementary_demography_df
 
-over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_57453' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_57453' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_57453' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_57453' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+prevalence_df = cbind(supplementary_demography_df, prevalence_df)
 
-over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_62201' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_62201' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_62201' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Faecalibacterium_prausnitzii_62201' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+prevalence_df = prevalence_df[, c(1, 2, 5)]
+prevalence_df$species = reorder(prevalence_df$species, prevalence_df$prevalence)
+prevalence_df = prevalence_df %>% arrange(desc(prevalence))
 
-over_iid_df[over_iid_df$species=='Oscillibacter_sp_60799' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Oscillibacter_sp_60799' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Oscillibacter_sp_60799' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Oscillibacter_sp_60799' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+prevalence_df = prevalence_df[, c(1, 3, 2)]
 
-over_iid_df[over_iid_df$species=='Prevotella_copri_61740' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Prevotella_copri_61740' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Prevotella_copri_61740' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Prevotella_copri_61740' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+ggplot(melt(prevalence_df), aes(x=species, y=value, fill=variable)) +
+  geom_bar(stat='identity', position = "identity") +
+  coord_flip() +
+  labs(title = "Sample Size by Species",
+       x = "Species",
+       y = "Sample Size",
+  fill = "Data") +
+  scale_fill_manual(labels = c("Non-QP samples", "QP samples"), values = c("lightblue", "blue")) +
+  theme_minimal() +
+  theme(axis.text.y = element_text(face = 'italic'))
 
-over_iid_df[over_iid_df$species=='Roseburia_inulinivorans_61943' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Roseburia_inulinivorans_61943' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Roseburia_inulinivorans_61943' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Roseburia_inulinivorans_61943' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+supplementary_demography_df = supplementary_demography_df %>% arrange(desc(new_sample_size))
+supplementary_demography_df$species = reorder(supplementary_demography_df$species, supplementary_demography_df$new_sample_size)
 
-over_iid_df[over_iid_df$species=='Ruminococcus_bromii_62047' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Ruminococcus_bromii_62047' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Ruminococcus_bromii_62047' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Ruminococcus_bromii_62047' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+### Fig 1A
 
-over_iid_df[over_iid_df$species=='Ruminococcus_bromii_62047' & over_iid_df$Cohort==' HMP', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Ruminococcus_bromii_62047' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
-over_iid_df[over_iid_df$species=='Ruminococcus_bromii_62047' & over_iid_df$Cohort==' African', ]$ordered_pi = 
-  mean(over_iid_df[over_iid_df$species=='Ruminococcus_bromii_62047' & over_iid_df$Cohort==' African', ]$pairwise_across_pi)
+fig_1A = ggplot(supplementary_demography_df, aes(x = reorder(species, new_sample_size), y = new_sample_size)) +
+  geom_bar(stat = "identity", color='black', fill='darkblue') +
+  coord_flip() +
+  # labs(title = "Number of QP samples by species",
+  #      x = "Species",
+  #      y = "Number of QP samples",
+  #   ) +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(),
+    panel.grid.minor = element_blank(), axis.line = element_line(colour = "black")) +
+  theme(axis.text.y = element_text(face = 'italic')) +
+  theme(axis.text.y = element_text(size=16)) +
+  theme(axis.text.x = element_text(size=16)) +
+  theme(axis.title = element_blank()) +
+  theme(plot.title = element_text(size=20))
 
-unique(over_iid_df$species)
-over_iid_df$species[over_iid_df$species == 'Bifidobacterium_longum_57796'] = 'Bifidobacterium longum'
-over_iid_df$species[over_iid_df$species == 'Blautia_wexlerae_56130'] = 'Blautia wexlerae'
-over_iid_df$species[over_iid_df$species == 'Butyrivibrio_crossotus_61674'] = 'Butyrivibrio crossotus'
-over_iid_df$species[over_iid_df$species == 'Eubacterium_eligens_61678'] = 'Eubacterium eligens'
-over_iid_df$species[over_iid_df$species == 'Escherichia_coli_58110'] = 'Escherichia coli'
-over_iid_df$species[over_iid_df$species == 'Faecalibacterium_prausnitzii_61481'] = 'Faecalibacterium prausnitzii (61481)'
-over_iid_df$species[over_iid_df$species == 'Faecalibacterium_prausnitzii_57453'] = 'Faecalibacterium prausnitzii (57453)'
-over_iid_df$species[over_iid_df$species == 'Faecalibacterium_prausnitzii_62201'] = 'Faecalibacterium prausnitzii (62201)'
-over_iid_df$species[over_iid_df$species == 'Faecalibacterium_cf_62236'] = 'Faecalibacterium cf'
-over_iid_df$species[over_iid_df$species == 'Oscillibacter_sp_60799'] = 'Oscillibacter species'
-over_iid_df$species[over_iid_df$species == 'Prevotella_copri_61740'] = 'Prevotella copri'
-over_iid_df$species[over_iid_df$species == 'Roseburia_inulinivorans_61943'] = 'Roseburia inulinovrans'
-over_iid_df$species[over_iid_df$species == 'Ruminococcus_bromii_62047'] = 'Ruminococcus bromii'
-
-better_pi_comparison_iid <- ggplot(data=over_iid_df, aes(x=reorder(species, ordered_pi), y=average_pi, fill=Cohort)) +
-  geom_boxplot(aes(fill=Cohort), outlier.shape=NA) +
-  geom_point(pch = 21, position = position_jitterdodge(), size=1.5) +
-  geom_point(aes(x=species, y=pairwise_across_pi, color=Cohort), size=4, shape=16, position=position_dodge(width=0.75)) +
-  theme_bw() +
-  theme(plot.background = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank()) +
-  theme(axis.text.x = element_text(size=rel(1.5), angle=40, vjust=1.0, hjust=1)) +
-  theme(axis.text.y = element_text(size=rel(1.5))) +
-  theme(axis.title.x = element_blank()) +
-  theme(axis.title.y = element_text(size=rel(1.5))) +
-  scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),
-                labels = trans_format("log10", math_format(10^.x,)),
-                limits = c(0.0001, 0.2)) +
-  scale_fill_manual(values=c('dodgerblue3', 'goldenrod1')) +
-  scale_color_manual(values=c('dodgerblue3', 'goldenrod1')) +
-  theme(axis.text.x=element_text(face="italic")) +
-  theme(legend.position = "none") +
-  xlab('Species') + 
-  ylab('Nucleotide diversity') +
-  # ggtitle('Distribution of within and between-host nucleotide diversity across cohorts') +
-  stat_compare_means(method='wilcox.test', label='p.signif', size=6)
-  #  stat_compare_means(method='wilcox.test', size=2)
-better_pi_comparison_iid
-
-distinct_iid_df = distinct(over_iid_df, pairwise_across_pi, .keep_all=TRUE)
-distinct_df = distinct(pi_summary_df, pairwise_across_pi, .keep_all=TRUE)
-HMP_distinct = distinct_df[distinct_df$Cohort==' HMP', ]$pairwise_across_pi
-African_distinct = distinct_df[distinct_df$Cohort==' African', ]$pairwise_across_pi
-
-HMP_distinct_pairwise = distinct_iid_df[distinct_iid_df$Cohort==' HMP', ]$pairwise_across_pi
-African_distinct_pairwise = distinct_iid_df[distinct_iid_df$Cohort==' African', ]$pairwise_across_pi
-
-wilcox.test(HMP_distinct_pairwise, African_distinct_pairwise, paired=TRUE, exact=TRUE)
-wilcox.test(HMP_distinct, African_distinct, paired=FALSE, exact=TRUE)
-
-hmp_summary_df = pi_summary_df[pi_summary_df$Cohort==' HMP', ]
-afr_summary_df = pi_summary_df[pi_summary_df$Cohort==' African', ]
-
-# Number of species in each cohort
-length(unique(hmp_summary_df$species))
-length(unique(afr_summary_df$species))
-
-# Number of shared species
-sum(unique(afr_summary_df$species) %in% unique(hmp_summary_df$species))
-
-afr_species_freq = data.frame(table(afr_summary_df$species))
-hmp_species_freq = data.frame(table(hmp_summary_df$species))
-
-over_5_afr_species = afr_species_freq[afr_species_freq$Freq > 5, ]$Var1
-over_5_hmp_species = hmp_species_freq[hmp_species_freq$Freq > 5, ]$Var1
-
-over_5_species = unique(c(over_5_afr_species, over_5_hmp_species))
-
-over_5_species_df = pi_summary_df[pi_summary_df$species %in% over_5_species, ]
-
-# over_5_species_df = drop_duplicates(over_5_species_df, keep=False)
-over_5_species_df = over_5_species_df[!duplicated(over_5_species_df$pairwise_across_pi), ]
-
-over_5_species_df = over_5_species_df[order(over_5_species_df$species), ]
-over_5_species_df
-
-over_5_species_df[over_5_species_df$Cohort==' African', ]$Cohort='African'
-over_5_species_df[over_5_species_df$Cohort==' HMP', ]$Cohort='North American'
-
-compare_iid_over_5_means <- ggplot(data=over_5_species_df, aes(x=Cohort, y=pairwise_across_pi, fill=Cohort)) +
-  geom_boxplot(aes(fill=Cohort), outlier.shape=NA) +
-  geom_point(pch = 21, position = position_jitterdodge(), size=1.5) +
-  theme_bw() +
-  theme(plot.background = element_blank(),
-        panel.grid.major = element_blank(),
-        panel.grid.minor = element_blank()) +
-  theme(axis.text.x = element_text(size=rel(1.5), angle=40, vjust=1.0, hjust=1)) +
-  theme(axis.text.y = element_text(size=rel(1.5))) +
-  theme(axis.title.x = element_blank()) +
-  theme(axis.title.y = element_blank()) +
-  theme(legend.text = element_text(size=rel(1.5))) +
-  theme(legend.title = element_text(size=rel(1.5))) +
-  scale_fill_manual(values=c('dodgerblue3', 'goldenrod1')) +
-  scale_color_manual(values=c('dodgerblue3', 'goldenrod1')) +
-  scale_y_log10(breaks = trans_breaks("log10", function(x) 10^x),
-                labels = trans_format("log10", math_format(10^.x,)),
-                limits = c(0.0001, 0.2)) +
-  ylab('Mean Nucleotide diversity per Species') +
-  # ylim(0, 0.03) +
-  stat_compare_means(method='wilcox.test', label='p.signif', size=6)
-  # ggtitle('Mean Nucleotide diversity per Species between Cohorts')
-compare_iid_over_5_means
-
-### Figure 1
-png("../Summary/figure_1_output.png", width = 1600, height = 900)
-# 1600 x 900 dimensions for saved image
-better_pi_comparison_iid + compare_iid_over_5_means + plot_layout(widths = c(3, 1))
-dev.off()
-
+ggsave('../Summary/figure_1_output.svg', fig_1A, width=6, height=4, units='in', dpi=600)

@@ -264,4 +264,4 @@ figure_6 = FD_core_accessory_DFE_reduced = a_putredinis_fd_core_dfe_plot + a_fin
   e_siraeum_fd_accessory_dfe_plot + r_bromii_fd_accessory_dfe_plot +
   plot_layout(ncol=2)
 
-ggsave('../Summary/figure_6_output.svg', figure_6, width=10, height=35, units='in', dpi=300, limitsize = FALSE)
+# ggsave('../Summary/figure_6_output.svg', figure_6, width=10, height=35, units='in', dpi=300, limitsize = FALSE)

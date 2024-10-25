@@ -2221,45 +2221,9 @@ ggplot(melt(supplementary_demography_df), aes(x=species, y=value, fill=variable)
   theme(axis.text.y = element_text(face = 'italic'))
 
 
-# 
-# supplementary_demography_df = data.frame(species=supplementary_species_list, 
-#   nu_mle = numeric(39),
-#   time_mle = numeric(39)
-# )
-# 
-# for (i in 1:length(supplementary_species_list)) {
-#   # nu_mle
-#   supplementary_demography_df[i, 2] = return_nu_mle(supplementary_likelihood_surface_list[i])
-#   # tau_mle
-#   supplementary_demography_df[i, 3] = return_time_mle(supplementary_likelihood_surface_list[i], 
-#     supplementary_downsampled_sfs_file_list[i], 
-#     supplementary_demography_file_list[i])
-# }
-# 
-# supplementary_demography_df
-# 
-options(ggrepel.max.overlaps = Inf)
-# 
-# supplementary_demography_scatter = ggscatter(supplementary_demography_df, x="nu_mle", y="time_mle", color='species', size=3) +
-#   ylab('Estimated time in years since most recent demographic event') +
-#   xlab(x_label_text) +
-#   geom_vline(xintercept=1.0, color='red', linewidth=1, linetype='dashed') +
-#   scale_shape_manual(name = "Best-Fit Demographic Model",
-#                      labels = c("Three Epoch", "Two Epoch"),
-#                      values = c(17, 19)) +
-#   geom_text_repel(aes(label = species, color=species, fontface = 'italic'), size=3) +
-#   guides(color=guide_legend(title="Species")) +
-#   scale_x_log10(limits=c(1e-2, 2e5)) +
-#   scale_y_log10(limits=c(2e2, 1e7)) +
-#   theme(legend.position = 'none') +
-#   guides(color = 'none') +
-#   guides(shape = 'none')  +
-#   theme(axis.text=element_text(size=12),
-#     axis.title=element_text(size=16))
-# 
-# supplementary_demography_scatter
 
-# Supplementary species model fit
+options(ggrepel.max.overlaps = Inf)
+
 ## Read in full data SFS (folded, core)
 
 a_muciniphila_FD_core_folded = read_input_sfs('../SupplementaryAnalysis/Akkermansia_muciniphila_55290/core_empirical_syn_downsampled_sfs.txt')
