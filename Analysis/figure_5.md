@@ -1,8 +1,10 @@
 # Figure 5
 
-Figure 5A-B are comprised of the SFS of core and accessory genes for 7 species for which we were able to find well-fitting synonymous and nonsynonymous SFSs.
+[Figure 5](../Summary/figure_5.jpg) is comprised of several components.
 
-Figure 5C-D is the DFE of core and accessory genes for two species.
+Figure 5A-B are comprised of the empirical synonymous and nonsynonymous SFSs of core and accessory genes for (A) B. caccae and (B) P. distasonis.
+
+Figure 5C-D is the DFE of core and accessory genes for these two species.
 
 To recreate this figure, you must:
 
@@ -15,4 +17,4 @@ To recreate this figure, you must:
   * To compare DFEs using a null expectation of `s`, an example `.bash` script which does so for all of the species analyzed in this paper can be found at [`../Scripts/constant_s_dfe.bash`](../Scripts/constant_s_dfe.bash).
   * To compare DFEs using a null expectation of `2N_Anc*s`, an example `.bash` script which does so for all of the species analyzed in this paper can be found at [`../Scripts/cross_species_dfe_inference.bash`](../Scripts/cross_species_dfe_inference.bash).
 ## [`generate_figure_5.R`](../Scripts/generate_figure_5.R)
-  This `.R` script generates Figure 1 and saves it to [`Summary/figure_3.png`](../Summary/figure_5.png).
+  This `.R` script generates Figure 5 and saves it to [`Summary/figure_5_output.svg`](../Summary/figure_5_output.svg).
