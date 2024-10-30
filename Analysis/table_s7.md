@@ -13,4 +13,4 @@ To recreate this table, you must:
   * To compare DFEs using a null expectation of `s`, an example `.bash` script which does so for all of the species analyzed in this paper can be found at [`../Scripts/constant_s_dfe.bash`](../Scripts/constant_s_dfe.bash).
   * To compare DFEs using a null expectation of `2N_Anc*s`, an example `.bash` script which does so for all of the species analyzed in this paper can be found at [`../Scripts/cross_species_dfe_inference.bash`](../Scripts/cross_species_dfe_inference.bash).
 ## [`generate_tables.R`](../Scripts/generate_tables.R)
-  This `.R` script generates all novel supplemental tables and saves them automatically in  [`Supplement`](../Supplement).
+  This `.R` script generates all novel supplemental tables and saves them automatically in  [`Supplement`](../Supplement/README.md).

@@ -5,4 +5,4 @@
 To recreate this figure, you must:
 
 ## [`generate_supplemental_figures.R`](../Scripts/generate_supplemental_figures.R)
-  This `.R` script generates all Supplemental Figures and saves them to [`../Supplement/`](../Supplement/).
+  This `.R` script generates all Supplemental Figures and saves them to [`../Supplement/`](../Supplement/README.md).

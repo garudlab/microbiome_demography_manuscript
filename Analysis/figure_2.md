@@ -1,6 +1,6 @@
 # Figure 2
 
-[Figure 2](../Summary/figure_2.jpg) is comprised of several components.
+[Figure 2](../Summary/figure_2_final.jpg) is comprised of several components.
 
 Figures 2A-B are comprised of the synonymous and nonsynonymous SFSs of empirical and model data.
 

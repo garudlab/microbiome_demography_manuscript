@@ -1,6 +1,6 @@
 # Figure 1
 
-[Figure 1](../Summary/figure_1.jpg) is comprised of several components.
+[Figure 1](../Summary/figure_1_final.jpg) is comprised of several components.
 
 Figure 1A shows the number of QP samples for the 39 most prevalent species in the datasets we analyzed.
 

@@ -1,6 +1,6 @@
 # Figure 4
 
-[Figure 4](../Summary/figure_4.jpg) is comprised of 6 scatterplots comparing various evolutionary summary statistics between a full SFS and a filtered SFS (see Methods).
+[Figure 4](../Summary/figure_4_final.jpg) is comprised of 6 scatterplots comparing various evolutionary summary statistics between a full SFS and a filtered SFS (see Methods).
 
 To recreate this figure, you must:
 

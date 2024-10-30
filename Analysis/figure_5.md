@@ -1,6 +1,6 @@
 # Figure 5
 
-[Figure 5](../Summary/figure_5.jpg) is comprised of several components.
+[Figure 5](../Summary/figure_5_final.jpg) is comprised of several components.
 
 Figure 5A-B are comprised of the empirical synonymous and nonsynonymous SFSs of core and accessory genes for (A) B. caccae and (B) P. distasonis.
 

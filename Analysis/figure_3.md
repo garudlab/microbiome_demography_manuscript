@@ -1,6 +1,6 @@
 # Figure 3
 
-[Figure 3](../Summary/figure_3.jpg) is comprised of a phylogenetically sorted panel of DFEs.
+[Figure 3](../Summary/figure_3_final.jpg) is comprised of a phylogenetically sorted panel of DFEs.
 
 To recreate this figure, you must:
 
