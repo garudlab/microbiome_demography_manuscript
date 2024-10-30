@@ -1,6 +1,6 @@
 # Figure S5
 
-Supplemental Figure 5 shows the distribution of fitness effects under a neutral+gamma model specification over the core genes of the 27 species included in this study.
+[Supplemental Figure 5](../Supplement/Supplemental_Figure_5.jpg) shows the distribution of fitness effects under a neutral+gamma model specification over the core genes of the 39 species included in this study.
 
 To recreate this figure, you must:
 

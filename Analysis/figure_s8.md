@@ -1,6 +1,6 @@
 # Figure S8
 
-Supplemental Figure 8 shows all of the site-frequency spectra and likelihood surfaces for demographic inference over accessory genes for the 27 species included in this study.
+[Supplemental Figure 8](../Supplement/Supplemental_Figure_8.jpg) shows all of the site-frequency spectra and likelihood surfaces for demographic inference over accessory genes for the 39 species included in this study.
 
 To recreate this figure, you must:
 

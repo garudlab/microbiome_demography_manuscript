@@ -1,6 +1,6 @@
 # Figure S6
 
-Supplemental Figure 6 shows the LRT statistic for comparison of the DFE between all pairs of the 27 species included in this study. Supplemental Figure 6A shows the difference matrix for a null model evaluating the selection coefficient, _s_, and Supplemental Figure 6B shows the difference matrix for a null model evaluating the population-scaled selection coefficient, _2Na*s_.
+[Supplemental Figure 6](../Supplement/Supplemental_Figure_6.jpg) shows the distribution of various summary statistics for within-genera and between-genera DFE comparisons: the LRT statistics, E[_s_], and E[_2Na*s_].
 
 To recreate this figure, you must:
 

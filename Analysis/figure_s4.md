@@ -1,6 +1,6 @@
 # Figure S4
 
-Supplemental Figure 4 shows the 95% confidence intervals of `nu` and `tau` for demographic inference over the core genes of the 27 species included in this study.
+[Supplemental Figure 4](../Supplement/Supplemental_Figure_4.jpg) shows the 95% confidence intervals of `nu` and `tau` for demographic inference over the core genes of the 39 species included in this study.
 
 To recreate this figure, you must:
 

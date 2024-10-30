@@ -1,11 +1,9 @@
 # Figure S10
 
-Supplemental Figure 10 shows the comparison of empirical site-frequency spectra with that of the model site-frequency spectra for a two-epoch demography fit to accessory genes, as well as the corresponding DFE's for the core and accessory genes of the 7 species for which we compared core and accessory genes in this study.
+[Supplemental Figure 10](../Supplement/Supplemental_Figure_10.jpg) shows a comparison of evolutionary summary statistics between core and accessory genes.
 
 To recreate this figure, you must:
 
-## Perform demographic inference using `Dadi`
-  An example `.bash` script which performs demographic inference using `Dadi` for all of the species analyzed in this paper can be found at [`../Scripts/fit_demographic_model.bash`](../Scripts/fit_demographic_model.bash). Uncomment appropriate lines to do so for core genes and for accessory genes.
 ## Perform demographic inference using `Dadi`
   An example `.bash` script which performs demographic inference using `Dadi` for all of the species analyzed in this paper can be found at [`../Scripts/fit_demographic_model.bash`](../Scripts/fit_demographic_model.bash). Uncomment appropriate lines to do so for core genes and for accessory genes.
 ## Fit the Distribution of Fitness Effects (DFE) using `FitDadi`

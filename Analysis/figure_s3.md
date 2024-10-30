@@ -1,6 +1,6 @@
 # Figure S3
 
-Supplemental Figure 3 shows all of the site-frequency spectra and likelihood surfaces for demographic inference over core genes for the 27 species included in this study.
+[Supplemental Figure 3](../Supplement/Supplemental_Figure_3.jpg) shows all of the site-frequency spectra and likelihood surfaces for demographic inference over core genes for the 39 species included in this study.
 
 To recreate this figure, you must:
 

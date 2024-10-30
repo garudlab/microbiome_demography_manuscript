@@ -1,3 +1,3 @@
 # Summary
 
-This directory includes several `.pptx` files containing slide decks describing >= weekly updates for the project's status.
+This summary contains summarizing intermediate output files used by the [../Scripts/](`../Scripts/`) directory
