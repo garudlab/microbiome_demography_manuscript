@@ -11,4 +11,4 @@ To recreate this figure, you must:
 ## Compute the likelihood ratio test for comparing DFEs using `FitDadi`
   An example `.bash` script which compares the DFEs between two sets of genes can be found at [`../Scripts/constant_s_dfe.bash`](../Scripts/constant_s_dfe.bash). Uncomment appropriate lines to do so for core genes and for accessory genes.
 ## [`generate_supplemental_figures.R`](../Scripts/generate_supplemental_figures.R)
-  This `.R` script generates all Supplemental Figures and saves them to [`../Supplement/`](../Supplement/README.md).
+  This `.R` script generates all Supplemental Figures and saves them to [`../Supplement/`](../Supplement/).

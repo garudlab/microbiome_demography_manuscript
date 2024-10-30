@@ -9,4 +9,4 @@ To recreate this figure, you must:
 ## [`plot_likelihood.py`](../Scripts/plot_likelihood.py)
   As input, this script accepts a synonymous SFS file as specified in `Dadi` format, as well as the output `*demography.txt` from demographic inference. An example `.bash` script which computes likelihood surfaces for all of the species analyzed in this paper can be found at [`../Scripts/plot_likelihood.bash`](../Scripts/plot_likelihood.bash). Uncomment appropriate lines to do so for core genes and for accessory genes.
 ## [`generate_supplemental_figures.R`](../Scripts/generate_supplemental_figures.R)
-  This `.R` script generates all Supplemental Figures and saves them to [`../Supplement/`](../Supplement/README.md).
+  This `.R` script generates all Supplemental Figures and saves them to [`../Supplement/`](../Supplement/).
